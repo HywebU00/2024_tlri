@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>產銷履歷系統前後台</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="back1/css/hyui.css">
+    <!-- favicon -->
+    <link href="back1/images/favicon.png" rel="icon" type="image/x-icon">
+    <style>
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 15px 15px 3em;
+            clear: both;
+            background: #FFF
+        }
+        .demo_wrap h1 {
+            display: inline-block;
+            margin: 0px auto;
+            max-width: 300px;
+            /*float: left;*/
+            margin-right: 1em 
+        }
+        b{
+            background: deeppink;
+            color: #fff;
+            padding: .25em .5em;
+        }
+        @media screen and (max-width:545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center
+            }
+        }
+
+        .demo_wrap h1 img { width: auto; }
+        .num { width: 12% }
+
+        body { counter-reset: num }
+        table {
+            margin-bottom: 1em;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td{
+            padding: .5em;
+            text-align: left;
+        }
+
+        table td{ border: #ddd 1px solid; word-break: break-all; }
+        table td a{ word-break: break-all; }
+        table th{
+            background-color: #F3F3F3;
+            color: #333;
+            border: #DDD 1px solid;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: .5em 0;
+            color: #ff5050
+        }
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
+            text-align: center;
+            content: counters(num, ".") " "
+        }
+        tbody tr td:nth-child(2) { width: 35% }
+        tbody tr td span{ color: deeppink; }
+        .btn_grp{ text-align: right; }
+
+        @media screen and (max-width:545px) {
+           .btn_grp{ text-align: center; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="demo_wrap">
+        <h1><img src="back1/images/logo-login.png" alt=""></h1>
+        <!-- <div class="btn_grp">
+            <a href="#" class="btn">切版檔案請按此下載</a>
+        </div> -->
+        <div class="table_wrapper">
+            <!--  -->
+            <h3>系統列表</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>農糧產銷履歷系統</td>
+                        <td>規劃中</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產銷履歷環境補置申請及審查系統 </td>
+                        <td><a href="back1/index.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>產銷履歷驗證費補助申請及審查系統</td>
+                        <td>規劃中</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- <a href="javascript:;" class="scrollToTop" >回頁首</a> -->
+    <script src="back1/js/jquery-3.3.1.min.js"></script>
+    <script src="back1/vendor/jquery.easing.min.js"></script>
+    <script src="back1/js/hyui.js"></script>
+    <script src="back1/js/customize.js"></script>
+    <script>
+    $(function() {
+        $('tbody').find('a').each(function(index, el) {
+            var Link = $(this).attr('href');
+            $(this).text(Link);
+        });
+    })
+    </script>
+</body>
+
+</html>
