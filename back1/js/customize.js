@@ -410,7 +410,8 @@ $(function() {
     _nav.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
     _search.clone().prependTo(_body).addClass('m_search');
-    var liHasChild_level1 = $('aside .menu ul').children('li.hasChild'),
+    var liHasChild_0 = $('.sidebar .menu .hasChild>a'),
+        liHasChild_level1 = $('aside .menu ul').children('li.hasChild'),
         liHasChild_level2 = $('aside .menu ul ul').children('li.hasChild'),
         liHasChild_level3 = $('aside .menu ul ul ul').children('li.hasChild'),
         subMenuWidth = liHasChild.first().children('ul').outerWidth();
@@ -455,13 +456,16 @@ $(function() {
             liHasChild_level3.off().on('click', function(e) {
                 e.preventDefault();
             });
+
             //手機版第第一層點了不會進入內頁，拿掉第一層的連結無作用
-            liHasChild.children('a').off().on('click', function(e) {
+            liHasChild_0.off().on('click', function(e) {
                 e.preventDefault();
             });
+
             _body.off('touchmove');
             $('.m_search').hide();
-            $('.language').find('ul').hide();
+            // $('.language').find('ul').hide();
+            
         } else {
             /*-----------------------------------*/
             /////////////// PC版設定 /////////////

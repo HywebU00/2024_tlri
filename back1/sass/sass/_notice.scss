@@ -6,7 +6,7 @@
     margin: .2em 0;
     position: relative;
     color: #666;
-    background-color: #f2f2f2;
+    // background-color: #f2f2f2;
     position: relative;
     @include box-sizing;
     border-radius: 4px;
@@ -61,7 +61,7 @@
 }
 *[class*="notice_warning"] {
     color: #CE5605;
-    background-color: #FEEFB3;
+    // background-color: #FEEFB3;
     &:before {
         background: url(../images/basic/icon_warning.svg) no-repeat center center;
         background-size: 15px;

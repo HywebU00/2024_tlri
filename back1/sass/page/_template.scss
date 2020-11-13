@@ -97,6 +97,9 @@ h3.demo {
 }
 h4 {
     margin: .5em 0;
+    &.sub-title{
+        font-size: 1.1125em;
+    }
 }
 body {
     background: $bgColor;
@@ -143,7 +146,8 @@ body {
 .container {
     padding: 0;
     margin: 0 auto;
-    max-width: $container-max; //請看_variable.scss
+    // max-width: $container-max; //請看_variable.scss
+    width: $container-max; //請看_variable.scss
 }
 .content {
     padding-top: 5em;
@@ -180,6 +184,7 @@ body {
 
     input, select{
         width: auto;
+        min-width: 240px;
         margin-right: .5em;
     }
 
@@ -187,6 +192,136 @@ body {
         flex-flow: row wrap;
     }
 }
+
+// 步驟
+.steps{
+    padding: 1em 0;
+    ul{
+        @include li-reset;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;   // 遮蔽step凸出來的線
+        li{
+            flex: 1 1 0;
+            flex-basis: calc(100% / 3);
+            text-align: center;
+            p{
+                // color: $primaryColor;
+                color: #757575;
+                margin-top: .5em;
+                b{
+                    color: #555;
+                    font-size: small;
+                }
+            }
+            span{
+                border-radius: 50%;
+                display: block;
+                margin: 0 auto;
+                background: #f3f3f3;
+                box-shadow: inset 0px 0px 0px 3px #ddd;
+                width: 56px;
+                height: 56px;
+                line-height: 56px;
+                // font-size: 0;
+
+                position: relative;
+
+                &:after{
+                    content: "";
+                    display: block;
+                    // width: 700%;
+                    width: 1400%;
+                    height: .15em;
+                    background: #ddd;
+                    position: absolute;
+                    left: 56px;
+                    top: 50%;
+                }
+            }
+            &.Pass{
+                p{ color: #222; }
+                span{
+                    // background: url(../images/icon/icon_check_white.svg) 50% 50% no-repeat, $primaryColor;
+                    background: url(../images/icon/icon_check_color.svg) 50% 50% no-repeat, #f3f3f3;
+                    background-size: 26px 26px;
+                    box-shadow: inset 0px 0px 0px 3px $primaryColor;
+                    &:after{
+                        // background: lighten($primaryColor,20);
+                        background: lighten($primaryColor,5);
+                    }
+                }
+            }
+            &.Now{
+                p{ color: $primaryColor; font-weight: bold; }
+                span{
+                    // background: url(../images/icon/icon_pen.svg) 50% 50% no-repeat, #f3f3f3;
+                    background: url(../images/icon/icon_pen.svg) 50% 50% no-repeat, $primaryColor;
+                    background-size: 36px 36px;
+                    box-shadow: inset 0px 0px 0px 3px $primaryColor;
+                }
+            }
+
+            &:last-child{
+                span{
+                    &:after{
+                        background: #fff;
+                        // width: 200%;
+                    }
+                }
+            }
+        }
+    }
+}
+// 表格註釋
+.table_remarks{
+    // background: #ececec;
+    padding: .5em 0;
+    border-radius: 4px;
+}
+// 提醒
+.remind{
+    color: #ab4500;
+    // background: #ddd;
+    border: solid 1px #ab4500;
+    padding: .5em 1.5em;
+    border-radius: 4px;
+    margin-bottom: .75em;
+}
+// 填表結果
+.Result{
+    @extend %flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    .col2{
+        @include flex-layout(2, 4px);
+        border: solid 1px #DDD;
+        padding: 1em 1.5em;
+        border-radius: 6px;
+
+        @include screen('mobile') {
+            @include flex-layout(1, 0px);
+            margin-bottom: .75em;
+        }
+
+        h4{
+            border-bottom: 2px solid #d0d0d0;
+            padding-bottom: .75em;
+            margin-bottom: 1em;
+        }
+        &:nth-child(2){
+            h5{
+                margin: .5em 0;
+                font-size: 1.125em;
+            }
+        }
+    }
+}
+
+// ----- ˊ以上農糧署有使用 ----- 
+
+
 // 最新消息
 #switch_news{
     position: fixed;
@@ -350,75 +485,6 @@ body {
                 color: #AAA;
                 font-size: .938em;
                 margin-left: 1em;
-            }
-        }
-    }
-}
-
-// 步驟
-.steps{
-    padding: 1em 0;
-    ul{
-        @include li-reset;
-        display: flex;
-        flex-flow: row nowrap;
-        overflow: hidden;   // 遮蔽step凸出來的線
-        li{
-            flex: 1 1 0;
-            flex-basis: calc(100% / 3);
-            text-align: center;
-            p{
-                color: $primaryColor;
-                margin-top: .5em;
-                b{
-                    color: #555;
-                    font-size: small;
-                }
-            }
-            span{
-                border-radius: 50%;
-                display: block;
-                margin: 0 auto;
-                background: #f3f3f3;
-                box-shadow: inset 0px 0px 0px 3px #ddd;
-                width: 56px;
-                height: 56px;
-                line-height: 56px;
-                // font-size: 0;
-
-                position: relative;
-
-                &:after{
-                    content: "";
-                    display: block;
-                    width: 700%;    
-                    height: .1em;
-                    background: #ddd;
-                    position: absolute;
-                    left: 56px;
-                    top: 50%;
-                }
-            }
-            &.Pass span{
-                // background: url(../images/icon/icon_check_white.svg) 50% 50% no-repeat, $primaryColor;
-                background: url(../images/icon/icon_check_color.svg) 50% 50% no-repeat, #f3f3f3;
-                background-size: 26px 26px;
-                box-shadow: inset 0px 0px 0px 3px $primaryColor;
-                &:after{
-                    background: lighten($primaryColor,20);
-                }
-            }
-            &.Now span{
-                // background: url(../images/icon/icon_pen.svg) 50% 50% no-repeat, #f3f3f3;
-                background: url(../images/icon/icon_pen.svg) 50% 50% no-repeat, $primaryColor;
-                background-size: 36px 36px;
-                box-shadow: inset 0px 0px 0px 3px $primaryColor;
-            }
-
-            &:last-child{
-                span{
-                    &:after{ background: #fff; width: 200%; }
-                }
             }
         }
     }
@@ -863,15 +929,12 @@ body {
 
 // ------------------- END --------------------------
 
-
-
-
 .grid {
     padding-bottom: 3em;
     .title {
-        border: 1px solid rgba(166, 171, 182, 0.3);
-        border-left: none;
-        border-right: none;
+        // border: 1px solid rgba(166, 171, 182, 0.3);
+        // border-left: none;
+        // border-right: none;
         margin-bottom: 1em;
         // @include gutter(12px);
         flex-flow: row nowrap;
@@ -1168,11 +1231,13 @@ body {
     justify-content: space-around;
     align-items: stretch;
     align-self: flex-start;
+
     .col {
         flex: 1 1 50%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-direction: column;
+        padding: 0 1em;
         @include screen('mobile') {
             // flex: 1 1 100%;
             display: block;
@@ -1365,9 +1430,9 @@ body {
             flex: 1 1 auto;
             flex-basis: 50%;
             font-size: 1.25rem;
-            border-left: 3px solid #005f77;
+            border-left: 3px solid $primaryColor;
             padding-left: .75em;
-            color: lighten($primaryColor, 5);
+            color: darken($primaryColor, 5);
             // border-bottom: 1px solid #AAA;
 
             +div{
@@ -1838,7 +1903,7 @@ table {
     }
     .dropdown {
         width: 100%;
-        z-index: 9;
+        z-index: 100;
         .btn {
             width: 100%;
             border: 1px solid #F1F1F1;

@@ -145,7 +145,7 @@ $btn-radius: 4px;
 }
 .btn-orange {
     @extend %btn;
-    @include btn_setting(darken($color-orange, 2), #fff);
+    @include btn_setting(darken(#3d6751, 0), #fff);
 }
 .btn-red {
     @extend %btn;
