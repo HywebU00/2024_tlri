@@ -175,8 +175,13 @@ body {
 }
 
 // ------------------- Lize -------------------------
-.small_size { font-size: .938em; }
-.large_size { font-size: 1.125em; }
+// .small_size { font-size: .938em; }
+// .large_size { font-size: 1.125em; }
+
+.main { font-size: 112.5%; }  // 預設字級 1em 的倍數
+
+.small_size { font-size: 100%; }
+.large_size { font-size: 125%; }
 
 .flex{
     border: 0;
@@ -1460,7 +1465,7 @@ body {
                 flex: 1 1 100%;
             }
             .btn {
-                font-size: .875rem;
+                font-size: 1.125rem;
                 border-radius: .25em;
                 padding: .4em 1.2em .4em .6em;
                 align-self: center;
@@ -1920,7 +1925,8 @@ table {
             width: 100%;
             min-width: 4em;
             .btn {
-                font-size: .813rem;
+                // font-size: .813rem;
+                font-size: 112.5%;
             }
             ul {
                 @include li-reset;

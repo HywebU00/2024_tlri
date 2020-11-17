@@ -12,7 +12,6 @@ table {
         &:hover {
             color: #111;
         }
-        ;
     }
     th,
     td {
@@ -86,7 +85,7 @@ table {
         border-left: none;
         border-right: none;
         // text-align: left;
-        min-width: 100px;
+        min-width: 120px;
         &.main_data {
             text-align: left;
             min-width: 10em;
@@ -238,12 +237,14 @@ table {
     }
     &.table_hover {
         tr:hover {
-            background: #FAFAFA;
+            // background: #FAFAFA;
+            background: lighten(tan, 16);
         }
     }
     &.table_sprite {
         tr:nth-child(even) {
-            background: #FAFAFA;
+            // background: #FAFAFA;
+            background: lighten(tan, 16);
         }
     }
 }

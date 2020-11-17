@@ -168,6 +168,9 @@ $btn-radius: 4px;
 .btn-primary{
     @extend %btn;
     @include btn_setting2(#f66339, #FFF);
+    &:hover, &:focus {
+        background: darken(#f66339, 22);
+    }
 }
 // 次要按鈕
 .btn-secondary{
