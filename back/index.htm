@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>產銷履歷驗證費補助申請及審查系統</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- hyUI -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <style>
+        .demo_wrap {
+            max-width: 1000px;
+            margin: 0em auto 1em;
+            padding: 2em 15px;
+            clear: both;
+            background: #FFF
+        }
+        .demo_wrap h1 {
+            display: inline-block;
+            margin: 0px auto;
+            max-width: 300px;
+            /*float: left;*/
+            margin-right: 1em 
+        }
+        b{
+            background: deeppink;
+            color: #fff;
+            padding: .25em .5em;
+        }
+        @media screen and (max-width:545px) {
+            .demo_wrap h1 {
+                max-width: 100%;
+                float: none;
+                text-align: center
+            }
+        }
+
+        .demo_wrap h1 img { width: auto; }
+        .num { width: 12% }
+
+        body { counter-reset: num }
+        table {
+            margin-bottom: 1em;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td{
+            padding: .5em;
+            text-align: left;
+        }
+
+        table td{ border: #ddd 1px solid; word-break: break-all; }
+        table td a{ word-break: break-all; }
+        table th{
+            background-color: #F3F3F3;
+            color: #333;
+            border: #DDD 1px solid;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        table caption {
+            text-align: left;
+            font-weight: bold;
+            font-size: 1.25em;
+            padding: .5em 0;
+            color: #ff5050
+        }
+        tbody tr td:first-child:before {
+            counter-increment: num;
+            display: block;
+            text-align: center;
+            content: counters(num, ".") " "
+        }
+        tbody tr td:nth-child(2) { width: 35% }
+        tbody tr td span{ color: deeppink; }
+        .btn_grp{ text-align: right; }
+
+        .normal a{
+            text-decoration: none;
+            background: #009688;
+            color: #fff;
+            padding: .5em 1.5em;
+            border-radius: 3px;
+        }
+
+        @media screen and (max-width:545px) {
+           .btn_grp{ text-align: center; } 
+        }
+    </style>
+</head>
+<body>
+    <div class="demo_wrap">
+        <h2 class="normal"><a href="module.htm" target="_blank">通用模板 ( •̀ v •́ )</a></h2>
+    </div>
+    <hr>
+    <div class="demo_wrap">
+        <h1><img src="images/logo-index-1.png" alt=""></h1>
+        <div class="table_wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>login</td>
+                        <td><a href="back1_login.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(列表頁)環境獎勵申請列表</td>
+                        <td><a href="back1_LP1.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(列表頁)環境獎勵申請列表</td>
+                        <td><a href="back1_LP2.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(內容頁樣式1)申請書-組織資料確認與填寫</td>
+                        <td><a href="back1_CP1.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(內容頁樣式2)申請書-土地資料勾選</td>
+                        <td><a href="back1_CP2.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(內容頁樣式3)申請書-資料確認</td>
+                        <td><a href="back1_CP3.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(內容頁樣式4)申請書-下載申請書</td>
+                        <td><a href="back1_CP4.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(內容頁樣式5)環境獎勵確認頁面-1（可編輯)</td>
+                        <td><a href="back1_CP5.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(內容頁樣式6)環境獎勵確認頁面-2（可編輯)</td>
+                        <td><a href="back1_CP6.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(內容頁樣式7)環境獎勵確認頁面（僅檢視)</td>
+                        <td><a href="back1_CP7.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>(內容頁樣式8)抽查結果回填</td>
+                        <td><a href="back1_CP8.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>查詢頁面</td>
+                        <td>同 back1_LP1 上半部</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <hr>
+    <div class="demo_wrap">
+        <h1><img src="images/logo-index.png" alt=""></h1>
+        <div class="table_wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="num">編號</th>
+                        <th>頁面名稱</th>
+                        <th>檔案名稱</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td>login</td>
+                        <td><a href="back2_login.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>報表下載</td>
+                        <td><a href="back2_LP1.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>驗證輔導補助申請</td>
+                        <td><a href="back2_LP2.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>輸入組織代碼</td>
+                        <td><a href="back2_LP3.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>申請頁面</td>
+                        <td><a href="back2_LP4.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>查詢頁面</td>
+                        <td><a href="back2_LP5.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>土地資訊詳細頁面</td>
+                        <td><a href="back2_LP6.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>驗證輔導補助審核</td>
+                        <td><a href="back2_LP7.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>審核頁面</td>
+                        <td><a href="back2_LP8.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>驗證輔導補助撥款</td>
+                        <td><a href="back2_LP9.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>撥款</td>
+                        <td><a href="back2_LP10.htm" target="_blank"></a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>批次撥款</td>
+                        <td><a href="back2_LP11.htm" target="_blank"></a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- <a href="javascript:;" class="scrollToTop" >回頁首</a> -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
+    <script>
+    $(function() {
+        $('tbody').find('a').each(function(index, el) {
+            var Link = $(this).attr('href');
+            $(this).text(Link);
+        });
+    })
+    </script>
+</body>
+
+</html>

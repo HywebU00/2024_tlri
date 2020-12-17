@@ -1,0 +1,241 @@
+header{
+	background: none;
+	box-shadow: 0px 0px 0 1px rgba(255,255,255, .85);
+	backdrop-filter: blur(15px);
+
+    .control_panel {
+        .item {
+            &.account {
+                &>a {
+                    background: #6EAD01;
+                }
+            }
+        }
+    }
+}
+
+.wrapper{
+	// background: #ddd;
+	background: url(../images/bg-login-1-page.jpg) 50% top no-repeat;
+    background-attachment: fixed;;
+}
+
+.login {
+	h1 {
+		span{
+			b{
+				color: $primaryColor;
+                border: solid 1px $primaryColor;
+			}
+		}
+	}
+}
+
+.login_wrapper{
+	    background: url(../images/bg-login-1.jpg) 50% 50% no-repeat;
+	    background-size: cover
+}
+
+.grid {
+    .title {
+        h2 {
+            color: #004633;
+        }
+    }
+}
+
+.font_size ul li a{
+	background: #666;
+    color: rgba(255,255,255,.75);
+}
+
+// table
+table {
+	th {
+		background: none !important;
+		color: #386546;
+		border: #ebebeb 1px solid !important;
+        border-left: none !important;
+        border-right: none !important;
+        border-bottom: solid 2px #386546 !important;
+	}
+	tr{
+		&:first-child{
+			th, td{ border-top: transparent !important; }
+		}
+	}
+}
+.th_left{
+	table {
+		th{
+			// border-bottom: transparent !important;
+			border-bottom: #ebebeb 1px solid !important;
+		}
+	}
+}
+
+// 
+.content_block, .widget_block, .publish_block {
+	._head {
+		h3 {
+			padding-left: 0;
+			border-left: none;
+			span{
+				color: #fff;
+				background: #15552a;
+				padding: .5em 1em;
+
+				&:before,
+				&:after{
+					content:'';
+					display: inline-block;
+					width: 16px;
+					height: 1px;
+					background: rgba(255,255,221,.7);
+					margin-bottom: 7px;
+				}
+
+				&:before{
+				    margin-right: 10px;
+				}
+				&:after{
+				    margin-left: 10px;
+				}
+			}
+		}
+	}
+}
+
+h4 {
+    &.sub-title{
+		font-size: 1em;
+		padding: 0 1em;
+		color: #3c3c3c;
+	    display: inline-block;
+	    border-left: 4px solid #222;
+	    margin: 1em 0;
+    }
+}
+
+// 步驟
+.steps{
+    padding: 1em 0;
+    ul{
+        @include li-reset;
+        display: flex;
+        flex-flow: row nowrap;
+        overflow: hidden;   // 遮蔽step凸出來的線
+        li{
+            flex: 1 1 0;
+            flex-basis: calc(100% / 3);
+            text-align: center;
+            p{
+                // color: $primaryColor;
+                color: #696969;
+                margin-top: .5em;
+                b{
+                    color: #555;
+                    font-size: small;
+                }
+            }
+            span{
+                border-radius: 50%;
+                display: block;
+                margin: 0 auto;
+                background: #f3f3f3;
+                box-shadow: inset 0px 0px 0px 3px #ddd;
+                width: 56px;
+                height: 56px;
+                line-height: 56px;
+                // font-size: 0;
+
+                position: relative;
+
+                &:after{
+                    content: "";
+                    display: block;
+                    // width: 700%;
+                    width: 1500%;
+                    height: .15em;
+                    background: #ddd;
+                    position: absolute;
+                    left: 56px;
+                    top: 50%;
+                }
+            }
+            &.Pass{
+                p{}
+                span{
+                    // background: url(../images/icon/icon_check_white.svg) 50% 50% no-repeat, $primaryColor;
+                    background: url(../images/icon/icon_check_color.svg) 50% 50% no-repeat, #f3f3f3;
+                    background-size: 26px 26px;
+                    box-shadow: inset 0px 0px 0px 3px #0d3b47;
+                    &:after{
+                        background: rgb(21,85,42);
+                    }
+                }
+                // +.Pass{
+                //     span{
+                //         &:after{
+                //             background: rgb(21,85,42);
+                //             background: linear-gradient(90deg, rgba(21,85,42,1) 0%, rgba(110,173,1,1) 30%);
+                //         }
+                //     }
+                // }
+            }
+            &.Now{
+                p{ color: #222;}
+                span{
+                    background: url(../images/icon/icon_pen.svg) 50% 50% no-repeat, #6ead01;
+                    background-size: 36px 36px;
+                    box-shadow: inset 0px 0px 0px 3px #6ead01;
+                }
+            }
+
+            &:last-child{
+                span{
+                    &:after{
+                        background: #fff;
+                        // width: 200%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 主要按鈕
+.btn-primary{
+    @extend %btn;
+    @include btn_setting2(#f66339, #FFF);
+    &:hover, &:focus {
+        background: darken(#f66339, 22);
+    }
+}
+// 次要按鈕
+.btn-secondary{
+    @extend %btn;
+    @include btn_setting2(#539a00, #FFF);
+}
+// 一般按鈕
+.btn-normal{
+    @extend %btn;
+    @include btn_setting2(#666, #FFF);
+}
+// 操作按鈕
+.btn-operating {
+    @extend %btn;
+    @include btn_setting(darken(#539a00, 0), #fff);
+}
+
+.btn-primary, .btn-secondary{
+    i{
+        &:before{ filter: invert(100%); }
+    }
+}
+
+
+footer {
+    background: #fff;
+    box-shadow: 0 -1px 30px 0 rgba(0,0,0,.25);
+}
