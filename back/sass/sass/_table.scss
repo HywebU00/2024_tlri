@@ -365,7 +365,17 @@ table {
 }
 .table_wrapper {
     margin-bottom: 2em;
-    overflow: scroll;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar{
+        width: 5px;
+        height: 8px;
+        background-color: #eee;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: #666;
+    }
+
 
     &.th_left{
         th{
