@@ -52,8 +52,9 @@ header{
 
 // table
 table {
-	th {
-		background: none !important;
+    // thead th{ border-bottom: solid 2px #386546 !important; }
+	th{
+        background: #fff !important; 
 		color: #386546;
 		border: #ebebeb 1px solid !important;
         border-left: none !important;

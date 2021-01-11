@@ -363,9 +363,11 @@ table {
         }
     }
 }
+
 .table_wrapper {
     margin-bottom: 2em;
-    overflow-x: scroll;
+    // overflow-x: scroll;
+    overflow: auto;
 
     &::-webkit-scrollbar{
         width: 5px;
@@ -375,7 +377,6 @@ table {
     &::-webkit-scrollbar-thumb{
         background: #666;
     }
-
 
     &.th_left{
         th{
@@ -399,12 +400,29 @@ table {
         }
     }
 
+    // 橫式標題固定、HTML須配合異動
+    &.sticky_th{
+        // padding-top: 60px;
+        max-height: 500px;
+        // overflow: auto;
+
+        table{
+            border-collapse: collapse;
+            thead th{
+                position: sticky;
+                z-index: 100;
+                top: 0;
+            }
+        }
+    }
+
     @include screen('tablet') {
         width: 100%;
         display: block;
         @include clearfix;
-        overflow-y: hidden;
-        overflow-x: auto;
+        // overflow-y: hidden;
+        // overflow-x: auto;
+        overflow: auto;
         padding-bottom: 1em;
         -webkit-overflow-scrolling: touch;
         -webkit-transform: translate3d(0, 0, 0);
@@ -415,6 +433,16 @@ table {
         }
     }
 }
+
+// table{
+//     position: relative;
+
+//     thead{
+//         position: absolute;
+//         width: 100%;
+//     }
+// }
+
 .scroltable {
     min-width: 600px !important;
 }
