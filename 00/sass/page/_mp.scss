@@ -1,0 +1,433 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+// 農糧署 -----------------------------------
+.sub_title{
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.mp{
+    padding-top: 5em;
+    @extend %flex_set;
+    font-size: 110%;
+
+    .main{
+        @include flex-col(9, 20px, 0px);
+
+        // figure{ margin: 0; }  // 統計圖
+
+        >section{
+            // padding: 1.25em 2em;
+            // margin: 1em 0 2em;
+            // background: #fff;
+            // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            // border-top: 4px solid $primaryColor;
+
+            position: relative;
+            .R_top{
+                position: absolute;
+                right: 2em;
+                top: 26px;
+                border-radius: 1em;
+                @include btn_setting($primaryColor, #FFF);
+            }
+
+            time{
+                font-size: .813em;
+                display: block;
+                text-align: right;
+                padding-top: .75em;
+            }
+
+            section{
+                .R_top{
+                    position: absolute;
+                    right: 0;
+                    top: calc(63px / 2 - 16px);
+
+                    padding: .25em 1em;
+                    margin: 0 1em;
+                }
+            }
+
+            .noData{
+                padding: 1em 2em;
+                text-align: center;
+                span{
+                    border: solid 1px #ddd;
+                    padding: 1em 2em;
+                }
+            }
+        }
+    }
+    .R_side{
+        @include flex-col(3, 20px, 0px);
+
+        >section{
+
+            position: relative;
+            margin-bottom: 4em;
+            button.more{
+                position: absolute;
+                right: 0;
+                top: -17px;
+                border-radius: 1em;
+                @include btn_setting($primaryColor, #FFF);
+            }
+
+            h3.sub_title{
+                position: relative;
+                margin-bottom: 1em;
+                margin-top: 1.5em;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 32px;
+                    height: 4px;
+                    top: -16px;
+                    background: $primaryColor;
+                }
+            }
+        }
+    }
+
+    // 管理者
+    .Manager_only{
+        border-top: 4px solid $primaryColor;
+
+        .form_inline{
+            @extend %flex_set;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+
+            input.complex{
+                flex: 0 0 auto;
+                flex-basis: calc(100% - 116px);
+            }
+            button{
+                flex: 0 0 116px;
+            }
+        }
+    }
+
+    // 我的組織 
+    .User{
+        min-height: 150px;
+        @extend %flex_set;
+
+        .Foto{
+            position: relative;
+            flex: 0 0 200px;
+
+            >div, button{ position: absolute; }
+
+            >div{
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                border: solid 4px #dcdcdc;
+                z-index: 1;
+
+                img{}
+            }
+            button{
+                z-index: 2;
+                right: 0;
+                bottom: 10px;
+            }
+        }
+        .Info{
+            flex: 0 0 auto;
+            flex-basis: calc(100% - 200px);
+
+            ul{
+                @extend %flex_set;
+                li{
+                    flex: 1 1 50%;
+                    padding: .35em 0;
+                }
+            }
+        }
+        +.Other_links{
+            margin-top: 1em;
+            padding: 1em 0;
+            border-top: 1px solid #e6e6e6;
+        }
+    }
+
+    // 新手進度導覽
+    .Rookie{
+        p{}
+        a{
+            box-shadow: 0 1px;
+            // padding-bottom: 1px;
+        }
+        .step{
+            @extend %flex_set;
+            >section{
+                @include flex-col-equal(4, 16px, 0px);
+                background: #e8f7f3;
+                // border: 1px solid #5ec1a1;
+
+                h4{
+                    text-align: center;
+                    color: #434343;
+                    background: #fff;
+                    margin: 0;
+                    padding: 1.5em 0;
+
+                    position: relative;
+                    &:before, &:after{
+                        content: '';
+                        // display: block;
+                        position: absolute;
+                        width: calc(50% - 32px);
+                        height: 1px;
+                        top: 48px;
+                        background: #3ad6b2;
+                    }
+
+                    &:before{ left: 0; }
+                    &:after{ right: 0; }
+
+                    span{
+                        display: block;
+                        margin: auto;
+                        margin-bottom: .5em;
+                        width: 46px;
+                        height: 46px;
+                        // background: rgb(0,167,60);
+                        // background: linear-gradient(90deg, rgba(0,167,60,1) 0%, rgba(118,203,80,1) 100%);
+                        background: #3ad6b2;
+                        color: #fff;
+                        border-radius: 50%;
+                        line-height: 46px;
+                        font-size: 1.5em;
+                    }
+                    +div{
+                        padding: 1em 1.5em;
+                        p{}
+                        ol{
+                            li{}
+                        }
+                    }
+                }
+
+                ul, ol{
+                    padding-left: 1.5em;
+                    li{
+                        line-height: 1.8;
+                        span{
+                            display: inline-block;
+                            // padding: .25em .75em;
+                            padding: 0 .4em;
+                            margin-left: .5em;
+                            line-height: 1.4;
+                            border-radius: 4px;
+                            color: #fff;
+                            background: #6b6b6b;
+                            &.focus{
+                                background: #d20000;
+                                padding: 0 .4em;
+                                line-height: 1.4;
+                                border-radius: 4px;
+                            }
+                        }
+                    }
+                }
+
+                // a{
+                //     box-shadow: 0 1px;
+                //     padding-bottom: 1px;
+                // }
+            }
+        }
+    }
+
+    // 統計圖相關欄位：組織管理
+    .Statistics_2{
+        section{
+            @include flex-col-equal(2, 10px, 2em);
+        }
+    }
+    .Statistics_4{
+        section{
+            @include flex-col-equal(4, 10px, 2em);
+        }
+    }
+
+    // 共同設定
+    .Statistics_2, .Statistics_4{
+        @extend %flex_set;
+        section{
+            position: relative;
+            // background: #eee;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+
+            padding-bottom: 1em;
+            margin-bottom: 1em;
+
+            h4{
+                margin: 0 -1em;
+                padding: 1.25em 7em 1.25em 1em;
+                background: $primaryColor;
+                color: #fff;
+                +div{
+                    figure + p{
+                        text-align: center;
+                        span{
+                            display: inline-block;
+                            padding: .25em .5em;
+                            color: #f80;
+                        }
+                    }
+                }
+            }
+
+            .R_top{
+                @include btn_setting($color-dark, #FFF);
+                &:hover, &:focus {
+                    background: #1c5a01; // Old browsers
+                }
+            }
+
+            .Mode{
+                @extend %flex_set;
+                button{
+                    @include flex-col-equal(2, 10px, 0px);
+                    color: #fff;
+                    line-height: 2.4;
+                    
+                    &:nth-child(1){
+                        background: #29c4a0;
+                    }
+                    &:nth-child(2){
+                        background: #ff7789;
+                    }
+                }
+            }
+        }
+
+        // 狀態
+        .Mode{
+            button{
+                width: 100%;
+                padding: .25em .5em;
+
+                span{
+                    display: inline-block;
+                    margin: 0 4px;
+                    // &:after{
+                    //     content:'';
+                    //     background: #000;
+                    //     color: #fff;
+                    //     padding: .5em;
+                    //     border-radius: 50%;
+                    // }
+                }
+            }
+        }
+    }
+
+    // 統計
+    .highcharts-container {
+        font-size: 1em;
+    }
+
+    // mp、右欄 ----------------------------------
+    .link_list, .download_list{
+        background: #fff;
+        padding: 1em 1.5em;
+        a{
+            display: block;
+            padding: .65em 0;
+            color: #333;
+
+            box-shadow: inset 0px -1px 0px 0px #ddd;
+            &:last-child{ box-shadow: none; }
+
+            time{ font-size: .813em; }
+            p{ margin: 0; }
+
+            &:hover, &:focus{
+                // background: $lightColor;
+                color: darken($lightColor, 2);
+            }
+        }
+    }
+
+    // 最新消息
+    .link_list{}
+    // 下載專區
+    .download_list{}
+
+}
+
+// 農糧署 -----------------------------------
+
+// 範例：
+.demosection {
+    [class^="col"] {
+        border: 2px solid #FFF;
+        background: #DEDEDE;
+    }
+}
+// 首頁輪播
+.mpSlider {
+    width: 100%;
+    padding-bottom: 3em;
+    @include gutter(0);
+    .img-container {
+        @include aspect-ratio(5, 2);
+    }
+}
+// 申請驗證 項目輪播
+.itemSlider {
+    width: 100%;
+    padding-bottom: 3em;
+    @include gutter(0);
+}
+// 廣告輪播
+.adSlider {
+    @include gutter(70px);
+    margin-bottom: 20px;
+    @include screen('mobile') {
+        @include gutter();
+    }
+    .slick-prev {
+        background: url(../vendor/slick/icon_arrow_left_inverse.png) no-repeat center center;
+        background-size: 80%;
+        left: -15px;
+    }
+    .slick-next {
+        background: url(../vendor/slick/icon_arrow_right_inverse.png) no-repeat center center;
+        background-size: 80%;
+        right: -15px;
+    }
+    .img-container {
+        width: 165px;
+        height: 55px;
+        margin: 0px 15px;
+        a {
+            display: block;
+            text-align: center;
+            img {
+                margin: 0 auto;
+            }
+        }
+        &:focus {
+            &:before {
+                content: "";
+                position: absolute;
+                z-index: 9;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                box-shadow: 0 0px 0px 3px $primaryColor inset;
+            }
+        }
+    }
+}

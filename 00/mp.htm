@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>農糧產品產銷履歷資訊系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+    <!-- highlight -->
+    <!-- <link rel="stylesheet" href="vendor/highlight/github-gist.css"> -->
+</head>
+
+<body>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- main Start -->
+        <!-- 主要內容區 -->
+        <div class="content mp">
+            <section class="main">
+                <!-- <h2 class="title">意見信箱</h2> -->
+                <!-- 0、組織切換：只有管理者看 -->
+                <section class="Manager_only">
+                    <div class="form_grp">
+                        <div class="form_content form_inline">
+                            <input name="" type="text" value="" autocomplete="off" class="complex">
+                            <button type="button" class="btn btn-deepgray">切換組織</button>
+                        </div>
+                        <div class="notice_warning">只有管理者看。此input可輸入、查詢、可下拉，請工程師支援</div>
+                    </div>
+                </section>
+                <!-- 1、我的組織 -->
+                <section>
+                    <h3 class="sub_title">我的組織</h3>
+                    <div class="User">
+                        <div class="Foto">
+                            <div class="img-container"><img src="images/01-farmer.jpg" alt="農民" class="cover"></div>
+                            <button type="button" class="btn btn-deepgray">編輯照片</button>
+                        </div>
+                        <div class="Info">
+                            <ul>
+                                <li>組織代碼：100891</li>
+                                <li>Email：mail@mail.com</li>
+                                <li>身份：農業產銷班</li>
+                                <li>手機：0912345678</li>
+                                <li>驗證機構：暐凱國際檢驗科技股份有限公司、中華驗證有限公司</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Other_links">
+                        <button type="button" class="btn btn-primary">組織資料</button>
+                        <button type="button" class="btn btn-primary">組織資料英文版</button>
+                        <button type="button" class="btn btn-primary">列印標籤授權使用</button>
+                        <button type="button" class="btn btn-primary">L4系統使用權限</button>
+                    </div>
+                    <button type="button" class="btn R_top"><i class="i_enter2"></i>進入我的組織</button>
+                </section>
+                <!-- 2、新手進度導覽 -->
+                <section>
+                    <h3 class="sub_title">新手進度導覽</h3>
+                    <div class="Rookie">
+                        <p>可參考首頁右上角「<a href="">新手導引</a>」功能頁，提供新手完整詳細說明</p>
+                        <div class="step">
+                            <section>
+                                <h4><span>1</span>諮詢階段</h4>
+                                <div><p>若您對農糧產銷履歷驗證有任何疑問，請與各縣市<a href="">輔導單位</a>聯繫。</p></div>
+                            </section>
+                            <section>
+                                <h4><span>2</span>申請驗證前</h4>
+                                <div>
+                                    <p>申請驗證前，請先完成各項資料設定</p>
+                                    <ol>
+                                        <li><a href="">作物品種</a><span class="focus">0</span></li>
+                                        <li><a href="">組織成員</a><span>5</span></li>
+                                        <li><a href="">農地資料</a><span>10</span></li>
+                                        <li><a href="">採後處理場所</a><span>50</span></li>
+                                        <li><a href="">我買的肥料</a><span>100</span></li>
+                                        <li><a href="">我買的農藥</a><span>500</span></li>
+                                        <li><a href="">生產紀錄</a><span>1000</span></li>
+                                        <li><a href="">商品規格</a><span>5000</span></li>
+                                    </ol>
+                                </div>
+                            </section>
+                            <section>
+                                <h4><span>3</span>申請驗證</h4>
+                                <div>
+                                    <p>聯繫驗證機構提出申請，提供驗證機構所需文件資料並配合驗證機構進行現場稽核及採樣送檢。</p>
+                                    <button type="button" class="btn btn-secondary">申請驗證</button>
+                                    <button type="button" class="btn btn-secondary" disabled>申請驗證</button>
+                                </div>
+                            </section>
+                            <section>
+                                <h4><span>4</span>通過驗證</h4>
+                                <div>
+                                    <p>通過稽核取得驗證資格，才可以開始<a href="">列印產銷履歷標籤</a>，以產銷履歷名義販售商品。</p>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <button type="button" class="btn R_top"><i class="i_close2"></i>關閉</button>
+                </section>
+                <!-- 3、組織管理 -->
+                <section>
+                    <h3 class="sub_title">組織管理</h3>
+                    <div class="Statistics_2">
+                        <section>
+                            <h4>組織標題項目一</h4>
+                            <div>
+                                <!-- 圓餅圖 -->
+                                <figure class="highcharts-figure">
+                                    <div id="pie1"></div>
+                                </figure>
+                                <p>作物共<span>30</span>項</p>     
+                            </div>
+                            <div class="Mode">
+                                <button type="button" class="btn">申請中<span>5</span></button>
+                                <button type="button" class="btn">三個月到期<span>3</span></button>
+                            </div>
+                            <button type="button" class="btn R_top"><i class="i_edit_a2"></i>編輯</button>
+                        </section>
+                        <section>
+                            <h4>組織標題項目二</h4>
+                            <div>
+                                <!-- 圓餅圖 -->
+                                <figure class="highcharts-figure">
+                                    <div id="pie2"></div>
+                                </figure>
+                                <p>組織成員共<span>100</span>人</p> 
+                            </div>
+                            <!-- <div class="Mode">
+                                <button type="button" class="btn">申請中<span>5</span></button>
+                                <button type="button" class="btn">三個月到期<span>3</span></button>
+                            </div> -->
+                            <button type="button" class="btn R_top"><i class="i_edit_a2"></i>編輯</button>
+                        </section>
+                        <section>
+                            <h4>組織標題項目三</h4>
+                            <div>
+                                <!-- 長條圖1 -->
+                                <figure class="highcharts-figure">
+                                    <div id="line1"></div>
+                                </figure>
+                                <p>驗證總面積共<span>1000.15</span>公頃</p>
+                            </div>
+                            <!-- <div class="Mode">
+                                <button type="button" class="btn">申請中<span>5</span></button>
+                                <button type="button" class="btn">三個月到期<span>3</span></button>
+                            </div> -->
+                            <button type="button" class="btn R_top"><i class="i_edit_a2"></i>編輯</button>
+                        </section>
+                        <section>
+                            <h4>組織標題項目四</h4>
+                            <div>
+                                <!-- 長條圖2 -->
+                                <figure class="highcharts-figure">
+                                    <div id="line2"></div>
+                                </figure>
+                                <p>採後處理場所共<span>0</span>處</p>
+                            </div>
+                            <!-- <div class="Mode">
+                                <button type="button" class="btn">申請中<span>5</span></button>
+                                <button type="button" class="btn">三個月到期<span>3</span></button>
+                            </div> -->
+                            <button type="button" class="btn R_top"><i class="i_edit_a2"></i>編輯</button>
+                        </section>
+                    </div>
+                    <button type="button" class="btn R_top"><i class="i_enter2"></i>進入組織管理</button>
+                    <time>更新統計時間：2020/12/08</time>
+                </section>
+                <!-- 4、資材管理 -->
+                <!-- 5、生產紀錄 -->
+                <section>
+                    <h3 class="sub_title">生產紀錄</h3>
+                    <div class="scroltable-wrapper">
+                        <table class="table_sprite table_hover type1">
+                            <thead>
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>生產批次</th>
+                                    <th>田間紀錄</th>
+                                    <th>採收</th>
+                                    <th>採後處理</th>
+                                    <th>產季結束</th>
+                                    <th>總筆數</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>蘿蔔</th>
+                                    <td><a href="">3</a></td>
+                                    <td><a href="">5</a></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td><a href="">8</a></td>
+                                </tr>
+                                <tr>
+                                    <th>小白菜</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>-</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <th>葉用甘藷</th>
+                                    <td><a href="">3</a></td>
+                                    <td><a href="">5</a></td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td><a href="">8</a></td>
+                                </tr>
+                                <tr>
+                                    <th>嫩莖萵苣(萵苣莖)</th>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                    <td>-</td>
+                                    <td>&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="btn R_top"><i class="i_enter2"></i>進入生產紀錄</button>
+                    <time>更新統計時間：2020/12/08</time>
+                </section>
+                <!-- 6、申請驗證 -->
+                <section>
+                    <h3 class="sub_title">申請驗證</h3>
+                    <!-- 頁籤2 -->
+                    <div class="tabSet2 cards">
+                        <section class="tabs"> 
+                            <div class="tabItem">
+                                <h4><a href="javascript:;"><b>通過驗證<br><span>(暫時中止驗證)</span></b><span>99</span></a></h4>
+                                <h4><a href="javascript:;"><b>三個月內即將到期</b><span>100</span></a></h4>
+                                <h4><a href="javascript:;"><b>申請中</b><span>5</span></a></h4>
+                                <h4><a href="javascript:;"><b>已到期<br><span>(終止驗證、驗證到期)</span></b><span>0</span></a></h4>
+                            </div>
+                            <!-- 內容 -->
+                            <div class="tabContent">
+                                <div class="box">
+                                    <div class="itemSlider">
+                                        <div class="inner_wrap">
+                                            <div>
+                                                <p>產物項目1</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目2</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目3</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>100000</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目4</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目5</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目6</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目7</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目8</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目9</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目10</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="inner_wrap">
+                                            <div>
+                                                <p>產物項目11</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目12</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目13</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>100000</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目14</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目15</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目16</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目17</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目18</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目19</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                            <div>
+                                                <p>產物項目20</p>
+                                                <ul>
+                                                    <li>農民：<span>5</span>人</li>
+                                                    <li>農地：<span>10.9</span>公頃</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="inner_wrap">
+                                        <div>
+                                            <p>產物項目1</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目2</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目3</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>100000</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目4</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目5</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目6</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目7</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目8</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目9</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目10</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="inner_wrap">
+                                        <div>
+                                            <p>產物項目1</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目2</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目3</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>100000</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目4</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                        <div>
+                                            <p>產物項目5</p>
+                                            <ul>
+                                                <li>農民：<span>5</span>人</li>
+                                                <li>農地：<span>10.9</span>公頃</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="box">
+                                    <div class="noData"><span>目前無項目</span></div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <button type="button" class="btn R_top"><i class="i_enter2"></i>進入申請驗證</button>
+                    <time>更新統計時間：2020/12/08</time>
+                </section>
+                <!-- 7、商品管理 -->
+                <!-- 8、列印出貨 -->
+            </section>
+            <section class="R_side">
+                <!-- <h2 class="title">新手導引</h2> -->
+                <!-- 1、新手引導 -->
+                <section>
+                    <!-- <button type="button" class="btn">新手引導</button> -->
+                    <a href="#" class="btn btn_guide"><i class="i_question2"></i>新手引導</a>
+                </section>
+                <!-- 2、最新消息 -->
+                <section>
+                    <h3 class="sub_title">最新消息</h3>
+                    <div class="link_list">
+                        <a href="#">
+                            <time>2020/12/01</time>
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                        <a href="#">
+                            <time>2020/12/01</time>
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                        <a href="#">
+                            <time>2020/12/01</time>
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                        <a href="#">
+                            <time>2020/12/01</time>
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                        <a href="#">
+                            <time>2020/12/01</time>
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                    </div>
+                    <button type="button" class="btn more">更多</button>
+                </section>
+                <!-- 3、下載專區 -->
+                <section>
+                    <h3 class="sub_title">下載專區</h3>
+                    <div class="download_list">
+                        <a href="#">
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                        <a href="#">
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                        <a href="#">
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                        <a href="#">
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                        <a href="#">
+                            <p>農委會「產銷履歷農產品資訊網」已採用加密協定(https)，網址已調整為</p>
+                        </a>
+                    </div>
+                    <button type="button" class="btn more">更多</button>
+                </section>
+            </section>
+        </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <script src="vendor/enquire/enquire.js"></script><!-- query js -->
+    <!-- highlight -->
+    <!-- <script src="vendor/highlight/highlight.pack.js"></script> -->
+    <!-- <script>
+        hljs.initHighlightingOnLoad();
+    </script> -->
+    <!-- highchart plugin -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+
+    <script>
+        var _Color = ['#20A4F3', '#54CEC3', '#ffbc08', '#fe7b62', '#00b44b', '#2869b9', '#d84400', '#009e7a', '#2e3c56', '#754a28'];
+        // 長條圖1
+        Highcharts.chart('line1', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: '2020/06/01~2020/12/31'
+            },
+            colors: _Color,
+            xAxis: {
+                categories: ['小白菜', '小芥菜', '木瓜', '胡蘿蔔', '結球白菜'],
+                labels: {
+                    style: { fontSize:'16px' }
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Total fruit consumption'
+                }
+            },
+            legend: {
+                reversed: true
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+            series: [{
+                name: '貼標出貨量(公斤)',
+                data: [0, 900, 1400, 1000, 750]
+            }, {
+                name: '未貼標出貨量(公斤)',
+                data: [1500, 750, 0, 0, 0]
+            }]
+        });
+        // 長條圖2
+        Highcharts.chart('line2', {
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: '圖表標題(可省略)'
+            },
+            colors: _Color,
+            xAxis: {
+                categories: ['Apples', 'Oranges', 'Pears', 'Grapes', 'Bananas'],
+                labels: {
+                    style: { fontSize:'16px' }
+                }
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Total fruit consumption'
+                }
+            },
+            legend: {
+                reversed: true
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+            series: [{
+                name: 'John',
+                data: [5, 3, 4, 7, 2]
+            }, {
+                name: 'Jane',
+                data: [2, 2, 3, 2, 1]
+            }, {
+                name: 'Joe',
+                data: [3, 4, 4, 2, 5]
+            }]
+        });
+        // pie
+        Highcharts.chart('pie1', {
+          chart: { type: 'variablepie' },
+          title: { text: '圖表標題(可省略)' },
+          colors: _Color,
+          tooltip: {
+            headerFormat: '',
+            pointFormat: '<span>\u25CF</span> <b> {point.name}</b><br/>' +
+              '項目: <b>{point.y}</b>項<br/>'
+          },
+          series: [{
+            minPointSize: 60,
+            innerSize: '60%',
+            zMin: 0,
+            name: 'countries',
+            data: [{
+              name: '通過驗證',
+              y: 20
+            }, {
+              name: '未驗證',
+              y: 15
+            }]
+          }]
+        });
+        Highcharts.chart('pie2', {
+            chart: {
+                plotBackgroundColor: null,
+                plotBorderWidth: null,
+                plotShadow: false,
+                type: 'pie'
+            },
+            title: { text: '圖表標題(可省略)' },
+            colors: _Color,
+            tooltip: {
+                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+            },
+            // colors: _Color,
+            accessibility: {
+                point: {
+                    valueSuffix: '%'
+                }
+            },
+            plotOptions: {
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
+                }
+            },
+            series: [{
+                name: 'Brands',
+                colorByPoint: true,
+                data: [{
+                    name: 'Chrome',
+                    y: 61.41,
+                    sliced: true,
+                    selected: true
+                }, {
+                    name: 'Internet Explorer',
+                    y: 11.84
+                }, {
+                    name: 'Firefox',
+                    y: 10.85
+                }, {
+                    name: 'Edge',
+                    y: 4.67
+                }, {
+                    name: 'Safari',
+                    y: 4.18
+                }, {
+                    name: 'Other',
+                    y: 7.05
+                }]
+            }]
+        });
+    </script>
+
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+    </script>
+    <!-- hyUI -->
+    <!-- <script src="js/hyui.js"></script> -->
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+// 無障礙頁籤（標籤與內容在一起）
+.tabSet {
+    max-width: 100%;
+    margin: 1em auto;
+    overflow: hidden;
+    @extend %clearfix;
+    @include screen('mobile') {
+        width: auto;
+        height: auto !important;
+    }
+    .tabs {
+        position: relative;
+        &>.tabItem {
+            &.active>a {
+                background-color: $primaryColor;
+                color: #FFF;
+            }
+            float: left;
+            margin: 0;
+            padding: 0;
+            font-size:1em;
+            line-height: 1;
+            @include screen('mobile') {
+                float: none;
+                &>a {
+                    width: 100% !important;
+                    border-bottom: 1px solid #888;
+                }
+                &.active>a {
+                    border-color: #bbb;
+                }
+            }
+            &>a {
+                display: block;
+                padding: 16px 0 14px;
+                text-align: center;
+                background-color: #aaa;
+                color: #fff;
+                font-weight: bold;
+                text-decoration: none;
+                @include text-overflow;
+                box-sizing: border-box;
+                &:hover {
+                    background: $primaryColor;
+                }
+            }
+        }
+
+        .tabContent {
+            position: absolute;
+            top: auto;
+            left: 0;
+            right: 0;
+            clear: both;
+            padding: 30px 20px;
+            display: none;
+            @include screen('mobile') {
+                position: static;
+            }
+            ul {
+                @include li-reset;
+            }
+            li {
+                margin: 0 0 1.3em 0;
+                padding: 0;
+                line-height: 1.6;
+                border-bottom: 1px #CCC dashed;
+                @include screen('mobile') {
+                    @include text-overflow();
+                }
+                a {
+                    @include aSetting_nocolor;
+                }
+                time {
+                    display: inline-block;
+                    margin: 0 0 0 1em;
+                    font-size: .813em;
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+
+// 一般頁籤（標籤與內容分開）
+.tabSet2 {
+    .tabs{
+        .tabItem{
+            @extend %flex_set;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            h4{
+                flex: 1 1 auto;
+                min-width: 100px;
+                margin: 0;
+
+                &.active{
+                    // background: $primaryColor;
+                    // a{color: #fff; }
+                }
+
+                a{
+                    display: block;
+                    padding: .75em 1.25em;
+                    text-align: center;
+                    // background-color: #aaa;
+                    color: #424242;
+                    font-weight: bold;
+                    text-decoration: none;
+                    // @include text-overflow;
+                    @include box-sizing;
+                }
+            }
+            @include screen('tablet') {
+                flex-flow: row wrap;
+                h2{}
+            }
+        }
+        .tabContent {
+            .box{
+                padding: 30px 0px;
+                display: none;
+                &.show{ display:block; }
+            }
+        }
+    }
+}
+
+
+//多組 可設定差異
+.example-2 {
+    .tabItem>a:hover {
+        background: $secondaryColor;
+    }
+    .tabItem.active>a {
+        background: $secondaryColor;
+    }
+}
+
+// 申請驗證 產物項目
+.cards{
+    .tabItem{
+        box-shadow: inset 0px -1px 0px 0px #ddd;
+        h4{
+            a{
+                color: #434343;
+                height: 100%;
+                text-align: left !important;
+
+                b{
+                    font-size: 1.125em;
+                    span{
+                        font-size: .813em;
+                        color: #6d6d6d;
+                    }
+                }
+
+                display: flex !important;
+                justify-content: space-between;
+                align-items: center;
+
+                >span{
+                    color: #fff;
+                    display: inline-block;
+                    line-height: 36px;
+                    width: 36px;
+                    height: 36px;
+                    text-align: center;
+                    border-radius: 50%;
+                }
+            }
+            &:nth-child(1){
+                a >span{ background: $secondaryColor; }
+            }
+            &:nth-child(2){
+                a >span{ background: #29c4a0; }
+            }
+            &:nth-child(3){
+                a >span{ background: #ff7789; }
+            }
+            &:nth-child(4){
+                a >span{ background: #b5b5b5; }
+            }
+
+            &.active{
+                box-shadow: inset 0px -6px 0px 0px $secondaryColor;
+            }
+        }
+    }
+    .tabContent{
+        .box{
+            .inner_wrap{
+                @extend %flex_set;
+                div{
+                    @include flex-col-equal(5, 8px, 20px);
+
+                    box-shadow: rgba(0, 0, 0, .15) 0px 0px 0px 1px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                    border-radius: 4px;
+                    overflow: hidden;
+
+                    p{
+                        margin: 0 -10px;
+                        padding: .75em 1.5em;
+                        background: #525252;
+                        color: #fff;
+                    }
+                    ul{
+                        padding-left: 2em;
+                        li{
+                            line-height: 1;
+                            span{
+                                display: inline-block;
+                                padding: .15em .35em;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 顯示content
+.active+.tabContent {
+    display: block;
+}

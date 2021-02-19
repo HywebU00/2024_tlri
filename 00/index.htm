@@ -5,20 +5,21 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>產銷履歷系統前後台</title>
+    <title>農糧產銷履歷系統 後台</title>
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
     <!-- hyUI -->
-    <link rel="stylesheet" href="back1/css/hyui.css">
+    <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
-    <link href="back1/images/favicon.png" rel="icon" type="image/x-icon">
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
     <style>
+        h1{ font-size: 1.75em; padding: .5em 0; }
         .demo_wrap {
             max-width: 1000px;
             margin: 0em auto 1em;
-            padding: 15px 15px 3em;
+            padding: 2em 15px;
             clear: both;
             background: #FFF
         }
@@ -82,15 +83,15 @@
         }
         tbody tr td:nth-child(2) { width: 35% }
         tbody tr td span{ color: deeppink; }
-        tbody tr td b{
-            background: #b7d100;
-            color: #fff;
-            padding: .25em .75em;
-            margin-left: .5em;
-            border-radius: 4px;
-        }
-        tbody tr td b.back{ background: #2da53b; }
         .btn_grp{ text-align: right; }
+
+        .normal a{
+            text-decoration: none;
+            background: #009688;
+            color: #fff;
+            padding: .5em 1.5em;
+            border-radius: 3px;
+        }
 
         @media screen and (max-width:545px) {
            .btn_grp{ text-align: center; } 
@@ -99,13 +100,12 @@
 </head>
 <body>
     <div class="demo_wrap">
-        <h1><img src="back/images/logo-login.png" alt=""></h1>
-        <!-- <div class="btn_grp">
-            <a href="#" class="btn">切版檔案請按此下載</a>
-        </div> -->
+        <h2 class="normal"><a href="module.htm" target="_blank">通用模板 ( •̀ v •́ )</a></h2>
+    </div>
+    <hr>
+    <div class="demo_wrap">
+        <h1>後台</h1>
         <div class="table_wrapper">
-            <!--  -->
-            <h3>系統列表</h3>
             <table>
                 <thead>
                     <tr>
@@ -117,33 +117,28 @@
                 <tbody>
                     <tr>
                         <td></td>
-                        <td>農糧產銷履歷系統<b>前台</b></td>
-                        <td>規劃中</td>
+                        <td>MP-首頁-履歷負責人</td>
+                        <td><a href="mp.htm" target="_blank"></a></td>
                     </tr>
+                    <!-- <tr>
+                        <td></td>
+                        <td>表單統整</td>
+                        <td><a href="form_spec.htm" target="_blank"></a></td>
+                    </tr> -->
                     <tr>
                         <td></td>
-                        <td>農糧產銷履歷系統<b class="back">後台</b></td>
-                        <td><a href="00/index.htm" target="_blank"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>產銷履歷環境補助申請及審查系統</td>
-                        <td><a href="back/index.htm" target="_blank"></a></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>產銷履歷驗證費補助申請及審查系統</td>
-                        <td><a href="back/index.htm" target="_blank"></a></td>
+                        <td>form</td>
+                        <td><a href="form.htm" target="_blank"></a></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
     <!-- <a href="javascript:;" class="scrollToTop" >回頁首</a> -->
-    <script src="back/js/jquery-3.3.1.min.js"></script>
-    <script src="back/vendor/jquery.easing.min.js"></script>
-    <script src="back/js/hyui.js"></script>
-    <script src="back/js/customize.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="vendor/jquery.easing.min.js"></script>
+    <script src="js/hyui.js"></script>
+    <script src="js/customize.js"></script>
     <script>
     $(function() {
         $('tbody').find('a').each(function(index, el) {
