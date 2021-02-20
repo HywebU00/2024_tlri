@@ -180,11 +180,11 @@ $(function() {
 
     // 開關
     $('.switch').click(function(event) {
-        $(this).next('.info_box').slideToggle(300);
+        $(this).next('.info_box').slideToggle(100);
     });
 
     $('.modal a.switch').click(function(event) {
-        $(this).parents('tr').next('tr.sub_info').slideToggle(300);
+        $(this).parents('tr').next('tr.sub_info').fadeToggle(100);
     });
 
 
