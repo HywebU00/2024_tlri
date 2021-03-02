@@ -19,12 +19,56 @@ table {
     // }
     td {
         padding: .5em;
-        text-align: left;
+        // text-align: left;
+
+        b{
+            margin-left: 4px;
+            margin-right: 4px;
+            &.acting,
+            &.stop{
+                &:before{
+                    content: '';
+                    display: inline-block;
+                    margin-right: 2px;
+                    width: 18px;
+                    height: 18px;
+                    background-size: contain;
+                    vertical-align: middle;
+                }
+            }
+            &.warn{ color: #b50000; }
+
+            &.acting{
+                color: #418000;
+                // padding-left: 1.5em;
+                &:before{
+                    background: url(../images/basic/icon_success.svg) 50% 50% no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                }
+            }
+            &.stop{
+                color: #b50000;
+                // padding-left: 1.5em;
+                &:before{
+                    background: url(../images/basic/icon_warning.svg) 50% 50% no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                }
+            }
+
+        }
     }
     td{
         border: #ddd 1px solid;
         word-break: break-all;
-        a { word-break: break-all; }
+
+        input, select, textarea{ width: auto; }
+
+        a {
+            word-break: break-all;
+            box-shadow: 0 1px;
+        }
     }
     th {
         background-color: #F3F3F3;
@@ -118,6 +162,74 @@ table {
                     padding-bottom: 1px;
                 }
             }
+        }
+    }
+}
+// 原本寫在 .modal 中的設定
+.table_operating{
+    a{
+        // box-shadow: 0 1px;
+        color: #c52a3e;
+        padding: 0 .2em;
+    }
+
+    b{
+        color: darken($primaryColor, 5);
+        &.this{ color: darken($color-orange, 5); }
+    }
+
+    // 作物自訂用量參考，3種狀況
+    .situation{
+        background: #eee;
+        padding: 1.25em 1em;
+        b{ padding: 0 .25em; }
+
+        ol, ul{
+            margin-bottom: 0;
+        }
+    }
+
+    table{
+        td{
+            a.switch{}
+            a{
+                // 克服折行問題
+                min-width: 60px;
+                display: inline-block;
+            }
+        }
+        tr.sub_info{
+
+            display: none; //預設隱藏
+            background: #6f6f6f;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            color: #fff;
+            table{
+                tr{
+                    &:last-child td{ border-bottom: 0; } 
+                }
+                th{
+                    background: none;
+                    color: #fff;
+                    border-top: 0;
+                }
+                td{
+                    border: #9a9a9a 1px solid;
+                }
+                th, td{
+                    border-left: 0;
+                    border-right: 0;
+                }
+            }
+        }
+
+        th{ min-width: 45px; }
+        th, td{
+            text-align: center !important;
+        }
+
+        table{
+            td{}
         }
     }
 }
@@ -242,6 +354,8 @@ table {
     -webkit-overflow-scrolling: touch;
     -webkit-transform: translate3d(0, 0, 0);
     overflow-y: hidden;
+
+    padding: 0 8px;
 }
 .scroltable-container { overflow: auto; }
 .scroltable-nav {

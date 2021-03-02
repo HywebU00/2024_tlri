@@ -14,6 +14,7 @@
     box-shadow:1px 1px 15px rgba(0, 0, 0, .5);
     animation: scaleUp .5s ease-out;
     overflow-y: scroll;
+    font-size: 112.5%;
     h2 {
         // border-bottom: 1px solid $primaryColor;
         color: #333;
@@ -35,161 +36,71 @@
         }
     }
 
-    a{
-        // box-shadow: 0 1px;
-        color: #c52a3e;
-        padding: 0 .2em;
-    }
+    // a{
+    //     // box-shadow: 0 1px;
+    //     color: #c52a3e;
+    //     padding: 0 .2em;
+    // }
 
-    b{
-        color: darken($primaryColor, 5);
-        &.this{ color: darken($color-orange, 5); }
-    }
+    // b{
+    //     color: darken($primaryColor, 5);
+    //     &.this{ color: darken($color-orange, 5); }
+    // }
 
-    .function{
-        @extend %flex_set;
-        flex-flow: row nowrap;
-        align-items: center;
+    // // 作物自訂用量參考，3種狀況
+    // .situation{
+    //     background: #eee;
+    //     padding: 1.25em 1em;
+    //     b{ padding: 0 .25em; }
 
-        >input, .status{ flex: 1 1 50%; }
-        >input{}
+    //     ol, ul{
+    //         margin-bottom: 0;
+    //     }
+    // }
 
-        // 狀態
-        .status{
-            @extend %flex_set;
-            flex-flow: row nowrap;
-            align-items: center;
-            justify-content: flex-end;
+    // table{
+    //     td{
+    //         a.switch{}
+    //         a{
+    //             // 克服折行問題
+    //             min-width: 60px;
+    //             display: inline-block;
+    //         }
+    //     }
+    //     tr.sub_info{
 
-            p{
-                margin: 0;
-                padding: 0 .5em;
-                span{
-                    display: inline-block;
-                    padding: 0 .25em;
-                    color: $lightColor;
-                    font-size: bold;
-                }
-            }
-            button{
-                max-width: 120px;
-            }
-        }
+    //         display: none; //預設隱藏
+    //         background: #6f6f6f;
+    //         box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    //         color: #fff;
+    //         table{
+    //             tr{
+    //                 &:last-child td{ border-bottom: 0; } 
+    //             }
+    //             th{
+    //                 background: none;
+    //                 color: #fff;
+    //                 border-top: 0;
+    //             }
+    //             td{
+    //                 border: #9a9a9a 1px solid;
+    //             }
+    //             th, td{
+    //                 border-left: 0;
+    //                 border-right: 0;
+    //             }
+    //         }
+    //     }
 
-        @include screen('tablet'){
-            flex-flow: row wrap;
-            input{ flex:1 1 100%; }
-        }
+    //     th{ min-width: 45px; }
+    //     th, td{
+    //         text-align: center !important;
+    //     }
 
-        // padding-left
-
-        // 搜尋 + 其他組合
-        &.type2{
-            @extend %flex_set;
-            flex-flow: row wrap;
-            justify-content: flex-start;
-
-            div{
-                // input + select + date
-                &:first-child{
-
-                    @extend %flex_set;
-                    flex-flow: row nowrap;
-                    justify-content: flex-start;
-                    align-items: center;
-                    // align-items: flex-start;
-
-                    label{ font-weight: 500; }
-                    input, select, textarea, .input-i {
-                        width: auto;
-                    }
-                    .form_grp{
-                        flex: 1 1 auto;
-                        width: auto;
-                        padding: 0 0;
-                        border-bottom: 0;
-
-                        .form_title{
-                            max-width: 100%;
-                            flex: 0 0 auto;
-                            padding-right: 0;
-                        }
-
-                        .form_content{
-                            max-width: 100%;
-                            flex-basis: auto;
-                            padding-left: 0;
-                        }
-                    }
-
-                    @include screen('tablet'){
-                        flex-flow: row wrap;
-                    }
-
-                }
-            }
-
-            // 狀態
-            .status{ flex: 1 1 auto; }
-        }
-
-
-    }
-
-    // 作物自訂用量參考，3種狀況
-    .situation{
-        background: #eee;
-        padding: 1.25em 1em;
-        b{ padding: 0 .25em; }
-
-        ol, ul{
-            margin-bottom: 0;
-        }
-    }
-
-    table{
-        td{
-            a.switch{}
-            a{
-                // 克服折行問題
-                min-width: 60px;
-                display: inline-block;
-            }
-        }
-        tr.sub_info{
-
-            display: none; //預設隱藏
-            background: #6f6f6f;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-            color: #fff;
-            table{
-                tr{
-                    &:last-child td{ border-bottom: 0; } 
-                }
-                th{
-                    background: none;
-                    color: #fff;
-                    border-top: 0;
-                }
-                td{
-                    border: #9a9a9a 1px solid;
-                }
-                th, td{
-                    border-left: 0;
-                    border-right: 0;
-                }
-            }
-        }
-
-        th{ min-width: 45px; }
-        th, td{
-            text-align: center !important;
-        }
-
-        table{
-            td{}
-        }
-    }
+    //     table{
+    //         td{}
+    //     }
+    // }
 
     .close {
         position: fixed;

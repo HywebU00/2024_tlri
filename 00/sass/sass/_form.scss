@@ -505,6 +505,7 @@ select::-ms-expand {
             }
             label{
                 @include gutter(.6em);
+                padding-bottom: 0;
             }
             @include screen('mobile'){
                 @include gutter();
@@ -1604,6 +1605,221 @@ select::-ms-expand {
     }
 }
 
+// card 卡片式 裡面的 .form
+.card{
+    .form{
+        .form_content {
+            margin-bottom: 5px;
+
+            // 行內元素
+            &.form_inline {
+                input[type="text"],
+                input[type="password"],
+                select,
+                textarea,
+                button,
+                .btn,
+                input[type="submit"],
+                input[type="reset"],
+                input[type="button"],
+                input[type="search"],
+                .input-i {
+                    width: 100% !important;
+                    // flex: 1 1 auto !important;
+                }
+
+                @include screen('tablet'){
+                    input[type="text"],
+                    input[type="password"],
+                    select,
+                    textarea,
+                    button,
+                    .btn,
+                    input[type="submit"],
+                    input[type="reset"],
+                    input[type="button"],
+                    input[type="search"],
+                    .input-i {
+                        flex: 1 1 auto !important;
+                    }
+
+                    input[type="text"],
+                    input[type="password"],
+                    select,
+                    textarea,
+                    button,
+                    input[type="submit"],
+                    input[type="reset"],
+                    input[type="button"],
+                    input[type="search"]{
+                        margin-bottom: 2px !important;
+                    }
+                } 
+            }
+
+            //選單格線系統
+            &.form_col-12,
+            &.form_col-6-6,
+            &.form_col-3-9,
+            &.form_col-9-3,
+            &.form_col-4-8,
+            &.form_col-8-4{
+                flex-basis: 100%;
+                max-width: 100%;
+                // @include gutter(0);
+
+                >.form_grp {
+                    border-bottom: 0;
+                }
+                label{
+                    // @include gutter(.6em);
+                }
+                @include screen('mobile'){
+                    // @include gutter();
+                }
+            }
+
+            &.form_col-12 {
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    flex-basis: 100%;
+                    width: 100%;
+
+                    @include screen('xs_mobile') {
+                        flex-basis: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.form_col-6-6 {
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    flex-basis: 50%;
+                    width: 50%;
+
+                    @include screen('xs_mobile') {
+                        flex-basis: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+
+            &.form_col-3-9 {
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    flex-basis: 25%;
+                    width: 25%;
+
+                    @include screen('xs_mobile') {
+                        flex-basis: 100%;
+                        width: 100%;
+                    }
+                }
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    &:nth-child(2) {
+                        flex-basis: 75%;
+                        width: 75%;
+
+                        @include screen('xs_mobile') {
+                            flex-basis: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &.form_col-9-3 {
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    flex-basis: 75%;
+                    width: 75%;
+
+                    @include screen('xs_mobile') {
+                        flex-basis: 100%;
+                        width: 100%;
+                    }
+                }
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    &:nth-child(2) {
+                        flex-basis: 25%;
+                        width: 25%;
+
+                        @include screen('xs_mobile') {
+                            flex-basis: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            &.form_col-4-8 {
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    flex-basis: calc(100% / 3);
+
+                    @include screen('xs_mobile') {
+                        flex-basis: 50%;
+                    }
+                }
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    &:last-child {
+                        flex-basis: calc(100% / 3 * 2);
+
+                        @include screen('xs_mobile') {
+                            flex-basis: 100%;
+                        }
+                    }
+                }
+            }
+
+            &.form_col-8-4 {
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    flex-basis: calc(100% / 3 * 2);
+
+                    @include screen('xs_mobile') {
+                        flex-basis: 50%;
+                    }
+                }
+
+                >.form_grp,
+                >input[type="text"],
+                >select {
+                    &:last-child {
+                        flex-basis: calc(100% / 3 );
+
+                        @include screen('xs_mobile') {
+                            flex-basis: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 // form 全域行內設定
@@ -2080,7 +2296,7 @@ abbr[title] {
     }
 
     +span{
-        margin-left: 1em;
+        margin-left: .25em;
 
         // 清掉
         padding: 0 !important;

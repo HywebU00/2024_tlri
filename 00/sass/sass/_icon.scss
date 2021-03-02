@@ -13,6 +13,8 @@
         background-size: contain;
         margin-top: -0.1em;
         margin-bottom: .1em;
+        margin-left: 4px;
+        margin-right: 4px;
     }
 }
 
@@ -27,6 +29,7 @@
 .i_arrow_right { @include hyui_icon('icon_arrow_right'); }
 .i_arrow_up { @include hyui_icon('icon_arrow_up'); }
 .i_arrow_down { @include hyui_icon('icon_arrow_down'); }
+.i_arrow_down_circle { @include hyui_icon('icon_arrow_down_circle'); }
 // 白色
 .i_add2 { @include hyui_icon('icon_add2'); }
 .i_apple2 { @include hyui_icon('icon_apple2'); }
@@ -36,15 +39,24 @@
 .i_arrow_down2 { @include hyui_icon('icon_arrow_down2'); }
 
 // B ----------------------------------------
+.i_blank { @include hyui_icon('icon_blank'); }
 .i_bookmark { @include hyui_icon('icon_bookmark'); }
+
 // 白色
+.i_blank2 { @include hyui_icon('icon_blank2'); }
 .i_bookmark2 { @include hyui_icon('icon_bookmark2'); }
+
+// 紅色
+.i_blank_R { @include hyui_icon('icon_blank_R'); }
 
 // C ----------------------------------------
 .i_chat { @include hyui_icon('icon_chat'); }
 .i_check { @include hyui_icon('icon_check'); }
 .i_clock { @include hyui_icon('icon_clock'); }
-.i_close { @include hyui_icon('icon_close'); }
+.i_close {
+    @include hyui_icon('icon_close');
+    &:before { background-size: 14px 14px; }
+}
 .i_copy { @include hyui_icon('icon_copy'); }
 .i_calendar { @include hyui_icon('icon_calendar'); }
 .i_calendar_color { @include hyui_icon('icon_calendar_color'); }
@@ -52,7 +64,10 @@
 .i_chat2 { @include hyui_icon('icon_chat2'); }
 .i_check2 { @include hyui_icon('icon_check2'); }
 .i_clock2 { @include hyui_icon('icon_clock2'); }
-.i_close2 { @include hyui_icon('icon_close2'); }
+.i_close2 {
+    @include hyui_icon('icon_close2');
+    &:before { background-size: 14px 14px; }
+}
 .i_copy2 { @include hyui_icon('icon_copy2'); }
 .i_calendar2 { @include hyui_icon('icon_calendar2'); }
 .i_calendar_color2 { @include hyui_icon('icon_calendar_color2'); }

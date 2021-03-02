@@ -4,7 +4,9 @@
 html {
   scroll-behavior: smooth;
 }
-body {}
+body {
+    overflow-x: hidden;
+}
 code, pre {
     font-size: 14px;
     line-height: 1.45em;
@@ -39,7 +41,7 @@ code, pre {
 .content {
     padding-top: 4em;
     margin-left: 14em;
-    margin-right: 1em;
+    // margin-right: 1em;
     position: relative;
     transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
     // max-width: 90em;
@@ -47,11 +49,11 @@ code, pre {
         margin-left: 5em;
     }
     @media screen and (max-width:1440px) {
-        margin-left: 14em;
+        margin-left: 13em;
     }
     @include screen('tablet') {
-        margin: 4em 1em 1em;
-        padding-top: 1em;
+        margin: 4em 0 1em;
+        padding-top: 0;
         &.full {
             margin-left: 1em;
         }
@@ -70,7 +72,9 @@ code, pre {
                 li{
                     &.now{
                         &:after{ display: none; }  // 自己的 after 隱藏
-                        a{ background: $primaryColor; }
+                        a{
+                            background: darken($primaryColor, 5);
+                        }
                         +li{ &:after{ display: none; } } // 自己後面的的 after 隱藏
                     }
 
@@ -79,6 +83,7 @@ code, pre {
                         color: #fff;
                         text-align: center;
                         padding: .75em 1.25em;
+                        font-size: 110%;
                     }
 
                     position: relative;
@@ -96,6 +101,98 @@ code, pre {
                     &:first-child{
                         &:after{ display: none; }
                     }
+                }
+
+                +.submenu_info{
+                    padding: .75em 2.25em;
+                    background: #ddd;
+                    color: #222;
+                    margin: 0 -1em;
+
+                    +.th3_menu{
+                        // margin: 0 0 1em;
+                    }
+                }
+            }
+
+            // 第三層選單
+            &.th3_menu{
+                @include li-reset;
+                @extend %flex_set;
+                justify-content: flex-start;
+                // margin: 1em 0;
+                // padding: 0 1em;
+
+                // position: relative;
+                // &:after{
+                //     content: '';
+                //     width: 100%;
+                //     height: 2em;
+                //     background: pink;
+                // }
+
+                li{
+                    a{
+                        // background: darken($primaryColor, 5);
+                        background: #fff;
+                        color: #333;
+                        display: block;
+                        padding: 1em 1.25em;
+                        font-size: 110%;
+                        font-weight: 500;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+                        position: relative;
+                    }
+
+                    &:first-child{
+                        a{
+                            &:before{
+                                content: '';
+                                width: 100%;
+                                height: 1.75em;
+                                background: #ddd;
+                                position: absolute;
+                                right: 100%;
+                                top: 0;
+                            }
+                        }
+                    }
+                    &:last-child{
+                        a{
+                            &:after{
+                                content: '';
+                                width: 700%;
+                                height: 1.75em;
+                                background: #ddd;
+                                position: absolute;
+                                left: 100%;
+                                top: 0;
+                            }
+                        }
+                    }
+
+
+                    &.now{
+                        a{
+                            color: #fff;
+                            background: darken($primaryColor, 5);
+
+                            position: relative;
+                            &:after{
+                                content: '';
+                                position: absolute;
+                                bottom: 0;
+                                right: 0;
+                                display: block;
+                                width: 100%;
+                                height: 3px;
+                                background: #ff9800;
+
+                            }
+                        }
+                    }
+
                 }
             }
         }
@@ -115,6 +212,230 @@ code, pre {
             background: #fff;
             box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
             border-top: 4px solid $primaryColor;
+
+            // p{
+            //     margin: .25em .3em .75em;
+            //     background: #f7f7f7;
+            //     padding: .5em 1.25em;
+            // }
+
+            // 說明
+            .explan{
+                margin: .25em 0 .75em;
+                background: #f7f7f7;
+                padding: .5em 1.25em;
+            }
+
+            // 系統使用授權
+            ol.li_card{
+                list-style-position: inside;
+                margin: 0;
+                padding: 0;
+
+                li{
+                    box-shadow: 0px 3px 20px -8px rgba(0, 0, 0, .3);
+                    transition: .3s ease-out;
+                    border-radius: .25em;
+                    padding: .75em 1em .5em;
+                    margin: .5em 0;
+                    &:hover {
+                        box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, .5);
+                    }
+
+                    @extend %clearfix;
+
+                    section{
+                        @extend %flex_set;
+                        width: calc(100% - 2em);
+                        // background: #e2e2dd;
+                        float: right;
+                        margin-top: -1.7em;
+                        align-items: center;
+
+
+                        .info{
+                            @include flex-col(10, 4px, 0px);
+
+                            @extend %flex_set;
+                            justify-content: flex-start;
+                            align-items: center;
+
+                            h4.title{
+                                margin: 5px 0;
+                            }
+                            button{ margin: 0 4px; }
+                            p{
+                                margin: 0;
+                                min-width: 100%;
+                                span{
+                                    display: inline-block;
+                                    padding: .2em 1em .2em 0;
+                                }
+                            }
+                        }
+                        .form_content{
+                            @include flex-col(2, 4px, 0px);
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+
+            // 新增處理作業內的順序
+            .order{
+                section{
+                    margin: 1em 0;
+                    @extend %flex_set;
+                    .num{
+                        @include flex-col(1, 4px, 0px);
+                        flex: 0 0 80px;
+                        max-width: 80px;
+                        // line-height: 3em;
+                        text-align: center;
+                        font-size: 1.5em;
+                        padding-top: 10px;
+                        color: #fff;
+
+                        &:after{
+                            content: '';
+                            background: #9a9a9a;
+                            display: block;
+                            width: 56px;
+                            height: 56px;
+                            border-radius: 50%;
+                            text-align: center;
+                            margin: -40px auto 0;
+                        }
+                    }
+                    .info{
+                        // @include flex-col(11, 4px, 0px);
+                        flex: 1 1 auto;
+                        max-width: calc(100% - 80px);
+
+                        h4{
+                            margin: .5em 0;
+                            font-size: 1.25em;
+                        }
+
+                        .flex-form{
+                            margin: 0;
+
+                            &.form_grid{
+                                border-top: 0;
+
+                                .form_grp{
+                                    margin: 0;
+                                    .form_title { @include gutter(0); }
+                                    .form_content{
+                                        &.form_mix_operation{
+                                            flex-basis: 100%;
+                                            max-width: 100%;
+                                            @include gutter(0);
+
+                                            .scroltable-wrapper{ width: 100%; }
+                                        }
+                                    }
+                                    
+                                }
+                            }
+                        }
+                        
+
+                    }
+                }
+            }
+
+            // 有框線的區塊
+            .stage_wrap{
+                border: 1px solid #ddd;
+                padding: 1em .5em;
+                border-radius: 4px;
+
+                // .remarks{
+                //     padding: 0 8px;
+                //     font-size: 112.5%;
+                //     margin: .35em 0;
+                //     span{
+                //         padding: 0 .25em;
+                //         margin-right: .75em;
+                //     }
+                // }
+
+                .form_grid{
+                    border-top: 0;
+                    .form_grp{
+                        &:last-child{
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            // 已選取N筆資料
+            .remarks{
+                padding: 0 8px;
+                font-size: 112.5%;
+                margin: .35em 0;
+                span{
+                    padding: 0 .25em;
+                    margin: 0 .25em;
+                }
+            }
+            // 
+            .sub_title{
+                color: darken($primaryColor, 10);
+                margin: 1.25em 0 .65em;
+            }
+
+            // 
+            .locked{
+                text-align: center;
+                color: #fff;
+                font-size: 112.5%;
+                padding: .65em 1em;
+                background: $lightColor;
+                border-radius: 40px;
+                span{
+                    &:before, &:after{
+                        content: '';
+                        margin-bottom: 5px;
+                        width: 20px;
+                        height: 1px;
+                        background: rgba(255,255,255,.5);
+                        display: inline-block;
+                    }
+
+                    &:before{ margin-right: 10px; }
+                    &:after{ margin-left: 10px; }
+                }
+            }
+
+            // 步驟結果
+            .result_info{
+                .status{
+                    text-align: center;
+                    font-size: 112.5%;
+                    span{
+                        border: solid 1px #ddd;
+                        padding: 1em 2em;
+                        display: inline-block;
+                    }
+                    &.success{}
+                }
+                ol{
+                    li{
+                        padding: .5em 0;
+                        h5{
+                            font-size: 125%;
+                            margin: .5em 0;
+                        }
+                        p{
+                            margin: .25em 0;
+                            a{}
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -231,11 +552,11 @@ code, pre {
         }
     }
 }
-
 .main {
   position: relative;
-  margin: 0 auto;
-  margin-left: 1em;
+  margin: 0 1em;
+  padding-bottom: 3em;  // 避開下方常駐按鈕
+  // margin-left: 1em;
   // padding:  1em 0 0 0;
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
 
@@ -245,6 +566,76 @@ code, pre {
 }
 
 // module setting -----------------------------------------
+// 步驟 1 
+// .steps{
+//     padding: 1em 0;
+//     ul{
+//         @include li-reset;
+//         display: flex;
+//         flex-flow: row nowrap;
+//         overflow: hidden;   // 遮蔽step凸出來的線
+//         li{
+//             flex: 1 1 0;
+//             flex-basis: calc(100% / 3);
+//             text-align: center;
+//             p{
+//                 color: $primaryColor;
+//                 margin-top: .5em;
+//                 b{
+//                     color: #555;
+//                     font-size: small;
+//                 }
+//             }
+//             span{
+//                 border-radius: 50%;
+//                 display: block;
+//                 margin: 0 auto;
+//                 background: #f3f3f3;
+//                 box-shadow: inset 0px 0px 0px 3px #ddd;
+//                 width: 56px;
+//                 height: 56px;
+//                 line-height: 56px;
+//                 // font-size: 0;
+
+//                 position: relative;
+
+//                 &:after{
+//                     content: "";
+//                     display: block;
+//                     width: 700%;    
+//                     height: .1em;
+//                     background: #ddd;
+//                     position: absolute;
+//                     left: 56px;
+//                     top: 50%;
+//                 }
+//             }
+//             &.Pass span{
+//                 // background: url(../images/icon/icon_check_white.svg) 50% 50% no-repeat, $primaryColor;
+//                 background: url(../images/icon/icon_check_color.svg) 50% 50% no-repeat, #f3f3f3;
+//                 background-size: 26px 26px;
+//                 box-shadow: inset 0px 0px 0px 3px $primaryColor;
+//                 &:after{
+//                     background: lighten($primaryColor,20);
+//                 }
+//             }
+//             &.Now span{
+//                 // background: url(../images/icon/icon_pen.svg) 50% 50% no-repeat, #f3f3f3;
+//                 background: url(../images/icon/icon_pen.svg) 50% 50% no-repeat, $primaryColor;
+//                 background-size: 36px 36px;
+//                 box-shadow: inset 0px 0px 0px 3px $primaryColor;
+//             }
+
+//             &:last-child{
+//                 span{
+//                     &:after{ background: #fff; width: 200%; }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+// 步驟2
 // 步驟
 .steps{
     padding: 1em 0;
@@ -258,8 +649,9 @@ code, pre {
             flex-basis: calc(100% / 3);
             text-align: center;
             p{
-                color: $primaryColor;
+                color: #666;
                 margin-top: .5em;
+                font-size: 1.125em;
                 b{
                     color: #555;
                     font-size: small;
@@ -274,7 +666,8 @@ code, pre {
                 width: 56px;
                 height: 56px;
                 line-height: 56px;
-                // font-size: 0;
+                font-size: 1.5em;
+                color: #666;
 
                 position: relative;
 
@@ -291,18 +684,23 @@ code, pre {
             }
             &.Pass span{
                 // background: url(../images/icon/icon_check_white.svg) 50% 50% no-repeat, $primaryColor;
-                background: url(../images/icon/icon_check_color.svg) 50% 50% no-repeat, #f3f3f3;
-                background-size: 26px 26px;
+                // background-size: 26px 26px;
                 box-shadow: inset 0px 0px 0px 3px $primaryColor;
+                color: darken($primaryColor, 10);
                 &:after{
                     background: lighten($primaryColor,20);
                 }
             }
             &.Now span{
                 // background: url(../images/icon/icon_pen.svg) 50% 50% no-repeat, #f3f3f3;
-                background: url(../images/icon/icon_pen.svg) 50% 50% no-repeat, $primaryColor;
-                background-size: 36px 36px;
+                // background-size: 36px 36px;
+                background: $primaryColor;
+                color: #fff;
                 box-shadow: inset 0px 0px 0px 3px $primaryColor;
+                +p{
+                    color: darken($primaryColor, 5);
+                    font-weight: bold;
+                }
             }
 
             &:last-child{
@@ -330,6 +728,17 @@ code, pre {
 
     @include screen('tablet') {}
     @include screen('mobile') {}
+}
+
+// 無數據
+.noData{
+    padding: 1em 2em;
+    text-align: center;
+    span{
+        border: solid 1px #ddd;
+        padding: 1em 2em;
+        display: inline-block;
+    }
 }
 
 
@@ -686,28 +1095,29 @@ table {
         flex-shrink: 1;
         flex-basis: calc(25% - 1em);
         max-width: calc(25% - 1em);
-        margin: 0 .5em 1em;
+        // margin: 0 .5em 1em;
+        margin: 1em .5em;
         background: #FFF;
         box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, .3);
         border-radius: .25em;
-        min-height: 200px;
-        padding-bottom: 4em;
+        // min-height: 200px;
+        // padding-bottom: 4em;
         position: relative;
         display: flex;
         flex-flow: column wrap;
         transition: .3s ease-out;
         @media screen and (min-width: 1600px) {
-            flex: 0 1 calc(20% - 1em);
-            max-width: calc(20% - 1em);
+            flex: 0 1 calc(100%/4 - 1em);
+            max-width: calc(100%/4 - 1em);
         }
         @include screen('notebook') {
-            flex: 0 1 calc(33.33% - 1em);
-            max-width: calc(33.33% - 1em);
+            flex: 0 1 calc(100%/2 - 1em);
+            max-width: calc(100%/2 - 1em);
         }
-        @include screen('mobile') {
-            flex: 0 1 calc(50% - 1em);
-            max-width: calc(50% - 1em);
-        }
+        // @include screen('mobile') {
+        //     flex: 0 1 calc(100%/2 - 1em);
+        //     max-width: calc(100%/2 - 1em);
+        // }
         @include screen('xs_mobile') {
             flex: 0 1 calc(100% - 1em);
             max-width: calc(100% - 1em);
@@ -843,28 +1253,93 @@ table {
         }
         .card_info {
             padding: .5em 1em;
-            font-size: .938em;
-            color: #666;
+            // font-size: .938em;
+            color: #333;
+            max-width: 100%;
+
             .card_title {
-                margin: .25em 0 1em;
+                padding: .65em 1em .65em;
+                margin: -.5em -.8em .75em;
                 font-size: 1.25rem;
                 font-weight: bold;
-                color: #333;
+                color: #fff;
+                background: #31a788;
+                border-top-left-radius: .25em;
+                border-top-right-radius: .25em;
             }
             ul {
                 @include li-reset;
-                font-size: .875rem;
+                padding: .5em 0;
+                // font-size: .875rem;
                 li {
                     border-bottom: 1px solid #DEDEDE;
                     padding: .25em .5em;
                     &:last-child {
                         margin-bottom: 0;
+                        border-bottom: 0;
                     }
                     span {
-                        color: $primaryColor;
+                        // color: $primaryColor;
+                        color: #333;
                     }
                 }
             }
+
+            // form
+            .form{
+                .form_grp{
+                    margin: .5em 0;
+                    input, textarea, select, button{ margin: 0 1px; }
+                    label{
+                        // color: #222;
+                        // font-size: 112.5%;
+                        font-weight: bold;
+                        margin-bottom: 4px;
+                    }
+
+                    .form_content{
+                        &.form_inline{
+                            flex-wrap: inherit;
+                            align-items: inherit;
+                        }
+                    }
+                }
+
+                @include screen('tablet'){
+                    .form_grp{
+                        .form_content{
+                            &.form_inline{
+                                flex-wrap: wrap;
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 商品品種
+            .sub-title{
+                margin: 0;
+                margin-left: .5em;
+                padding-left: 2.5em;
+                font-size: 1.125em;
+                color: #af3e11;
+
+                &:before{
+                    content: '品種';
+                    font-size: .813em;
+                    color: #222;
+                    background: #eee;
+                    display: inline-block;
+                    padding: .25em .5em;
+                    margin-left: -3.5em;
+                    margin-right: .5em;
+                }
+
+                +ul{
+                    li{}
+                }
+            }
+
         }
         .btn-grp {
             display: block;
@@ -878,6 +1353,25 @@ table {
             .btn {
                 width: 100%;
                 margin: 0;
+            }
+        }
+
+        // 審核狀態
+        .review{
+            position: absolute;
+            right: 1em;
+            top: .5em;
+            background: #4e4e4e;
+            color: #fff;
+            padding: .25em .5em;
+            font-weight: bold;
+
+            &.now{
+                background: #ff9800;
+            }
+            &.pass{
+                background: #fff;
+                color: #31a788;
             }
         }
     }

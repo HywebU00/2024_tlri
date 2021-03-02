@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>農糧產品產銷履歷資訊系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+
+    <style type="text/css">
+        .mark{
+            font-size: 1.125em;
+            background: #222;
+            color: #fff;
+            display: inline-block;
+            padding: .5em 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <!--popup start-->
+    <div id="modal" class="modal">
+        <h2>燈箱主標題<span>台塑3號有機肥料</span></h2>
+        <h4>1. 原料</h4>
+        <table class="table_hover">
+            <tr>
+                <th><input type="checkbox" name="" value=""></th>
+                <th>農民</th>
+                <th>生產履歷追溯碼</th>
+                <th>作物</th>
+                <th>品種</th>
+                <th>採收日期</th>
+                <th>剩餘重量(公斤)</th>
+                <th>出貨完畢</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td>陳小珊</td>
+                <td>10037920009009</td>
+                <td>稻米</td>
+                <td>桃園1號</td>
+                <td>2020/03/26</td>
+                <td>13,000</td>
+                <td>
+                    <div class="checkSwitch">
+                        <label>
+                            <input name="checkboxSample1" type="checkbox" value="">
+                            <div class="checkSwitch_switch"></div>
+                        </label>
+                    </div>
+                    <!-- 資訊文字 -->
+                    <span>尚有庫存</span>
+                    <!-- <span>出貨完畢</span> -->
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td>陳小珊</td>
+                <td>10037920009009</td>
+                <td>稻米</td>
+                <td>桃園1號</td>
+                <td>2020/03/26</td>
+                <td>13,000</td>
+                <td>
+                    <div class="checkSwitch">
+                        <label>
+                            <input name="checkboxSample1" type="checkbox" value="">
+                            <div class="checkSwitch_switch"></div>
+                        </label>
+                    </div>
+                    <!-- 資訊文字 -->
+                    <!-- <span>尚有庫存</span> -->
+                    <span>出貨完畢</span>
+                </td>
+            </tr>
+        </table>
+        <!-- 2. 半成品 -->
+        <h4>2. 半成品</h4>
+        <table class="table_hover">
+            <tr>
+                <th><input type="checkbox" name="" value=""></th>
+                <th>採後處理追溯碼</th>
+                <th>作物</th>
+                <th>作業進度</th>
+                <th>作業日期</th>
+                <th>採後處理場所</th>
+                <th>備註說明</th>
+                <th>剩餘重量(公斤)</th>
+                <th>出貨完畢</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td>10037920900020</td>
+                <td>稻米</td>
+                <td>烘乾</td>
+                <td>2020/05/22</td>
+                <td>芳榮稻米產銷專業區</td>
+                <td></td>
+                <td>300</td>
+                <td>
+                    <div class="checkSwitch">
+                        <label>
+                            <input name="checkboxSample1" type="checkbox" value="">
+                            <div class="checkSwitch_switch"></div>
+                        </label>
+                    </div>
+                    <!-- 資訊文字 -->
+                    <span>尚有庫存</span>
+                    <!-- <span>出貨完畢</span> -->
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td>10037920900020</td>
+                <td>稻米</td>
+                <td>碾製</td>
+                <td>2020/05/22</td>
+                <td>芳榮稻米產銷專業區</td>
+                <td></td>
+                <td>300</td>
+                <td>
+                    <div class="checkSwitch">
+                        <label>
+                            <input name="checkboxSample1" type="checkbox" value="">
+                            <div class="checkSwitch_switch"></div>
+                        </label>
+                    </div>
+                    <!-- 資訊文字 -->
+                    <!-- <span>尚有庫存</span> -->
+                    <span>出貨完畢</span>
+                </td>
+            </tr>
+        </table>
+        <!-- 3. 製成品 -->
+        <h4>3. 製成品</h4>
+        <table class="table_hover">
+            <tr>
+                <th><input type="checkbox" name="" value=""></th>
+                <th>採後處理追溯碼</th>
+                <th>作物</th>
+                <th>採後處理完成日期</th>
+                <th>處理別</th>
+                <th>採後處理場所</th>
+                <th>備註說明</th>
+                <th>剩餘重量(公斤)</th>
+                <th>出貨完畢</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td>10037920900020</td>
+                <td>稻米</td>
+                <td>2020/12/01</td>
+                <td>白米</td>
+                <td>芳榮稻米產銷專業區</td>
+                <td></td>
+                <td>300</td>
+                <td>
+                    <div class="checkSwitch">
+                        <label>
+                            <input name="checkboxSample1" type="checkbox" value="">
+                            <div class="checkSwitch_switch"></div>
+                        </label>
+                    </div>
+                    <!-- 資訊文字 -->
+                    <span>尚有庫存</span>
+                    <!-- <span>出貨完畢</span> -->
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td>10037920900020</td>
+                <td>稻米</td>
+                <td>2020/12/01</td>
+                <td>白米</td>
+                <td>芳榮稻米產銷專業區</td>
+                <td></td>
+                <td>300</td>
+                <td>
+                    <div class="checkSwitch">
+                        <label>
+                            <input name="checkboxSample1" type="checkbox" value="">
+                            <div class="checkSwitch_switch"></div>
+                        </label>
+                    </div>
+                    <!-- 資訊文字 -->
+                    <!-- <span>尚有庫存</span> -->
+                    <span>出貨完畢</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!--popup end-->
+
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- main Start -->
+        <!-- 主要內容區 -->
+        <div class="content">
+            <section class="main">
+                <!-- 第二層選單 -->
+                <ul class="submenu">
+                    <li><a href="#">3-1 生產紀錄</a></li>
+                    <li class="now"><a href="#">3-2 採後處理作業</a></li>
+                    <li><a href="#">3-2 採後處理作業</a></li>
+                </ul>
+                <!-- 選單說明 -->
+                <p class="submenu_info">項目說明，沒有文字的情況下，仍要保留Ｐ標籤</p>
+
+                <!-- 第三層選單 -->
+                <ul class="th3_menu">
+                    <li class="now"><a href="#">3-2-1 第三層選單</a></li>
+                    <li><a href="#">3-2-2 第三層選單</a></li>
+                </ul>
+
+                <div class="inner_head">
+                    <!-- h2節點 -->
+                    <h2 class="title">新增採後處理作業</h2>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                            <li class="icon_print"><a href="#">友善列印</a></li>
+                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section>
+                    <p class="explan">註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p>
+                    <h3 class="sub_title">次標題：填寫出貨批次</h3>
+                    <!-- 內容 -->
+                    <section class="stage_wrap">
+                        <div class="order">
+                            <section>
+                                <div class="num">1</div>
+                                <div class="info">
+                                    <h4>步驟一</h4>
+                                    <div class="flex-form form_grid">
+                                        <div class="form_grp">
+                                            <label for="address" class="form_title">input＋select下拉 1<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                            <div class="form_content">
+                                                <input name="text" type="text" value="" placeholder="input＋select下拉，下拉功能工程師支援" class="complex">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="num">2</div>
+                                <div class="info">
+                                    <h4>步驟二</h4>
+                                    <div class="flex-form form_grid">
+                                        <div class="form_grp">
+                                            <div class="form_content form_mix_operation">
+                                                <div class="btn_grp">
+                                                    <button type="button" class="btn btn-primary" id="openModal"><i class="i_add2"></i>選擇批次（開燈箱 #openModal）</button>
+                                                </div>
+                                                <table class="table_hover">
+                                                    <tr>
+                                                        <th>序號</th>
+                                                        <th>採後處理追溯碼</th>
+                                                        <th>處理完成日期</th>
+                                                        <th>處理別</th>
+                                                        <th>採後處理場所</th>
+                                                        <th>備註說明</th>
+                                                        <th>剩餘重量(公斤)</th>
+                                                        <th>本次出貨量(公斤)<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></th>
+                                                        <th>移除</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center">1</td>
+                                                        <td>10037920900020</td>
+                                                        <td>2020/12/01</td>
+                                                        <td>白米</td>
+                                                        <td>芳榮稻米產銷專業區</td>
+                                                        <td></td>
+                                                        <td>300</td>
+                                                        <td align="center">
+                                                            <select id="selectSample" name="">
+                                                                <option value="">請選擇</option>
+                                                                <option value="">項目一</option>
+                                                                <option value="">項目二</option>
+                                                                <option value="">項目三</option>
+                                                            </select>
+                                                        </td>
+                                                        <td><button type="button" class="btn btn-delete"><i class="i_close2"></i>刪除</button></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="center">2</td>
+                                                        <td>10037920900020</td>
+                                                        <td>2020/12/01</td>
+                                                        <td>白米</td>
+                                                        <td>芳榮稻米產銷專業區</td>
+                                                        <td></td>
+                                                        <td>300</td>
+                                                        <td align="center"><input name="text" type="text" value="" placeholder="一般狀態" autocomplete="off"></td>
+                                                        <td><button type="button" class="btn btn-delete"><i class="i_close2"></i>刪除</button></td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <div class="num">3</div>
+                                <div class="info">
+                                    <h4>步驟三</h4>
+                                    <div class="flex-form form_grid">
+                                        <div class="form_grp">
+                                            <label for="address" class="form_title">input＋select下拉 1<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                            <div class="form_content">
+                                                <input name="text" type="text" value="" placeholder="input＋select下拉，下拉功能工程師支援" class="complex">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="explan">說明文字<span class="R">說明文字</span><span class="B">說明文字</span></p>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+
+                    <h3 class="sub_title">次標題：填寫商品包裝規格</h3>
+                    <!-- 內容 -->
+                    <section class="stage_wrap">
+                        <div class="flex-form form_grid">
+                            <div class="form_grp">
+                                <label for="address" class="form_title">input 1<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                <div class="form_content">
+                                    <input name="text" type="text" value="" placeholder="一般狀態">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="address" class="form_title">input＋select下拉 1<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                <div class="form_content">
+                                    <input name="text" type="text" value="" placeholder="input＋select下拉，下拉功能工程師支援" class="complex" autocomplete="off">
+                                </div>
+                            </div>
+                            <!-- 日期 -->
+                            <div class="form_grp">
+                                <div class="form_title">日期(type="date") 11</div>
+                                <div class="form_content form_inline">
+                                    <div class="datepick">
+                                        <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                                    </div>
+                                    <div class="checkbox">
+                                        <label><input type="checkbox">checkbox 項目</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">select滿版 7</label>
+                                <div class="form_content">
+                                    <select id="selectSample" name="">
+                                        <option value="">請選擇</option>
+                                        <option value="">項目一</option>
+                                        <option value="">項目二</option>
+                                        <option value="">項目三</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="" class="form_title">包裝標示誤差值</label>
+                                <div class="form_content form_inline">
+                                    &plusmn;
+                                    <select id="selectSample" name="">
+                                        <option value="">請選擇</option>
+                                        <option value="">項目一</option>
+                                        <option value="">項目二</option>
+                                        <option value="">項目三</option>
+                                    </select>
+                                    公斤
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="phone" class="form_title">標題 8<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
+                                <div class="form_content form_inline">
+                                    2公斤/包，列印張數
+                                    <input name="text" type="text" value="" placeholder="一般狀態">
+                                    張 ，出貨總重量合計<b class="R">700</b>公斤
+                                    <div class="notice_info">一般提醒訊息</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </div>
+        <!-- control panel-->
+        <div class="btn_panel btn_grp">
+            <button type="button" class="btn btn-normal">取消</button>
+            <button type="button" class="btn btn-primary">存檔並繼續新增下一筆</button>
+            <button type="button" class="btn btn-secondary">存檔</button>
+        </div>
+        <!-- control panel End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <script src="vendor/enquire/enquire.js"></script><!-- query js -->
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+    </script>
+    <!-- hyUI -->
+    <!-- <script src="js/hyui.js"></script> -->
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>農糧產品產銷履歷資訊系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!--popup start-->
+    <div id="modal" class="modal">
+        <h2>燈箱主標題<span>台塑3號有機肥料</span></h2>
+        <!-- 3. (搜尋+表單) + 選取狀態 -->
+        <h4>3. (搜尋+表單) + 選取狀態</h4>
+        <div class="function_mix type2">
+            <!-- 搜尋 + 其他組合 -->
+            <div>
+                <!-- 搜尋 -->
+                <input name="text" type="text" value="" placeholder="請輸入任意字串查詢">
+                <div class="form_grp form_inline">
+                    <!--  -->
+                    <label for="selectSample" class="form_title">類別：</label>
+                    <div class="form_content">
+                        <select id="selectSample" name="">
+                            <option value="">請選擇</option>
+                            <option value="">項目一</option>
+                            <option value="">項目二</option>
+                            <option value="">項目三</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- 日期 -->
+                <div class="form_grp form_inline">
+                    <label for="selectSample" class="form_title">處理完成日期：</label>
+                    <div class="form_content form_inline">
+                        <div class="datepick">
+                            <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                        </div>
+                        <div class="datepick">
+                            <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 選取狀態 -->
+            <div class="status">
+                <p>已選取<span>2</span>筆資料</p>
+                <button type="button" class="btn btn-blue">確定新增</button>
+            </div>
+        </div>
+        <p class="explan">說明文字<span class="R">說明文字</span><span class="B">說明文字</span></p>
+        <table class="table_hover">
+            <tr>
+                <th><input type="checkbox" name="" value=""></th>
+                <th>序號</th>
+                <th>採後處理追溯碼</th>
+                <th>作物</th>
+                <th>作業進度</th>
+                <th>作業日期</th>
+                <th>採後處理場所</th>
+                <th>備註說明</th>
+                <th>現有量(公斤)</th>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td>1</td>
+                <td>10037920900007</td>
+                <td>稻米</td>
+                <td>烘乾</td>
+                <td>2020/05/22</td>
+                <td>芳榮稻米產銷專業區</td>
+                <td></td>
+                <td>6,000</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="" value=""></td>
+                <td>2</td>
+                <td>10037920900007</td>
+                <td>稻米</td>
+                <td>烘乾</td>
+                <td>2020/05/22</td>
+                <td>芳榮稻米產銷專業區</td>
+                <td></td>
+                <td>6,000</td>
+            </tr>
+        </table>
+    </div>
+    <!--popup end-->
+
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- main Start -->
+        <!-- 主要內容區 -->
+        <div class="content">
+            <section class="main">
+                <!-- 第二層選單 -->
+                <ul class="submenu">
+                    <li><a href="#">3-1 生產紀錄</a></li>
+                    <li class="now"><a href="#">3-2 採後處理作業</a></li>
+                    <li><a href="#">3-2 採後處理作業</a></li>
+                </ul>
+                <!-- 選單說明 -->
+                <p class="submenu_info">項目說明，沒有文字的情況下，Ｐ標籤要保留</p>
+
+                <!-- 第三層選單 -->
+                <ul class="th3_menu">
+                    <li class="now"><a href="#">3-2-1 第三層選單</a></li>
+                    <li><a href="#">3-2-2 第三層選單</a></li>
+                </ul>
+
+                <div class="inner_head">
+                    <!-- h2節點 -->
+                    <h2 class="title">檢視申請紀錄</h2>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                            <li class="icon_print"><a href="#">友善列印</a></li>
+                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section>
+                    <div class="locked">
+                        <span>驗證機構已收到您的驗證資料，如欲修改驗證資料，請聯絡驗證單位。</span>
+                    </div>
+                    <p class="explan">註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p>
+
+                    <h3 class="sub_title">次標題：作物</h3>
+                    <!-- 內容 -->
+                    <section class="stage_wrap">
+                        <p class="remarks">農民筆數：<span>2</span>農地筆數：<span>4</span></p>
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>採後處理追溯碼</th>
+                                <th>作業進度</th>
+                                <th>作業日期</th>
+                                <th>採後處理場所</th>
+                                <th>備註說明</th>
+                                <th>現有量(公斤)</th>
+                                <th>本次出貨量(公斤)<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></th>
+                                <th>移除</th>
+                            </tr>
+                            <tr>
+                                <td align="center">1</td>
+                                <td>10037920900020</td>
+                                <td>乾燥</td>
+                                <td>2020/12/01</td>
+                                <td>芳榮稻米產銷專業區</td>
+                                <td></td>
+                                <td>13,000</td>
+                                <td align="center">
+                                    <select name="" id="">
+                                        <option value="">台北市</option>
+                                        <option value="">新北市</option>
+                                        <option value="">桃園市</option>
+                                        <option value="">新竹市</option>
+                                        <option value="">...</option>
+                                    </select>
+                                </td>
+                                <td><button type="button" class="btn btn-delete"><i class="i_close2"></i>刪除</button></td>
+                            </tr>
+                            <tr>
+                                <td align="center">2</td>
+                                <td>10037920900020</td>
+                                <td>乾燥</td>
+                                <td>2020/12/01</td>
+                                <td>芳榮稻米產銷專業區</td>
+                                <td></td>
+                                <td>13,000</td>
+                                <td align="center"><input name="text" type="text" value="" placeholder="一般狀態" autocomplete="off"></td>
+                                <td><button type="button" class="btn btn-delete"><i class="i_close2"></i>刪除</button></td>
+                            </tr>
+                        </table>
+                    </section>
+
+                    <h3 class="sub_title">次標題：農民農地</h3>
+                    <!-- 內容 -->
+                    <section class="stage_wrap">
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <form action="" class="form_inline">
+                                <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                        <option value="">30</option>
+                                        <option value="">40</option>
+                                    </select> 筆，
+                                    <input type="button" class="btn" value="確定">
+                                </div>
+                            </form>
+                        </div>
+                        <p class="remarks">農民筆數：<span>2</span>農地筆數：<span>4</span></p>
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>農民</th>
+                                <th>地段</th>
+                                <th>地號</th>
+                                <th>生產面積（公頃）</th>
+                                <th>申請驗證面積</th>   
+                            </tr>
+                            <tr>
+                                <td align="center">1</td>
+                                <td align="center">王小明</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td align="right">3.0264</td>
+                                <td align="right">1.2</td>
+                            </tr>
+                            <tr>
+                                <td align="center">2</td>
+                                <td align="center">王小明</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td align="right">3.0264</td>
+                                <td align="right">1.2</td>
+                            </tr>
+                            <tr>
+                                <td align="center">3</td>
+                                <td align="center">王小明</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td align="right">3.0264</td>
+                                <td align="right">1.2</td>
+                            </tr>
+                        </table>
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <ul class="page">
+                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <h3 class="sub_title">次標題：採後處理場所</h3>
+                    <!-- 內容 -->
+                    <section class="stage_wrap">
+                        <p class="remarks">場所筆數：<span>4</span></p>
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>作物</th>
+                                <th>場所類型</th>
+                                <th>自有或委託</th>
+                                <th>場所名稱</th>  
+                            </tr>
+                            <tr>
+                                <td align="center">1</td>
+                                <td>稻米</td>
+                                <td>採後處理（初級加工）場所（含自有及委託）</td>
+                                <td>自有</td>
+                                <td>芳榮稻米產銷專業區</td>
+                            </tr>
+                            <tr>
+                                <td align="center">2</td>
+                                <td>稻米</td>
+                                <td>採後處理（初級加工）場所（含自有及委託）</td>
+                                <td>自有</td>
+                                <td>芳榮稻米產銷專業區</td>
+                            </tr>
+                            <tr>
+                                <td align="center">3</td>
+                                <td>稻米</td>
+                                <td>採後處理（初級加工）場所（含自有及委託）</td>
+                                <td>自有</td>
+                                <td>芳榮稻米產銷專業區</td>
+                            </tr>
+                        </table>
+                    </section>
+                </section>
+            </section>
+        </div>
+        <!-- control panel-->
+        <div class="btn_panel btn_grp">
+            <button type="button" class="btn btn-normal">取消</button>
+            <button type="button" class="btn btn-primary">存檔並繼續新增下一筆</button>
+            <button type="button" class="btn btn-secondary">存檔</button>
+        </div>
+        <!-- control panel End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <script src="vendor/enquire/enquire.js"></script><!-- query js -->
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+    </script>
+    <!-- hyUI -->
+    <!-- <script src="js/hyui.js"></script> -->
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>
