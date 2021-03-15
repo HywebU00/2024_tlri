@@ -439,10 +439,10 @@ select::-ms-expand {
     .form_content {
         display: flex;
         // padding-top: 3px;
-        max-width: calc(100% - #{$form_title_width});
+        max-width: calc(100% - #{$form_title_width}  - .6em);
         // flex:1 1 calc(100% - #{$form_title_width});
         flex: auto;
-        flex-basis: calc(100% - #{$form_title_width});
+        flex-basis: calc(100% - #{$form_title_width}  - .6em);
         position: relative;
         min-height: 1px;
         overflow: hidden;
@@ -825,7 +825,8 @@ select::-ms-expand {
                 >.form_grp,
                 >input[type="text"],
                 >select {
-                    flex-basis: calc(50% - .6em);
+                    // flex-basis: calc(50% - .6em);
+                    flex-basis: calc(50% - 1.2em);
 
                     @include screen('xs_mobile') {
                         flex-basis: 100%;
@@ -1437,6 +1438,10 @@ select::-ms-expand {
     input[type="button"],
     input[type="search"] {
         flex: 1 1 auto;
+
+        &.btn-delete{
+            flex: 0 0 auto;
+        }
     }
 
     //---------------------------------------------form setting--------//
@@ -1828,6 +1833,8 @@ select::-ms-expand {
     flex-wrap: wrap;
     align-items: center;
 
+    .item{ width: 100%; }
+
     label {
         vertical-align: middle;
         margin-right: .5em;
@@ -1866,7 +1873,8 @@ select::-ms-expand {
         display: flex;
         margin-right: .5em;
         width: auto;
-        flex: 0 0 auto;
+        // flex: 0 0 auto;
+        flex: 1 1 auto;
     }
 
     .btn_grp {

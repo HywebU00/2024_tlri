@@ -3,6 +3,8 @@
 h1.title, h2.title {
   line-height: 1.25em;
   margin: .4em 0;
+
+  span{ color: $primaryColor; }
 }
 // .tt{ color: #222; }
 .cp {

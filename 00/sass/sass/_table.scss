@@ -1,4 +1,5 @@
 //http://lab.25sprout.com/responsive_table/
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -83,7 +84,9 @@ table {
         }
     }
     &.table_hover {
-        tr:hover { background: #fff5e2 !important; }
+        tr{
+            &:hover { background: #fff5e2 !important; }
+        }
     }
     &.table_sprite {
         tr:nth-child(even) { background: #F5F5F5; }
@@ -167,6 +170,8 @@ table {
 }
 // 原本寫在 .modal 中的設定
 .table_operating{
+    font-size: 112.5%;
+    
     a{
         // box-shadow: 0 1px;
         color: #c52a3e;
@@ -201,16 +206,23 @@ table {
         tr.sub_info{
 
             display: none; //預設隱藏
-            background: #6f6f6f;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-            color: #fff;
+            // background: #6f6f6f;
+            // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+            // color: #fff;
+
+            background: #f5f5f5;
+
+            &:hover { background: #f5f5f5 !important; }
+
             table{
                 tr{
+                    &:hover { background: #fff5e2 !important; }
+                    &:first-child:hover { background: none !important; }
                     &:last-child td{ border-bottom: 0; } 
                 }
                 th{
                     background: none;
-                    color: #fff;
+                    // color: #fff;
                     border-top: 0;
                 }
                 td{
@@ -219,6 +231,114 @@ table {
                 th, td{
                     border-left: 0;
                     border-right: 0;
+                }
+            }
+
+            // 
+            .div_form{
+                display: flex;
+                flex-flow: row nowrap;
+                border-bottom: 1px solid #ddd;
+                &:last-child{
+                    border-bottom: 0;
+                }
+
+                .label, .detail{
+                    padding: .5em .75em;
+                }
+
+                .label{
+                    flex: 0 0 auto;
+                    font-weight: bold;
+
+                    time{
+                        background: darken($primaryColor, 5);
+                        padding: .25em .5em;
+                        color: #fff;
+                        margin-right: .5em;
+                    }
+                }
+                .detail{
+                    flex: 1 1 auto;
+                    text-align: left;
+                    padding-left: 0;
+                }
+
+                // 展開，讓內容區塊寬度100%
+                &.evolve{
+                    display: flex;
+                    flex-flow: row wrap;
+                    text-align: left;
+                    border-bottom: 0;
+
+                    h3{
+                        color: darken($primaryColor, 5);
+                        padding: 0 .75em;
+                        margin: 1em 0 .25em;
+                    }
+
+                    .label, .detail{ flex: 1 1 100%; }
+                    .label{}
+                    .detail{
+                        padding: 0 .75em .5em;
+                        section{
+                            background: #fff;
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                            color: #222;
+                            padding: 1em;
+                            margin: .55em 0;
+                            border-radius: 4px;
+
+                            // position: relative;  
+
+                            &:last-child{ margin-bottom: 0; }
+
+                            time{
+                                &.update{
+                                    // position: absolute;
+                                    // right: 0;
+                                    padding: .25em .5em;
+                                    background: #eee;
+                                    &:before{
+                                        content: '更新日期：';
+                                        display: inline-block;
+                                    }
+                                }
+                            }
+                            p{
+                                margin-bottom: .5em;
+                                font-size: 110%;
+                                font-weight: 500;
+                            }
+                            ol{
+                                list-style-position: inside;
+                                padding: .9em 1.5em;
+                                margin: 0.25em 0;
+                                background: #f5f5f5;
+                                border-top: solid 2px #5f5f5f;
+
+                                li{
+                                    padding: .25em .5em;
+                                    border-radius: 4px;
+                                    overflow: hidden;
+                                    margin-bottom: 4px;
+
+                                    &.uncorrected{
+                                        background: #c52a3e;
+                                        color: #fff;
+                                    }
+                                    &.corrected{
+                                        box-shadow: inset #c52a3e 0 0 0 2px;
+                                        background: #fff;
+                                    }
+                                    &.deleted{
+                                        color: #c52a3e;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
         }
