@@ -50,7 +50,7 @@ text.highcharts-credits { display: none; }
     transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
     // max-width: 90em;
     &.full {
-        margin-left: 5em;
+        margin-left: 3.5em;
     }
     @media screen and (max-width:1440px) {
         margin-left: 13em;
@@ -88,6 +88,10 @@ text.highcharts-credits { display: none; }
                         text-align: center;
                         padding: .75em 1.25em;
                         font-size: 110%;
+                        transition: all .3s ease;
+                        &:hover, &:focus{
+                            background: darken($primaryColor, 5);
+                        }
                     }
 
                     position: relative;
@@ -1616,15 +1620,18 @@ table {
                 margin: .75em 0;
                 span{
                     display: inline-block;
-                    background: #666;
-                    color: #fff;
+                    background: #f6f6f6;
+                    color: #222;
                     cursor: pointer;
                     line-height: 2;
                     padding: .4em 1.75em;
                     border-radius: 40px;
+                    box-shadow: inset 0 0 0 1px #ddd;
 
                     &:hover{
+                        color: #fff;
                         background: $color-orange;
+                        box-shadow: inset 0 0 0 1px darken($color-orange, 5)
                     }
                 }
             }

@@ -35,8 +35,9 @@
                 font-size: 1em;
                 color: $color-word;
                 // @include gradient (#F7F7F7, #EAEAEA, vertical);
-                background: #eee;
+                // background: #eee;
                 border: #ccc solid 1px;
+
                 &:hover,
                 &:focus {
                     background: $primaryColor;
@@ -134,6 +135,9 @@
         .btn{
             min-width: auto;
             padding: .4em 1em !important;
+            background: #666;
+            border: 1px solid #666;
+            color: #FFF;
         }
         // input[type="button"] {
         //     @include gradient(#F7F7F7, #EAEAEA, vertical);

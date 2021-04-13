@@ -121,6 +121,10 @@ $btn-radius:.2em;
     @include btn_setting($color-orange, #FFF);
 }
 
+.btn_download{
+    @include btn_setting($color-blue, #FFF);
+}
+
 
 
 
