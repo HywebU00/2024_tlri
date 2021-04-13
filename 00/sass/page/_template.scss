@@ -12,6 +12,9 @@ code, pre {
     line-height: 1.45em;
 }
 
+// Highcharts 隱藏浮水印
+text.highcharts-credits { display: none; }
+
 // 最外圍預設為100%
 .wrapper {
   width: 100%;
@@ -740,6 +743,123 @@ code, pre {
     }
 }
 
+// 風險警示 8格
+.statistics_risk{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    p, ul.grade{}
+
+    >p{
+        @include flex-col(8, $grid-margin-width, 10px);
+        margin: 0;
+        padding: 1em 0;
+        font-size: 125%;
+        font-weight: 500;
+    }
+    // 等級
+    ul.grade{
+        @include li-reset;
+        @include flex-col(4, $grid-margin-width, 10px);
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-end;
+        align-items: center;
+        li{
+            margin: 0 10px;
+            &:before{
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                margin-right: 4px;  
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+
+            &.H{
+                &:before{ background: $lightColor; }
+            }
+            &.M{
+                &:before{ background: #ff9800; }
+            }
+            &.L{
+                &:before{ background: #ffeb3b; }
+            }
+        }
+    }
+
+    // 八格
+    section.list{
+        flex: 1 1 100%;
+
+        @extend %flex_set;
+        >div{
+
+            @include flex-col-equal(4, 10px, 0px);
+
+            margin-bottom: 6px;
+            background: #f3f3f3;
+            border-radius: 4px;
+            text-align: center;
+            padding: 1em;
+            font-size: 112.5%;
+            font-weight: bold; 
+
+            p{ margin: 0; }
+            span.count{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background: #fff;
+                display: inline-block;
+                line-height: 60px;
+                margin-top: 12px;
+                font-size: 1.5em;
+            }
+
+            &.H{
+                // background: $lightColor;
+                // p{ color: #fff; }
+
+                // p{ color: $lightColor; }
+                span.count{
+                    background: $lightColor;
+                    color: #fff;
+                }
+            }
+            &.M{
+                // background: #ff9800;
+
+                // p{ color: #de7200; }
+                span.count{
+                    background: #de7200;
+                    color: #fff;
+                }
+            }
+            &.L{
+                // background: #ffeb3b;
+                
+                // p{}
+                span.count{
+                    background: #ffeb3b;
+                }
+            }
+
+            @include screen('notebook'){
+                @include flex-col-equal(3, 10px, 0px);
+                padding: 1em;
+            }
+            @include screen('tablet'){
+                @include flex-col-equal(2, 10px, 0px);
+                padding: 1em;
+            }
+        }
+    }
+}
+
 
 // SuperCMS setting ---------------------------------------
 // table
@@ -1360,7 +1480,7 @@ table {
             position: absolute;
             right: 1em;
             top: .5em;
-            background: #4e4e4e;
+            background: #c60000;
             color: #fff;
             padding: .25em .5em;
             font-weight: bold;
@@ -1375,6 +1495,573 @@ table {
         }
     }
 }
+
+.card_produce{
+    @extend %flex_set;
+    // padding-bottom: 1em;
+    // justify-content: flex-start;
+    // align-content: flex-start;
+    flex-flow: row wrap;;
+
+    .col{
+        @include flex-col-equal(3, 10px, 0px); 
+        padding: 1em 1.75em;
+        background: #fff;
+        margin-bottom: 10px;
+
+        box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, .3);
+        border-radius: .25em;
+        transition: .3s ease-out;
+
+        &:hover {
+            box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, .5);
+        }
+
+        @include screen('notebook'){
+            @include flex-col-equal(2, 10px, 0px); 
+            padding: 1em 1.75em;
+        }
+        @include screen('tablet'){
+            @include flex-col-equal(1, 10px, 0px); 
+            padding: 1em 1.75em;
+        }
+
+        // 生產者
+        .producer{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            border-bottom: solid 4px $primaryColor;
+            padding-bottom: .5em;
+            margin-bottom: .5em;
+
+
+            position: relative;
+
+            .img-container{
+                width: 90px;
+                height: 90px;
+                border-radius: 50%;
+                border: solid 4px #dcdcdc;
+
+                flex: 0 0 90px;
+            }
+
+            .user{
+                flex: 1 1 auto;
+                flex-basis: calc( 100% - 90px);
+                padding: 0 1em;
+                font-size: 135%;
+                font-weight: bold;
+
+                // 履歷編號
+                .resume_ID{
+                    font-size: 68%;
+                    font-weight: normal;
+                }
+            }
+
+            .switch{
+                position: absolute;
+                width: 30px;
+                height: 60px;
+                right: 0;
+                font-size: 0;
+                background: url(../images/icon/icon_3dots_gray.svg) 50% 50% no-repeat;
+                background-size: contain;
+
+                &:hover, &:focus{
+                    background: url(../images/icon/icon_3dots_blue.svg) 50% 50% no-repeat;
+                    background-size: contain;
+                    border: 1px solid #ddd;
+                }
+            }
+        }
+        // 作物
+        .crop{
+            text-align: center;
+            padding: .75em 0;
+            >span{
+                position: relative;
+                padding-top: 1.5em;
+                display: inline-block;
+                font-size: 125%;
+                margin: 0 10px;
+
+                &:before{
+                    position: absolute;
+                    top: 0;
+                    font-size: 75%;  
+                    width: 100%; 
+                    color: #666;
+                }
+                &:nth-child(1){
+                    &:before{
+                        content: '作物';
+                    }
+                }
+                &:nth-child(2){
+                    &:before{
+                        content: '品種';
+                    }
+                }
+                &:nth-child(3){
+                    &:before{
+                        content: '類別';
+                    }
+                }
+            }
+
+            .area{
+                margin: .75em 0;
+                span{
+                    display: inline-block;
+                    background: #666;
+                    color: #fff;
+                    cursor: pointer;
+                    line-height: 2;
+                    padding: .4em 1.75em;
+                    border-radius: 40px;
+
+                    &:hover{
+                        background: $color-orange;
+                    }
+                }
+            }
+        }
+
+        // 生產紀錄
+        .course{
+            padding: .5em 0;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+
+            .info, .stage{ @extend %flex_set; }
+
+            .info{
+                align-items: center;
+
+                >p{ margin: 0; }
+                .btn_grp{ padding: 0; }
+            }
+            .stage{
+                padding: .75em 0;
+                span{
+                    display: block;
+                    @include flex-col-equal(5, 5px, 0px);
+                    height: 8px;
+                    background: #dcdcdc;
+
+                    &.get{
+                        background: #41baff;
+                    }
+                }
+            }
+        }
+
+        // 產季與風險
+        .current_state{
+            @extend %flex_set;
+            margin: 1em 0;
+
+            .switch{}
+            .risk{
+                &:before{
+                    content: '風險警示：';
+                    padding-left: 1.75em;
+                    background: url(../images/icon/icon_doc_uncorrect_gray.svg) left 50% no-repeat;
+                }
+
+                &.alert{
+                    color: #ad0017;
+                    &:before{
+                        background: url(../images/icon/icon_doc_uncorrect_red.svg) left 50% no-repeat;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 快速連結、捷徑
+.shortcut{
+    // background: #ad0017;
+    background: darken($primaryColor, 5);
+    border-radius: 5px;
+    color: #fff;
+    padding: 1.25em;
+    // 總數
+    .total{
+        text-align: center;
+        line-height: 1.6;
+        font-size: 1.25em;
+
+        position: relative;
+        &:before, &:after{
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 2px;
+            background: #fff;
+            left: 50%;
+            margin-left: -70px;
+        }
+        &:before{ top: -10px;}
+        &:after{ bottom: -10px; }
+    }
+    // 連結
+    .links{
+        @extend %flex_set;
+        flex-flow: row wrap;
+        justify-content: center;
+
+        a{
+            flex: 1 1 auto;
+            flex-basis: calc(100%/5);
+            max-width: calc(100%/5);
+            color: #fff;
+            text-align: center;
+            font-size: 1.25em;
+            font-weight: 500;
+            padding: 1em;
+            padding-top: 110px;
+
+            transition: all .3s ease;
+
+            &:hover, &:focus{
+                background: rgba(0,0,0,.3);
+            }
+
+            position: relative;
+            &:before{
+                content: '';
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;   
+                left: 50%;
+                margin-left: -40px;
+                top: 1em;
+            }
+
+            // 投藥
+            &.dosing{
+                &:before{
+                    background: url(../images/icon_quicklink_dosing.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+            // 植物施肥
+            &.fertilize{
+                &:before{
+                    background: url(../images/icon_quicklink_fertilize.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+            // 動物餵食
+            &.feed{
+                &:before{
+                    background: url(../images/icon_quicklink_feed.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+
+            // 採收
+            &.harvest{
+                &:before{
+                    background: url(../images/icon_quicklink_harvest.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+            // 作樂
+            &.operate{
+                &:before{
+                    background: url(../images/icon_quicklink_operate.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+
+        }
+    }
+
+    @include screen('mobile') {
+        .links{
+            justify-content: flex-start;
+            a{
+                flex-basis: calc(100%/2);
+                max-width: calc(100%/2);
+            }
+        }
+    }
+}
+
+// 生產者履歷
+$foto-size: 180px;
+.user_ID{
+    @extend %flex_set;
+
+    // 生產者資料
+    .info{
+        @include flex-col(8, 10px, 0px);
+
+        @extend %flex_set;
+        align-items: center;
+        .foto{
+            width: $foto-size;
+
+            .img-container{
+                width: $foto-size;
+                height: $foto-size;
+                border-radius: 50%;
+                border: solid 4px #dcdcdc;
+            }
+        }
+        .list{
+            flex: 1 1 auto;
+            // flex-basis: calc( 100% - $foto-size);
+
+            .contact{
+                @extend %flex_set;
+                justify-content: flex-start;
+                align-items: center;
+
+                .name{
+                    // flex: 1 1 100%;
+                    margin: 0;
+                    font-size: 1.25em;
+                    padding: .5em 1em;
+                    font-weight: bold;
+                }
+                .tel, .mail{
+                    background: #ddd;
+                    padding: .35em 1em .35em 2.5em;
+                    border-radius: 40px;
+                    margin: 0 .25em;
+                }
+
+                .tel{
+                    background: url(../images/icon/icon_phone.svg) 16px 50% no-repeat ,#efeeee;
+                    background-size: 16px 16px;
+                }
+                .mail{
+                    background: url(../images/icon/icon_mail.svg) 16px 50% no-repeat ,#efeeee;
+                    background-size: 16px 16px;
+                }
+            }
+
+            ul{
+                margin: 0;
+                li{
+                    padding: .125em 0;
+                }
+            }
+        }
+    }
+    // 圓餅圖
+    .chart{
+        @include flex-col(4, 10px, 0px);
+        text-align: center;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        flex-flow: row wrap;
+        .info, .chart{
+            @include flex-col(12, 10px, 0px);
+        }
+        .chart{ margin-top: 1em; }
+    }
+}
+
+// 生產紀錄
+.process{
+    .col{
+        @extend %flex_set;
+        // margin-bottom: .5em;
+
+        >time{
+            flex: 0 0 120px;
+            font-size: 1.25em;
+            font-weight: bold;
+            padding-left: 30px;
+            padding-top: .85em;
+            // color: #008664;
+            span{
+                color: #fff;
+                background: #008664;
+                display: inline-block;
+                padding: .35em .65em;
+                border-radius: 30px;
+
+                position: relative;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    background: #008664;
+                    transform: rotate(45deg);
+                    left: -3px;
+                    top: 14px;
+                }
+            }
+
+            position: relative;
+            &:before, &:after{
+                content: '';
+                position: absolute;
+
+            }
+            &:before{
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background: #008664;
+                left: 2px;
+                top: 28px;
+                z-index: 1;
+            }
+            &:after{
+                width: 2px;
+                height: 100%;
+                background: #dadada;
+                left: 9px;
+                top: 0;
+            }
+        }
+    }
+
+    // time{
+    //     &.update{
+    //         // position: absolute;
+    //         // right: 0;
+    //         // padding: .25em .5em;
+    //         // background: #eee;
+
+    //         float: right;
+    //         font-size: 86%;
+    //         font-weight: 500;
+    //         line-height: 36px;
+    //         // background: none;
+    //         &:before{
+    //             content: '更新日期：';
+    //             display: inline-block;
+    //         }
+    //     }
+    // }
+
+    .info{
+        flex: 1 1 auto;
+        flex-basis: calc(100% - 180px);
+        max-width: calc(100% - 180px);
+
+        // 列表
+        .list{
+            @extend %flex_set;
+            flex-flow: row nowrap;
+            padding: 1em;
+            // background: #f5f5f5;
+            box-shadow: inset 0 0 1px 0 rgba(0,0,0,.65);
+
+            .form_grid{
+                flex: 1 1 auto;
+                border-top: none;
+
+                &.flex-form{ margin: 0 .5em; }
+
+                .form_grp{
+                    .form_title{
+                        padding-top: .25em;
+                        padding-bottom: .25em;
+                        padding-left: 0;
+                        max-width: inherit;
+                        flex: 0 0 auto;
+                    }
+
+                    &:last-child{
+                        border-bottom: none;
+                    }
+                }
+
+                // 相鄰的圖片
+                +img{
+                    flex: 0 0 180px;
+                    max-width: 180px;
+                    height: 100%;
+                }
+            }
+        }
+        // 
+        .function{
+            background: #f6f6f6;
+            margin-bottom: 1.5em;
+            border-bottom: solid 1px #e7e7e7;
+
+            position: relative;
+            .btn_grp{
+                &.left{ padding: .5em 1em; }
+                +time{
+                    &.update{
+                        position: absolute;
+                        right: 20px;
+                        top: 50%;
+                        margin-top: -18px;
+                        font-size: 86%;
+                        font-weight: 500;
+                        line-height: 36px;
+                        color: #222;
+                        // background: none;
+                        &:before{
+                            content: '更新日期：';
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @include screen('tablet') {
+        .col{
+            >time{ flex: 1 1 100%; }
+        }
+        .info{
+            flex: 1 1 100%;
+            max-width: calc(100% - 40px);
+            margin-left: 40px;
+
+            .list{ margin-top: 10px; }
+
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 2px;
+                height: 100%;
+                background: #dadada;
+                left: -31px;
+                top: 0;
+            }
+        }
+    }
+
+    @include screen('mobile') {
+        .info{
+            .function{
+                .btn_grp{
+                    +time{
+                        &.update{
+                            position: static;
+                            padding-left: 1.2em;   
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .media {
     display: flex;
     flex-flow: row wrap;

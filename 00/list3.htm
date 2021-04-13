@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>農糧產品產銷履歷資訊系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- main Start -->
+        <!-- 主要內容區 -->
+        <div class="content">
+            <section class="main">
+                <!-- 第二層選單 -->
+                <ul class="submenu">
+                    <li><a href="#">1-1 組織資料</a></li>
+                    <li><a href="#">1-2 列印標籤授權使用</a></li>
+                    <li><a href="#">1-3 L4系統使用權限</a></li>
+                    <li class="now"><a href="#">1-4 使用權限</a></li>
+                    <li><a href="#">1-5 系統權限</a></li>
+                </ul>
+                <!-- 選單說明 -->
+                <!-- <p class="submenu_info">項目說明</p> -->
+
+                <!-- 第三層選單 -->
+                <!-- <ul class="th3_menu">
+                    <li class="now"><a href="#">1-4-1 第三層選單</a></li>
+                    <li><a href="#">1-4-2 第三層選單</a></li>
+                </ul> -->
+
+                <div class="inner_head">
+                    <!-- h2節點 -->
+                    <h2 class="title">List-單一履歷生產紀錄</h2>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                            <li class="icon_print"><a href="#">友善列印</a></li>
+                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 生產者履歷 -->
+                <section class="user_ID">
+                    <!-- 生產者資料 -->
+                    <div class="info">
+                        <div class="foto">
+                            <div class="img-container">
+                                <img src="images/01-farmer.jpg" alt="農民" class="cover">
+                            </div>
+                        </div>
+                        <div class="list">
+                            <div class="contact">
+                                <p class="name">張小可</p>
+                                <div class="tel">0912-345-678</div>
+                                <div class="mail">mail@mail.com.tw</div>
+                            </div>
+                            <ul>
+                                <li>履歷號碼：10085120030007</li>
+                                <li>作物品種：水稻-二期稻作-台農91號</li>
+                                <li>栽種總面積：1.55公頃
+                                    <ol>
+                                        <li>新嘉段0145-0000：0.3899公頃(未驗證)</li>
+                                        <li>新嘉段0179-0000：0.3585公頃</li>
+                                        <li>新嘉段0145-0000：0.3899公頃...<a href="#">更多</a></li>
+                                    </ol>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 圓餅圖 -->
+                    <div class="chart">
+                        <!-- 圓餅圖 -->
+                        <figure class="highcharts-figure">
+                            <div id="pie1"></div>
+                        </figure>
+                        <p>合理採收量<span>7484.8</span>公斤</p>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="sub_title">次標題：生產紀錄</h3>
+
+                    <!-- 快速按鈕 -->
+                    <div class="shortcut">
+                        <p class="total">總蜂群數：<span>500</span></p>
+                        <div class="links">
+                            <a href="#" class="dosing">投藥</a>
+                            <a href="#" class="fertilize">植物施肥</a>
+                            <a href="#" class="feed">動物餵食</a>
+                            <a href="#" class="harvest">採收</a>
+                            <a href="#" class="operate">作業</a>
+                        </div>
+                    </div>
+
+                    <!-- <p>註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p> -->
+
+                    <div class="btn_grp left">
+                        <!-- <button type="button" class="btn btn-add"><i class="i_add2"></i>選擇土地以新增生產批次</button> -->
+                        <button type="button" class="btn btn-deepgray"><i class="i_import2"></i>批次匯入紀錄</button>
+                        <button type="button" class="btn btn-deepgray"><i class="i_export2"></i>批次匯出紀錄</button>
+                        <button type="button" class="btn btn-deepgray">以此生產紀錄作為常用作業內容</button>
+                        <button type="button" class="btn btn-deepgray">複製生產紀錄至其他生產農民</button>
+                        <button type="button" class="btn btn-deepgray">套用常用作業內容</button>
+                    </div>
+
+                    <!-- <p class="explan">說明文字<span class="R">說明文字</span><span class="B">說明文字</span></p> -->
+
+                    <!-- 頁碼：筆數 -->
+                    <div class="pagination">
+                        <form action="" class="form_inline">
+                            <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                </select> 筆，
+                                <input type="button" class="btn btn-deepgray" value="確定">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- 生產紀錄 -->
+                    <section class="process">
+                        <div class="col">
+                            <time><span>2020/06/02</span></time>
+                            <div class="info">
+                                <div class="list">
+                                    <!-- 列表 -->
+                                    <div class="flex-form form_grid">
+                                        <div class="form_grp">
+                                            <label for="" class="form_title">生產履歷追溯碼：</label>
+                                            <div class="form_content form_inline">
+                                                <p>10037920000102</p>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="" class="form_title">作業種類：</label>
+                                            <div class="form_content form_inline">
+                                                <p>採收</p>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="" class="form_title">作業內容：</label>
+                                            <div class="form_content form_inline">
+                                                <p>採收量：6,190公斤</p>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp warn">
+                                            <label for="" class="form_title">勘誤資料：</label>
+                                            <div class="form_content form_inline">
+                                                <p class="this">採收量：5,000公斤</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 圖片 -->
+                                    <!-- <img src="images/demo/01.jpg" alt=""> -->
+                                </div>
+                                <!-- function -->
+                                <div class="function">
+                                    <!-- 按鈕 -->
+                                    <div class="btn_grp left">
+                                        <button type="button" class="btn btn-blue"><i class="i_edit2"></i>編修</button>
+                                        <button type="button" class="btn btn-blue"><i class="i_close2"></i>刪除</button>
+                                        <button type="button" class="btn btn-red"><i class="i_uncorrect2"></i>勘誤</button>
+                                    </div>
+                                    <!-- 更新時間 -->
+                                    <time class="update">2020/06/18 15:34</time>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <time><span>2020/06/02</span></time>
+                            <div class="info">
+                                <div class="list">
+                                    <!-- 列表 -->
+                                    <div class="flex-form form_grid">
+                                        <div class="form_grp">
+                                            <label for="" class="form_title">共同作業：</label>
+                                            <div class="form_content form_inline">
+                                                <p>張小可－14426320010002－109年第1號－稻米-台農71號-二期稻作<br>徐小魚－14426320010003－109年第1號－稻米-台梗11號-二期稻作</p>
+                                                <ul>
+                                                    <li>栽培防治</li>
+                                                    <li>防治對象：水稻穗稻熱病</li>
+                                                    <li>使用防治資材：許可證:101251 - 護粒松(廠牌:喜多生) - 廠商:興農股份</li>
+                                                    <li>有限公司 - 乳劑50.000 (%) - 775C.C. X 250</li>
+                                                </ul>
+                                                <ol>
+                                                    <li>栽培防治</li>
+                                                    <li>防治對象：水稻穗稻熱病</li>
+                                                    <li>使用防治資材：許可證:101251 - 護粒松(廠牌:喜多生) - 廠商:興農股份</li>
+                                                    <li>有限公司 - 乳劑50.000 (%) - 775C.C. X 250</li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="" class="form_title">作業內容：</label>
+                                            <div class="form_content form_inline">
+                                                <p>文字</p>
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="" class="form_title">標題 12：</label>
+                                            <div class="form_content form_inline">
+                                                <ul>
+                                                    <li>栽培防治</li>
+                                                    <li>防治對象：水稻穗稻熱病</li>
+                                                    <li>使用防治資材：許可證:101251 - 護粒松(廠牌:喜多生) - 廠商:興農股份</li>
+                                                    <li>有限公司 - 乳劑50.000 (%) - 775C.C. X 250</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 圖片 -->
+                                    <img src="images/demo/01.jpg" alt="">
+                                </div>
+                                <!-- function -->
+                                <div class="function">
+                                    <!-- 按鈕 -->
+                                    <div class="btn_grp left">
+                                        <button type="button" class="btn btn-blue"><i class="i_edit2"></i>編修</button>
+                                        <button type="button" class="btn btn-blue"><i class="i_close2"></i>刪除</button>
+                                        <button type="button" class="btn btn-red"><i class="i_uncorrect2"></i>勘誤</button>
+                                    </div>
+                                    <!-- 更新時間 -->
+                                    <time class="update">2020/06/18 15:34</time>
+                                </div>
+                            </div>
+                        </div>
+                    </section>  
+
+                    <!-- 頁碼：頁數 -->
+                    <div class="pagination">
+                        <ul class="page">
+                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">8</a></li>
+                            <li><a href="#">9</a></li>
+                            <li><a href="#">10</a></li>
+                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                        </ul>
+                    </div>
+                </section>
+            </section>
+        </div>
+        <!-- control panel-->
+        <div class="btn_panel btn_grp">
+            <button type="button" class="btn btn-normal">取消</button>
+            <button type="button" class="btn btn-primary">存檔並繼續新增下一筆</button>
+            <button type="button" class="btn btn-secondary">存檔</button>
+        </div>
+        <!-- control panel End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <script src="vendor/enquire/enquire.js"></script><!-- query js -->
+    <!-- highchart plugin -->
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/variable-pie.js"></script>
+
+    <script>
+        var _Color = ['#20A4F3', '#ddd'];
+        // pie
+        Highcharts.chart('pie1', {
+          chart: { 
+            height: 240,
+            type: 'variablepie' 
+          },
+          title: { text: '合理採收量' },
+          colors: _Color,
+          tooltip: {
+            headerFormat: '',
+            pointFormat: '<span>\u25CF</span> <b> {point.name}</b><br/>' +
+              '項目: <b>{point.y}</b>項<br/>'
+          },
+          series: [{
+            minPointSize: 30,
+            innerSize: '100px',
+            zMin: 0,
+            name: 'countries',
+            // dataLabels: [{
+            //     style: { 
+            //         fontSize: 16 
+            //     }
+            // }],
+            data: [{
+              name: '已採收',
+              y: 80
+            }, {
+              name: '未採收',
+              y: 20
+            }]
+          }]
+        });
+    </script>
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+    </script>
+    <!-- hyUI -->
+    <!-- <script src="js/hyui.js"></script> -->
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

@@ -57,6 +57,10 @@
     @include hyui_icon('icon_close');
     &:before { background-size: 14px 14px; }
 }
+
+.i_close_circle {
+    @include hyui_icon('icon_close_circle');
+}
 .i_copy { @include hyui_icon('icon_copy'); }
 .i_calendar { @include hyui_icon('icon_calendar'); }
 .i_calendar_color { @include hyui_icon('icon_calendar_color'); }
@@ -74,6 +78,7 @@
 
 // D ----------------------------------------
 .i_dot{ @include hyui_icon('icon_dot'); }
+.i_delete{ @include hyui_icon('icon_delete'); }   //資料夾＋叉叉
 // 白色
 .i_dot2{ @include hyui_icon('icon_dot2'); }
 
@@ -86,6 +91,7 @@
 .i_edit2 { @include hyui_icon('icon_edit2'); }
 .i_edit_a2 { @include hyui_icon('icon_edit_a2'); }
 .i_enter2 { @include hyui_icon('icon_enter2'); }
+.i_export2{ @include hyui_icon('icon_export2'); }
 
 // F ----------------------------------------
 .i_facebook { @include hyui_icon('icon_facebook'); }
@@ -110,8 +116,10 @@
 .i_home2 { @include hyui_icon('icon_home2'); }
 
 // I ----------------------------------------
+.i_import {  @include hyui_icon('icon_import'); }
 .i_info {  @include hyui_icon('icon_info'); }
 // 白色
+.i_import2 {  @include hyui_icon('icon_import2'); }
 .i_info2 { @include hyui_icon('icon_info2'); }
 
 // J ----------------------------------------
@@ -150,10 +158,12 @@
 .i_order2{ @include hyui_icon('icon_order2'); }
 
 // P ----------------------------------------
+.i_phone{ @include hyui_icon('icon_phone'); }
 .i_photo{ @include hyui_icon('icon_photo'); }
 .i_pick { @include hyui_icon('icon_pick'); }
 .i_play{ @include hyui_icon('icon_play'); }
 // 白色
+.i_phone2{ @include hyui_icon('icon_phone2'); }
 .i_photo2{ @include hyui_icon('icon_photo2'); }
 .i_pick2 { @include hyui_icon('icon_pick2'); }
 .i_play2{ @include hyui_icon('icon_play2'); }
@@ -192,6 +202,9 @@
 .i_trash2 { @include hyui_icon('icon_trash2'); }
 
 // U ----------------------------------------
+.i_uncorrect{ @include hyui_icon('icon_doc_uncorrect'); }
+// 白色
+.i_uncorrect2{ @include hyui_icon('icon_doc_uncorrect2'); }
 
 // V ----------------------------------------
 .i_video { @include hyui_icon('icon_video'); }

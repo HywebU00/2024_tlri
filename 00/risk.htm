@@ -849,13 +849,13 @@
                     </div>
                 </div>
 
-                <!-- Add-選擇土地以新增生產批次 -->
+                <!-- 風險警示總覽 -->
                 <section>
                     <h3 class="sub_title">次標題</h3>
                     <p class="explan">註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。<span class="R">說明文字</span><span class="B">說明文字</span></p>
 
                     <!-- 1 -->
-                    <div class="">
+                    <div>
                         <div class="function_mix type2">
                             <!-- 搜尋 + 其他組合 -->
                             <div>
@@ -874,43 +874,43 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div class="statistics_risk">
                             <p>此統計期間共噴灑 4 次農藥與採收 3 次</p>
-                            <ul>
-                                <li>高風險</li>
-                                <li>中風險</li>
-                                <li>低風險</li>
+                            <ul class="grade">
+                                <li class="H">高風險</li>
+                                <li class="M">中風險</li>
+                                <li class="L">低風險</li>
                             </ul>
-                            <section>
-                                <div>
+                            <section class="list">
+                                <div class="H">
                                     <p>使用未核准登記用藥</p>
                                     <span class="count">1</span>
                                 </div>
-                                <div>
+                                <div class="M">
                                     <p>使用農藥劑量超過建議值</p>
-                                    <span class="count">1</span>
+                                    <span class="count">10</span>
                                 </div>
-                                <div>
+                                <div class="L">
                                     <p>未符合施藥間隔天數</p>
-                                    <span class="count">1</span>
+                                    <span class="count">100</span>
                                 </div>
-                                <div>
+                                <div class="H">
                                     <p>使用農藥未達安全期即採收</p>
                                     <span class="count">1</span>
                                 </div>
-                                <div>
+                                <div class="M">
                                     <p>超過正常採收期天數</p>
                                     <span class="count">1</span>
                                 </div>
-                                <div>
+                                <div class="L">
                                     <p>超出合理採收量</p>
                                     <span class="count">1</span>
                                 </div>
-                                <div>
+                                <div class="H">
                                     <p>批次生產之第一次採收</p>
                                     <span class="count">1</span>
                                 </div>
-                                <div>
+                                <div class="M"> 
                                     <p>未採收執行產季結束</p>
                                     <span class="count">1</span>
                                 </div>
@@ -923,6 +923,9 @@
                             <!-- 搜尋 -->
                             <input name="text" type="text" value="" placeholder="請輸入任意字串查詢" autocomplete="off">
                             <button type="button" class="btn btn-blue">匯出查詢結果</button>
+                        </div>
+                        <div class="checkbox">
+                            <label><input type="checkbox">只顯示未修正資料</label>
                         </div>
                         <table class="table_hover">
                             <tr>
@@ -964,12 +967,21 @@
                                         <div class="detail">2020/12/05</div>
                                     </section>
                                     <section class="div_form">
+                                        <div class="label">採收量(公斤)：</div>
+                                        <div class="detail">12000.8</div>
+                                    </section>
+                                    <section class="div_form">
+                                        <div class="label">合理採收量(公斤)：</div>
+                                        <div class="detail">75000</div>
+                                    </section>
+                                    <section class="div_form">
                                         <div class="label">耕作面積：</div>
                                         <div class="detail">0.25 公頃</div>
                                     </section>
                                     <!-- 樣式1：原始紀錄 -->
                                     <section class="div_form evolve">
-                                        <h3>樣式1：原始紀錄</h3>
+                                        <h3>風險列表</h3>
+                                        <!-- A -->
                                         <div class="label"><time>2020/12/04</time>我用的農藥</div>
                                         <div class="detail">
                                             <!-- 第一筆 -->
@@ -977,36 +989,70 @@
                                                 <!-- 1-1 -->
                                                 <div>
                                                     <p><i class="i_bookmark"></i>農藥A1：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
-                                                    <ol>
-                                                        <li class="uncorrected">未修正</li>
-                                                        <li class="corrected">已修正</li>
-                                                        <li class="deleted">已刪除</li>
-                                                    </ol>
+                                                    <ul>
+                                                        <li class="uncorrected">未修正1</li>
+                                                        <li class="uncorrected">未修正2</li>
+                                                        <li class="uncorrected">未修正3</li>
+                                                    </ul>
                                                 </div>
                                                 <!-- 1-2 -->
                                                 <div>
                                                     <p><i class="i_bookmark"></i>農藥A2：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
-                                                    <ol>
-                                                        <li class="uncorrected">採收日2020/12/05，未達安全期7天，安全採收日為2020/12/11之後</li>
-                                                        <li class="corrected">使用劑量1.6公斤/公頃，超過建議值0.8公斤/公頃</li>
-                                                        <li class="deleted">該發生風險之作業項目已被XXXX刪除</li>
-                                                    </ol>
+                                                    <ul>
+                                                        <li class="uncorrected">未修正1</li>
+                                                        <li class="uncorrected">未修正2</li>
+                                                        <li class="uncorrected">未修正3</li>
+                                                    </ul>
                                                 </div>
                                             </section>
                                             <!-- 第二筆 -->
                                             <section class="">
                                                 <p><i class="i_bookmark"></i>農藥B：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量100公克 - 稀釋倍數500</p>
-                                                <ol>
-                                                    <li class="uncorrected">未修正</li>
-                                                    <li class="corrected">已修正</li>
-                                                    <li class="deleted">已刪除</li>
-                                                </ol>
+                                                <ul>
+                                                    <li class="uncorrected">未修正1</li>
+                                                    <li class="uncorrected">未修正2</li>
+                                                    <li class="uncorrected">未修正3</li>
+                                                </ul>
+                                            </section>
+                                        </div>
+                                        <!-- B -->
+                                        <div class="label"><time>2020/12/03</time>我用的農藥</div>
+                                        <div class="detail">
+                                            <!-- 第一筆 -->
+                                            <section class="">
+                                                <!-- 1-1 -->
+                                                <div>
+                                                    <p><i class="i_bookmark"></i>農藥A1：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
+                                                    <ul>
+                                                        <li class="uncorrected">未修正1</li>
+                                                        <li class="uncorrected">未修正2</li>
+                                                        <li class="uncorrected">未修正3</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- 1-2 -->
+                                                <div>
+                                                    <p><i class="i_bookmark"></i>農藥A2：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
+                                                    <ul>
+                                                        <li class="uncorrected">未修正1</li>
+                                                        <li class="uncorrected">未修正2</li>
+                                                        <li class="uncorrected">未修正3</li>
+                                                    </ul>
+                                                </div>
+                                            </section>
+                                            <!-- 第二筆 -->
+                                            <section class="">
+                                                <p><i class="i_bookmark"></i>農藥B：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量100公克 - 稀釋倍數500</p>
+                                                <ul>
+                                                    <li class="uncorrected">未修正1</li>
+                                                    <li class="uncorrected">未修正2</li>
+                                                    <li class="uncorrected">未修正3</li>
+                                                </ul>
                                             </section>
                                         </div>
                                     </section>
                                     <!-- 樣式2：異動紀錄 -->
                                     <section class="div_form evolve">
-                                        <h3>樣式2：風險歷史異動紀錄</h3>
+                                        <h3>風險異動紀錄</h3>
                                         <div class="label"><time>2020/12/04</time>我用的農藥</div>
                                         <div class="detail">
                                             <!-- 第一筆 -->
@@ -1014,47 +1060,183 @@
                                                 <!-- 1-1 -->
                                                 <div>
                                                     <p><i class="i_bookmark"></i>農藥A1：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
-                                                    <ol>
+                                                    <ul>
                                                         <li class="uncorrected">未修正</li>
                                                         <li class="corrected">已修正</li>
                                                         <li class="deleted">已刪除</li>
-                                                    </ol>
+                                                    </ul>
                                                 </div>
                                                 <!-- 1-2 -->
                                                 <div>
                                                     <p><i class="i_bookmark"></i>農藥A2：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
-                                                    <ol>
+                                                    <ul>
                                                         <li class="uncorrected">未修正</li>
                                                         <li class="corrected">已修正</li>
                                                         <li class="deleted">已刪除</li>
-                                                    </ol>
+                                                    </ul>
                                                 </div>
                                             </section>
                                             <!-- 第二筆 -->
                                             <section>
                                                 <p><i class="i_bookmark"></i>農藥B：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量100公克 - 稀釋倍數500</p>
-                                                <ol>
+                                                <ul>
                                                     <li class="uncorrected">未修正</li>
                                                     <li class="corrected">已修正</li>
                                                     <li class="deleted">已刪除</li>
-                                                </ol>
+                                                </ul>
                                             </section>
-
                                         </div>
                                     </section>
                                     <!-- 樣式3：異動紀錄 -->
                                     <section class="div_form evolve">
-                                        <h3>樣式3：風險歷史異動紀錄</h3>
+                                        <h3>樣式3：風險異動紀錄（使用農藥劑量超過建議值）</h3>
+                                        <!-- 1 -->
                                         <div class="label">我用的農藥</div>
                                         <div class="detail">
                                             <section>
-                                                <time class="update">2020/12/04</time>
                                                 <p><i class="i_bookmark"></i>亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
-                                                <ol>
+                                                <time class="update">2020/12/04</time>
+                                                <ul>
                                                     <li class="uncorrected">未修正</li>
                                                     <li class="corrected">已修正</li>
                                                     <li class="deleted">已刪除</li>
-                                                </ol>
+                                                </ul>
+                                            </section>
+                                        </div>
+                                        <!-- 2 -->
+                                        <div class="detail">
+                                            <section>
+                                                <p><i class="i_bookmark"></i>亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
+                                                <time class="update">2020/12/04</time>
+                                                <ul>
+                                                    <li class="uncorrected">未修正</li>
+                                                    <li class="corrected">已修正</li>
+                                                    <li class="deleted">已刪除</li>
+                                                </ul>
+                                            </section>
+                                        </div>
+                                        <!-- 3 -->
+                                        <div class="detail">
+                                            <!-- 第一筆 -->
+                                            <section>
+                                                <!-- 1-1 -->
+                                                <div>
+                                                    <p><i class="i_bookmark"></i>農藥A1：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
+                                                    <time class="update">2020/12/04</time>
+                                                    <ul>
+                                                        <li class="uncorrected">未修正</li>
+                                                        <li class="corrected">已修正</li>
+                                                        <li class="deleted">已刪除</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- 1-2 -->
+                                                <div>
+                                                    <p><i class="i_bookmark"></i>農藥A2：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量400公克 -稀釋倍數4000</p>
+                                                    <time class="update">2020/12/04</time>
+                                                    <ul>
+                                                        <li class="uncorrected">未修正</li>
+                                                        <li class="corrected">已修正</li>
+                                                        <li class="deleted">已刪除</li>
+                                                    </ul>
+                                                </div>
+                                            </section>
+                                            <!-- 第二筆 -->
+                                            <section>
+                                                <p><i class="i_bookmark"></i>農藥B：亞滅培- 水溶性粉劑(20.000 (%))  - 使用劑量100公克 - 稀釋倍數500</p>
+                                                <time class="update">2020/12/04</time>
+                                                <ul>
+                                                    <li class="uncorrected">未修正</li>
+                                                    <li class="corrected">已修正</li>
+                                                    <li class="deleted">已刪除</li>
+                                                </ul>
+                                            </section>
+                                        </div>
+                                    </section>
+                                    <!-- 樣式4：異動紀錄 -->
+                                    <section class="div_form evolve">
+                                        <h3>樣式4：風險異動紀錄（超出合理採收量）</h3>
+                                        <!-- 1 -->
+                                        <div class="detail">
+                                            <section>
+                                                <!-- 超出合理採收量 1 -->
+                                                <div class="div_form">
+                                                    <div class="label">累計採收量(公斤)：</div>
+                                                    <div class="detail">
+                                                        <b class="warn">76000.8</b>
+                                                        <time class="update">2020/12/05</time>
+                                                    </div>
+                                                </div>
+                                                <!-- 超出合理採收量 2 -->
+                                                <div class="div_form">
+                                                    <div class="label">累計採收量(公斤)：</div>
+                                                    <div class="detail">
+                                                        文字顏色1
+                                                        <b>文字顏色2</b>
+                                                        <b class="this">文字顏色3</b>
+                                                        <b class="warn">文字顏色4</b>
+                                                        <time class="update">2020/12/04</time>
+                                                    </div>
+                                                    <ul>
+                                                        <li class="uncorrected">未修正</li>
+                                                        <li class="corrected">已修正</li>
+                                                        <li class="deleted">已刪除</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- 未修正 -->
+                                                <div class="div_form">
+                                                    <div class="detail">
+                                                        <span class="uncorrected">蓮霧正常採收期6天，正常採收期為2020/11/26之前，採收日2020/12/02超過正常採收期</span>
+                                                        <time class="update">2020/12/05</time>
+                                                    </div>
+                                                </div>
+                                                <!-- 已修正 -->
+                                                <div class="div_form">
+                                                    <div class="detail">
+                                                        <span class="corrected">蓮霧正常採收期6天，正常採收期為2020/11/26之前，採收日2020/12/02超過正常採收期</span>
+                                                        <time class="update">2020/12/05</time>
+                                                    </div>
+                                                </div>
+                                                <!-- 已刪除 -->
+                                                <div class="div_form">
+                                                    <div class="detail">
+                                                        <span class="deleted">蓮霧正常採收期6天，正常採收期為2020/11/26之前，採收日2020/12/02超過正常採收期</span>
+                                                        <time class="update">2020/12/05</time>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                        <!-- 2 採收日 -->
+                                        <div class="detail">
+                                            <section>
+                                                <!-- 採收日 1 -->
+                                                <div class="div_form">
+                                                    <div class="label">採收日：</div>
+                                                    <div class="detail">
+                                                        2020/12/05
+                                                        <time class="update">2020/12/05</time>
+                                                    </div>
+                                                </div>
+                                                <!-- 採收日 2 -->
+                                                <div class="div_form">
+                                                    <div class="label">採收日：</div>
+                                                    <div class="detail">
+                                                        2020/12/05
+                                                        <time class="update">2020/12/04</time>
+                                                    </div>
+                                                    <ul>
+                                                        <li class="uncorrected">未修正</li>
+                                                        <li class="corrected">已修正</li>
+                                                        <li class="deleted">已刪除</li>
+                                                    </ul>
+                                                </div>
+                                                <!-- 採收日 3 -->
+                                                <div class="div_form">
+                                                    <div class="label">採收日：</div>
+                                                    <div class="detail flex">
+                                                        2020/12/03
+                                                        <time class="update">2020/12/03</time>
+                                                    </div>
+                                                </div>
                                             </section>
                                         </div>
                                     </section>
@@ -1096,7 +1278,7 @@
                                 <td>楊小靜</td>
                                 <td>蓮霧</td>
                                 <td>2020/12/05</td>
-                                <td><a href="javascript:void(0);" class="switch">未讀取</a></td>
+                                <td><a href="javascript:void(0);" class="switch viewed">已讀取</a></td>
                                 <td>2020/12/12</td>
                                 <td>已刪除</td>
                             </tr>
@@ -1106,7 +1288,7 @@
                                 <td>楊小靜</td>
                                 <td>蓮霧</td>
                                 <td>2020/12/05</td>
-                                <td><a href="javascript:void(0);" class="switch">已修正</a></td>
+                                <td><a href="javascript:void(0);" class="switch viewed">已讀取</a></td>
                                 <td>2020/12/12</td>
                                 <td>已刪除</td>
                             </tr>
@@ -1116,7 +1298,7 @@
                                 <td>楊小靜</td>
                                 <td>蓮霧</td>
                                 <td>2020/12/05</td>
-                                <td><a href="javascript:void(0);" class="switch">未修正</a></td>
+                                <td><a href="javascript:void(0);" class="switch viewed">已讀取</a></td>
                                 <td>2020/12/12</td>
                                 <td>已刪除</td>
                             </tr>
@@ -1126,7 +1308,7 @@
                                 <td>楊小春</td>
                                 <td>葡萄</td>
                                 <td>2020/12/05</td>
-                                <td><a href="javascript:void(0);" class="switch">已修正</a></td>
+                                <td><a href="javascript:void(0);" class="switch viewed">已讀取</a></td>
                                 <td>2020/12/12</td>
                                 <td>已刪除</td>
                             </tr>

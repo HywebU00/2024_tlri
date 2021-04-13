@@ -170,7 +170,7 @@ table {
 }
 // 原本寫在 .modal 中的設定
 .table_operating{
-    font-size: 112.5%;
+    // font-size: 112.5%;
     
     a{
         // box-shadow: 0 1px;
@@ -181,6 +181,7 @@ table {
     b{
         color: darken($primaryColor, 5);
         &.this{ color: darken($color-orange, 5); }
+        &.warn{ color: #c52a3e; }
     }
 
     // 作物自訂用量參考，3種狀況
@@ -194,9 +195,40 @@ table {
         }
     }
 
+    .function_mix+.checkbox{
+        margin: .65em 0;
+        text-align: right;
+    }
+
     table{
         td{
-            a.switch{}
+            a.switch{
+                // 未讀取
+                &:after{
+                    content: '';
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                    vertical-align: middle;
+                    background: url(../images/icon/icon_doc_uncorrect_red.svg) 50% 50% no-repeat;
+                    background-size: contain;
+                    margin-left: .25em;
+                }
+                // 已讀取
+                &.viewed{
+                    color: #046aa5;
+                    &:after{
+                        content: '';
+                        display: inline-block;
+                        width: 18px;
+                        height: 18px;
+                        vertical-align: middle;
+                        background: url(../images/icon/icon_check_circle.svg) 50% 50% no-repeat;
+                        background-size: contain;
+                        margin-left: .25em;
+                    }
+                }
+            }
             a{
                 // 克服折行問題
                 min-width: 60px;
@@ -206,6 +238,7 @@ table {
         tr.sub_info{
 
             display: none; //預設隱藏
+
             // background: #6f6f6f;
             // box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
             // color: #fff;
@@ -244,7 +277,8 @@ table {
                 }
 
                 .label, .detail{
-                    padding: .5em .75em;
+                    // padding: .5em .75em;
+                    padding: 1em .75em .5em;;
                 }
 
                 .label{
@@ -252,10 +286,22 @@ table {
                     font-weight: bold;
 
                     time{
-                        background: darken($primaryColor, 5);
-                        padding: .25em .5em;
-                        color: #fff;
+                        // background: darken($primaryColor, 5);
+                        padding: .25em .75em;
+                        // color: #fff;
                         margin-right: .5em;
+
+                        // 更新日期
+                        &.update{
+                            background: none;
+                            color: #555;
+                            float: right;
+                            padding: 0;
+                            font-size: 75%;
+                            &:before{
+                                content: '更新日期：'
+                            }
+                        }
                     }
                 }
                 .detail{
@@ -272,33 +318,66 @@ table {
                     border-bottom: 0;
 
                     h3{
-                        color: darken($primaryColor, 5);
-                        padding: 0 .75em;
-                        margin: 1em 0 .25em;
+                        // color: darken($primaryColor, 10);
+                        // padding: 0 .75em;
+                        // margin: 1em 0 .25em;
+
+                        color: #fff;
+                        background: darken($primaryColor, 10);
+                        padding: .45em 1.5em;
+                        margin: 1em .5em .25em;
+
+                        position: relative;
+
+                        &:before, &:after{
+                            content: '';
+                            width: 14px;
+                            height: 1px;
+                            background: #fff;
+                            display: block;
+                            position: absolute;
+                            top: calc(50% - 1px);
+                        }
+                        &:before{ left: .5em; }
+                        &:after{ right: .5em; }
                     }
 
-                    .label, .detail{ flex: 1 1 100%; }
-                    .label{}
-                    .detail{
+                    >.label, >.detail{ flex: 1 1 100%; }
+                    >.label{
+                        // color: pink;
+                        font-size: 120%;
+                        // background: url(../images/icon/icon_planting.svg) .5em 50% no-repeat;
+                        // background-size: 24px 24px;
+                        // padding-left: 1.75em;
+
+                        span{}
+                    }
+                    >.detail{
                         padding: 0 .75em .5em;
                         section{
                             background: #fff;
-                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 20px;
                             color: #222;
                             padding: 1em;
                             margin: .55em 0;
                             border-radius: 4px;
 
                             // position: relative;  
-
+                            &:first-child{ margin-top: 0; }
                             &:last-child{ margin-bottom: 0; }
 
                             time{
                                 &.update{
                                     // position: absolute;
                                     // right: 0;
-                                    padding: .25em .5em;
-                                    background: #eee;
+                                    // padding: .25em .5em;
+                                    // background: #eee;
+
+                                    float: right;
+                                    font-size: 86%;
+                                    font-weight: 500;
+                                    line-height: 36px;
+                                    // background: none;
                                     &:before{
                                         content: '更新日期：';
                                         display: inline-block;
@@ -306,16 +385,32 @@ table {
                                 }
                             }
                             p{
-                                margin-bottom: .5em;
-                                font-size: 110%;
+                                margin: 0;
+                                padding: .35em 0;
+                                font-size: 112.5%;
                                 font-weight: 500;
+                                color: darken($primaryColor, 10);
+                                display: inline-block;  // 讓更新日期可以塞在後面
+
+                                +time{
+                                    &.update{}
+
+                                    @include screen('notebook'){
+                                        &.update{
+                                            float: none;
+                                            display: block;
+                                            text-align: right;
+                                        }
+                                    }
+                                }
                             }
-                            ol{
-                                list-style-position: inside;
+                            ul{
+                                // list-style-position: inside;
+                                list-style: none;
                                 padding: .9em 1.5em;
                                 margin: 0.25em 0;
                                 background: #f5f5f5;
-                                border-top: solid 2px #5f5f5f;
+                                border-left: solid 2px #666;
 
                                 li{
                                     padding: .25em .5em;
@@ -323,18 +418,105 @@ table {
                                     overflow: hidden;
                                     margin-bottom: 4px;
 
+                                    // &::marker {
+                                    //     color: blue;
+                                    // }
+
+                                    &:before{
+                                        content: '';
+                                        display: inline-block;
+                                        margin-right: .75em;
+                                        width: 20px;
+                                        height: 20px;
+                                        vertical-align: middle;
+                                    }
+
                                     &.uncorrected{
                                         background: #c52a3e;
                                         color: #fff;
+                                        &:before{
+                                            background: url(../images/icon/icon_doc_uncorrect.svg) 50% 50% no-repeat;
+                                            background-size: contain;
+                                        }
                                     }
                                     &.corrected{
-                                        box-shadow: inset #c52a3e 0 0 0 2px;
+                                        // box-shadow: inset #c52a3e 0 0 0 2px;
+                                        box-shadow: inset #949494 0 0 0 2px;
                                         background: #fff;
+                                        &:before{
+                                            background: url(../images/icon/icon_doc_correct.svg) 50% 50% no-repeat;
+                                            background-size: contain;
+                                        }
                                     }
                                     &.deleted{
                                         color: #c52a3e;
+                                        &:before{
+                                            background: url(../images/icon/icon_doc_delete.svg) 50% 50% no-repeat;
+                                            background-size: contain;
+                                        }
                                     }
                                 }
+                            }
+                        }
+
+                        .div_form{
+                            flex-flow: row wrap;
+                            >.detail{
+                                time{
+                                    // 更新日期
+                                    &.update{
+                                        float: right;
+                                        // font-size: 86%;
+                                        // font-weight: 500;
+                                        // background: none;
+                                    }
+                                }
+
+                                span{
+                                    display: inline-block;
+                                    padding: .25em .5em;
+                                    border-radius: 4px;
+                                    overflow: hidden;
+                                    margin-bottom: 4px;
+                                    &:before{
+                                        content: '';
+                                        display: inline-block;
+                                        margin-right: .75em;
+                                        width: 20px;
+                                        height: 20px;
+                                        vertical-align: middle;
+                                    }
+
+                                    &.uncorrected{
+                                        background: #c52a3e;
+                                        color: #fff;
+                                        &:before{
+                                            background: url(../images/icon/icon_doc_uncorrect.svg) 50% 50% no-repeat;
+                                            background-size: contain;
+                                        }
+                                    }
+                                    &.corrected{
+                                        // box-shadow: inset #c52a3e 0 0 0 2px;
+                                        box-shadow: inset #949494 0 0 0 2px;
+                                        background: #fff;
+                                        &:before{
+                                            background: url(../images/icon/icon_doc_correct.svg) 50% 50% no-repeat;
+                                            background-size: contain;
+                                        }
+                                    }
+                                    &.deleted{
+                                        color: #c52a3e;
+                                        &:before{
+                                            background: url(../images/icon/icon_doc_delete.svg) 50% 50% no-repeat;
+                                            background-size: contain;
+                                        }
+                                    }
+                                }
+                            }
+                            >ul{
+                                flex: 1 1 100%;
+                                padding: .5em .75em;
+                                margin-left: 5.5em;
                             }
                         }
                     }

@@ -7,6 +7,10 @@ $btn-radius:.2em;
 .btn_grp {
     text-align: center;
     padding: 1em 0;
+
+    &.left{
+        text-align: left;
+    }
 }
 
 // 按鈕的共用設定
@@ -114,7 +118,7 @@ $btn-radius:.2em;
 
 .btn-add {
     // @extend %btn;
-    @include btn_setting($primaryColor, #FFF);
+    @include btn_setting($color-orange, #FFF);
 }
 
 

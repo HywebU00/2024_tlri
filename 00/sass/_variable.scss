@@ -23,7 +23,7 @@ $line:						nth($_line,$color_light);
 $color-blue: #21baff;
 $color-green: #5cb85c;
 $color-orange: #f77810;
-$color-red: #ff3e4d;
+$color-red: #b70000;
 $color-yellow: #fcc211;
 $color-purple: #aa5ac5;
 $color-gray: #ccc;
@@ -51,6 +51,7 @@ $font-size: 1em;
 // 格線系統
 $grid-columns: 12 !default;                //格線欄位數
 $grid-gutter-width: 30px !default;         //左右padding
+$grid-margin-width: 0px !default;         //左右margin
 $container-max: 1200px !default;           //container最大寬
 
 //mediaquery
