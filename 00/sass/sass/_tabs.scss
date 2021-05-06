@@ -221,6 +221,27 @@
             }
         }
     }
+
+    // 樣式2
+    &.card-type2{
+        margin-top: 1em;
+        .tabItem{
+            h4{
+                a{
+                    display: block !important;
+                    text-align: center !important;
+                }
+                &.active{
+                    a{ color: $secondaryColor; }
+                }
+            }
+        }
+        .tabContent{
+            padding: 0 1.5em;
+            box-shadow: inset 0 0 1px 0 #000;
+        }
+    }
+
 }
 
 // 顯示content

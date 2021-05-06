@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>農糧產品產銷履歷資訊系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- main Start -->
+        <!-- 主要內容區 -->
+        <div class="content">
+            <section class="main">
+                <!-- 第二層選單 -->
+                <ul class="submenu">
+                    <li><a href="#">1-1 組織資料</a></li>
+                    <li><a href="#">1-2 列印標籤授權使用</a></li>
+                    <li><a href="#">1-3 L4系統使用權限</a></li>
+                    <li class="now"><a href="#">1-4 使用權限</a></li>
+                    <li><a href="#">1-5 系統權限</a></li>
+                </ul>
+                <!-- 選單說明 -->
+                <!-- <p class="submenu_info">項目說明</p> -->
+
+                <!-- 第三層選單 -->
+                <!-- <ul class="th3_menu">
+                    <li class="now"><a href="#">1-4-1 第三層選單</a></li>
+                    <li><a href="#">1-4-2 第三層選單</a></li>
+                </ul> -->
+
+                <div class="inner_head">
+                    <!-- h2節點 -->
+                    <h2 class="title">List-生產批次(grid)</h2>
+                    <!-- function功能區塊 -->
+                    <div class="function">
+                        <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                            <li class="icon_print"><a href="#">友善列印</a></li>
+                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <section>
+                    <h3 class="sub_title">次標題：生產批次</h3>
+
+                    <!-- 快速按鈕 -->
+                    <div class="shortcut">
+                        <p class="total">總蜂群數：<span>500</span></p>
+                        <div class="links">
+                            <a href="#" class="dosing">投藥</a>
+                            <a href="#" class="fertilize">植物施肥</a>
+                            <a href="#" class="feed">動物餵食</a>
+                            <a href="#" class="harvest">採收</a>
+                            <a href="#" class="operate">作業</a>
+                        </div>
+                    </div>
+
+                    <!-- <p>註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p> -->
+
+                    <div class="btn_grp left">
+                        <button type="button" class="btn btn-add"><i class="i_add2"></i>選擇土地以新增生產批次</button>
+                        <button type="button" class="btn btn-normal">常用作業內容管理</button>
+                    </div>
+
+                    <p class="explan">說明文字<span class="R">說明文字</span><span class="B">說明文字</span></p>
+
+                    <!-- 篩選條件 -->
+                    <div class="filter">
+                        <div class="condition">
+                            <button type="button" class="btn">
+                                <div>
+                                    <!-- <span class="count">2</span> -->
+                                    <span class="text">年份</span>
+                                </div>
+                                <i class="i_arrow_down"></i>
+                            </button>
+                            <button type="button" class="btn chosen">
+                                <div>
+                                    <span class="count">2</span>
+                                    <span class="text">作物</span>
+                                </div>
+                                <i class="i_close_circle"></i>
+                            </button>
+                            <button type="button" class="btn ">
+                                <div>
+                                    <!-- <span class="count">2</span> -->
+                                    <span class="text">品種</span>
+                                </div>
+                                <i class="i_arrow_down"></i>
+                            </button>
+                            <button type="button" class="btn">
+                                <div>
+                                    <!-- <span class="count">2</span> -->
+                                    <span class="text">生產農民</span>
+                                </div>
+                                <i class="i_arrow_down"></i>
+                            </button>
+                            <button type="button" class="btn">
+                                <div>
+                                    <!-- <span class="count">2</span> -->
+                                    <span class="text">生產階段</span>
+                                </div>
+                                <i class="i_arrow_down"></i>
+                            </button>
+                        </div>
+                        <!-- 搜尋 -->
+                        <input name="text" type="text" value="" placeholder="請輸入任意字串查詢" autocomplete="off">
+                        <!-- checkbox -->
+                        <div class="checkbox">
+                            <label><input type="checkbox">只顯示產季中的生產履歷</label>
+                        </div>
+                    </div>
+
+                    <!-- 頁籤 -->
+                    <section>
+                        <div class="tabSet2 cards card-type2">
+                            <section class="tabs"> 
+                                <div class="tabItem">
+                                    <h4><a href="javascript:;"><b>生產批次總覽</b></a></h4>
+                                    <h4><a href="javascript:;"><b>尚無生產紀錄</b></a></h4>
+                                    <h4><a href="javascript:;"><b>生產紀錄登打中</b></a></h4>
+                                    <h4><a href="javascript:;"><b>採收作業中</b></a></h4>
+                                    <h4><a href="javascript:;"><b>產季已結束</b></a></h4>
+                                </div>
+                                <!-- 內容 -->
+                                <div class="tabContent">
+                                    <div class="box">
+                                        <!-- 頁碼：筆數 -->
+                                        <div class="pagination">
+                                            <form action="" class="form_inline">
+                                                <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 
+                                                    <select name="" id="">
+                                                        <option value="">10</option>
+                                                        <option value="">20</option>
+                                                        <option value="">30</option>
+                                                        <option value="">40</option>
+                                                    </select> 筆，
+                                                    <input type="button" class="btn" value="確定">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- 產銷履歷卡片 -->
+                                        <section class="card_produce">
+                                            <div class="col">
+                                                <div class="up">
+                                                    <!-- 識別名稱 -->
+                                                    <div class="Identify">
+                                                        <a class="title">識別名稱</a>
+                                                        <button type="button" class="btn switch">展開選單</button>
+                                                    </div>
+                                                    <!-- 生產者543 -->
+                                                    <div class="producer">
+                                                        <div class="foto">
+                                                            <!-- foro -->
+                                                            <div class="img-container">
+                                                                <img src="images/01-farmer.jpg" alt="農民" class="cover">
+                                                            </div>
+                                                            <!-- risk -->
+                                                            <div class="risk"><a href="#"><span>99</span></a></div>
+                                                        </div>
+                                                        <div class="user">
+                                                            <p>張小可</p>
+                                                            <!-- 作物 -->
+                                                            <div class="crop">
+                                                                <span>稻米</span>
+                                                                <span>台農71號</span>
+                                                                <span>一期稻作</span>
+                                                                <span class="resume_ID">履歷編號：100379200001</span>
+                                                                <div class="area"><a href="#"><span>栽種總面積 1.3813公頃</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- other -->
+                                                    <div class="course">
+                                                        <div class="info">
+                                                            <a href="#">尚無生產紀錄</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="down">
+                                                    <div class="btn_grp">
+                                                        <button type="button" class="btn btn-blue">檢視</button>
+                                                        <button type="button" class="btn btn-blue"><i class="i_add2"></i>新增生產紀錄</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="up">
+                                                    <!-- 識別名稱 -->
+                                                    <div class="Identify">
+                                                        <a class="title">識別名稱識別名稱識別名稱識別名稱識別名稱識別名稱</a>
+                                                        <button type="button" class="btn switch">展開選單</button>
+                                                    </div>
+                                                    <!-- 生產者543 -->
+                                                    <div class="producer">
+                                                        <div class="foto">
+                                                            <!-- foro -->
+                                                            <div class="img-container">
+                                                                <img src="images/01-farmer.jpg" alt="農民" class="cover">
+                                                            </div>
+                                                            <!-- risk -->
+                                                            <div class="risk"><a href="#"><span>99</span></a></div>
+                                                        </div>
+                                                        <div class="user">
+                                                            <p>張小可</p>
+                                                            <!-- 作物 -->
+                                                            <div class="crop">
+                                                                <span>稻米</span>
+                                                                <span>台農71號</span>
+                                                                <span>一期稻作</span>
+                                                                <span class="resume_ID">履歷編號：100379200001</span>
+                                                                <div class="area"><a href="#"><span>栽種總面積 1.3813公頃</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- other -->
+                                                    <div class="course">
+                                                        <div class="info">
+                                                            <a href="#">尚無生產紀錄</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="down">
+                                                    <div class="btn_grp">
+                                                        <button type="button" class="btn btn-blue">檢視</button>
+                                                        <button type="button" class="btn btn-blue"><i class="i_add2"></i>新增生產紀錄</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="up">
+                                                    <!-- 識別名稱 -->
+                                                    <div class="Identify">
+                                                        <a class="title">識別名稱</a>
+                                                        <button type="button" class="btn switch">展開選單</button>
+                                                    </div>
+                                                    <!-- 生產者543 -->
+                                                    <div class="producer">
+                                                        <div class="foto">
+                                                            <!-- foro -->
+                                                            <div class="img-container">
+                                                                <img src="images/01-farmer.jpg" alt="農民" class="cover">
+                                                            </div>
+                                                            <!-- risk -->
+                                                            <div class="risk"><a href="#"><span>99</span></a></div>
+                                                        </div>
+                                                        <div class="user">
+                                                            <p>張小可</p>
+                                                            <!-- 作物 -->
+                                                            <div class="crop">
+                                                                <span>稻米</span>
+                                                                <span>台農71號台農71號台農71號台農71號台農71號台農71號</span>
+                                                                <span>一期稻作</span>
+                                                                <span class="resume_ID">履歷編號：100379200001</span>
+                                                                <div class="area"><a href="#"><span>栽種總面積 1.3813公頃</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- other -->
+                                                    <div class="course">
+                                                        <div class="info">
+                                                            <a href="#">尚無生產紀錄尚無生產紀錄尚無生產紀錄尚無生產紀錄尚無生產紀錄尚無生產紀錄尚無生產紀錄尚無生產紀錄</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="down">
+                                                    <div class="btn_grp">
+                                                        <button type="button" class="btn btn-blue">檢視</button>
+                                                        <button type="button" class="btn btn-blue"><i class="i_add2"></i>新增生產紀錄</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="up">
+                                                    <!-- 識別名稱 -->
+                                                    <div class="Identify">
+                                                        <a class="title">識別名稱</a>
+                                                        <button type="button" class="btn switch">展開選單</button>
+                                                    </div>
+                                                    <!-- 生產者543 -->
+                                                    <div class="producer">
+                                                        <div class="foto">
+                                                            <!-- foro -->
+                                                            <div class="img-container">
+                                                                <img src="images/01-farmer.jpg" alt="農民" class="cover">
+                                                            </div>
+                                                            <!-- risk -->
+                                                            <div class="risk"><a href="#"><span>99</span></a></div>
+                                                        </div>
+                                                        <div class="user">
+                                                            <p>張小可</p>
+                                                            <!-- 作物 -->
+                                                            <div class="crop">
+                                                                <span>稻米</span>
+                                                                <span>台農71號</span>
+                                                                <span>一期稻作</span>
+                                                                <span class="resume_ID">履歷編號：100379200001</span>
+                                                                <div class="area"><a href="#"><span>栽種總面積 1.3813公頃</span></a></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- other -->
+                                                    <div class="course">
+                                                        <div class="info">
+                                                            <a href="#">尚無生產紀錄</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="down">
+                                                    <div class="btn_grp">
+                                                        <button type="button" class="btn btn-blue">檢視</button>
+                                                        <button type="button" class="btn btn-blue"><i class="i_add2"></i>新增生產紀錄</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <!-- 頁碼：頁數 -->
+                                        <div class="pagination">
+                                            <ul class="page">
+                                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                                <li class="active"><a href="#">1</a></li>
+                                                <li><a href="#">2</a></li>
+                                                <li><a href="#">3</a></li>
+                                                <li><a href="#">4</a></li>
+                                                <li><a href="#">5</a></li>
+                                                <li><a href="#">6</a></li>
+                                                <li><a href="#">7</a></li>
+                                                <li><a href="#">8</a></li>
+                                                <li><a href="#">9</a></li>
+                                                <li><a href="#">10</a></li>
+                                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="noData"><span>目前無項目</span></div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="noData"><span>目前無項目</span></div>
+                                    </div>
+                                    <div class="box">
+                                        <div class="noData"><span>目前無項目</span></div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </section>
+            </section>
+        </div>
+        <!-- control panel-->
+        <div class="btn_panel btn_grp">
+            <button type="button" class="btn btn-normal">取消</button>
+            <button type="button" class="btn btn-primary">存檔並繼續新增下一筆</button>
+            <button type="button" class="btn btn-secondary">存檔</button>
+        </div>
+        <!-- control panel End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <script src="vendor/enquire/enquire.js"></script><!-- query js -->
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+    </script>
+    <!-- hyUI -->
+    <!-- <script src="js/hyui.js"></script> -->
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>
