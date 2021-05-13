@@ -232,6 +232,10 @@ text.highcharts-credits { display: none; }
                 margin: .25em 0 .75em;
                 background: #f7f7f7;
                 padding: .5em 1.25em;
+                ol, ul{
+                    margin-top: 6px;
+                    margin-bottom: 6px;
+                }
             }
 
             // 系統使用授權
@@ -306,7 +310,7 @@ text.highcharts-credits { display: none; }
 
                         &:after{
                             content: '';
-                            background: #9a9a9a;
+                            background: #34ae8f;
                             display: block;
                             width: 56px;
                             height: 56px;
@@ -323,6 +327,7 @@ text.highcharts-credits { display: none; }
                         h4{
                             margin: .5em 0;
                             font-size: 1.25em;
+                            color: #009b74;
                         }
 
                         .flex-form{
@@ -374,6 +379,17 @@ text.highcharts-credits { display: none; }
                             border-bottom: 0;
                         }
                     }
+                }
+
+                .filter{ border: transparent; }
+                .cards.card-type2{
+                    padding: 0 16px;
+                }
+                .cards-total{
+                    margin: 0 -8px -16px;
+                    border-bottom-left-radius: 4px;
+                    border-bottom-right-radius: 4px;
+                    border-top: 1px solid #ddd;
                 }
             }
 
@@ -1643,6 +1659,7 @@ table {
             padding: .5em 0;
             border-top: 1px solid #ddd;
             border-bottom: 1px solid #ddd;
+            margin-bottom: 10px;
 
             .info, .stage{ @extend %flex_set; }
 
@@ -1691,6 +1708,20 @@ table {
     }
 }
 
+// 選取總計
+.cards-total{
+    background: #f5f5f5;
+    padding: 1em;
+    text-align: center;
+    font-size: 112.5%;
+    span{
+        display: inline-block;
+        margin: 0 6px;
+        font-weight: bold;
+        color: $primaryColor;
+    }  
+}
+
 // 樣式2
 .card-type2{
     .card_produce{
@@ -1716,7 +1747,7 @@ table {
                 margin: -1em -1.75em 1em;
                 a.title{
                     display: block;
-                    padding: 1em 2.5em 1em 1.75em;
+                    padding: 1em 4em 1em 1.75em;
                     color: #fff;
                     text-align: center;
                     background: #505050;
@@ -1745,6 +1776,14 @@ table {
                         background-size: contain;
                         border: 1px solid #f5f5f5;
                     }
+                }
+                .checkbox{
+                    position: absolute;
+                    width: 24px;
+                    height: 24px;
+                    right: 12px;
+                    top: 50%;
+                    margin-top: -12px;
                 }
             }
             // 生產者
@@ -1872,6 +1911,92 @@ table {
         &:before{ top: -10px;}
         &:after{ bottom: -10px; }
     }
+    // // 連結
+    // .links{
+    //     @extend %flex_set;
+    //     flex-flow: row wrap;
+    //     justify-content: center;
+
+    //     a{
+    //         flex: 1 1 auto;
+    //         flex-basis: calc(100%/5);
+    //         max-width: calc(100%/5);
+    //         color: #fff;
+    //         text-align: center;
+    //         font-size: 1.25em;
+    //         font-weight: 500;
+    //         padding: 1em;
+    //         padding-top: 110px;
+
+    //         transition: all .3s ease;
+
+    //         &:hover, &:focus{
+    //             background: rgba(0,0,0,.3);
+    //         }
+
+    //         position: relative;
+    //         &:before{
+    //             content: '';
+    //             position: absolute;
+    //             width: 80px;
+    //             height: 80px;
+    //             border-radius: 50%;   
+    //             left: 50%;
+    //             margin-left: -40px;
+    //             top: 1em;
+    //         }
+
+    //         // 投藥
+    //         &.dosing{
+    //             &:before{
+    //                 background: url(../images/icon_quicklink_dosing.svg) 50% 50% no-repeat, #fff;
+    //                 background-size: 50px 50px;
+    //             }
+    //         }
+    //         // 植物施肥
+    //         &.fertilize{
+    //             &:before{
+    //                 background: url(../images/icon_quicklink_fertilize.svg) 50% 50% no-repeat, #fff;
+    //                 background-size: 50px 50px;
+    //             }
+    //         }
+    //         // 動物餵食
+    //         &.feed{
+    //             &:before{
+    //                 background: url(../images/icon_quicklink_feed.svg) 50% 50% no-repeat, #fff;
+    //                 background-size: 50px 50px;
+    //             }
+    //         }
+    //         // 採收
+    //         &.harvest{
+    //             &:before{
+    //                 background: url(../images/icon_quicklink_harvest.svg) 50% 50% no-repeat, #fff;
+    //                 background-size: 50px 50px;
+    //             }
+    //         }
+    //         // 作樂
+    //         &.operate{
+    //             &:before{
+    //                 background: url(../images/icon_quicklink_operate.svg) 50% 50% no-repeat, #fff;
+    //                 background-size: 50px 50px;
+    //             }
+    //         }
+
+    //     }
+    // }
+
+    // @include screen('mobile') {
+    //     .links{
+    //         justify-content: flex-start;
+    //         a{
+    //             flex-basis: calc(100%/2);
+    //             max-width: calc(100%/2);
+    //         }
+    //     }
+    // }
+}
+.shortcut,
+.shortcut-wrap{
     // 連結
     .links{
         @extend %flex_set;
@@ -1880,14 +2005,15 @@ table {
 
         a{
             flex: 1 1 auto;
-            flex-basis: calc(100%/5);
-            max-width: calc(100%/5);
+            // flex-basis: calc(100%/5);
+            // max-width: calc(100%/5);
             color: #fff;
             text-align: center;
             font-size: 1.25em;
             font-weight: 500;
-            padding: 1em;
+            padding: 1em .25em;
             padding-top: 110px;
+            border-radius: 36px;
 
             transition: all .3s ease;
 
@@ -1928,7 +2054,6 @@ table {
                     background-size: 50px 50px;
                 }
             }
-
             // 採收
             &.harvest{
                 &:before{
@@ -1936,10 +2061,37 @@ table {
                     background-size: 50px 50px;
                 }
             }
-            // 作樂
+            // 作業
             &.operate{
                 &:before{
                     background: url(../images/icon_quicklink_operate.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+            // 出貨列印
+            &.print{
+                &:before{
+                    background: url(../images/icon_quicklink_operate.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+            // 我要異動蜂群
+            &.move{
+                &:before{
+                    background: url(../images/icon_quicklink_operate.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+            // 產季 開始、結束
+            &.start{
+                &:before{
+                    background: url(../images/icon_quicklink_dosing.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+            &.end{
+                &:before{
+                    background: url(../images/icon_quicklink_fertilize.svg) 50% 50% no-repeat, #fff;
                     background-size: 50px 50px;
                 }
             }
@@ -1947,12 +2099,66 @@ table {
         }
     }
 
-    @include screen('mobile') {
+    // @include screen('mobile') {
+    //     .links{
+    //         justify-content: flex-start;
+    //         a{
+    //             flex-basis: calc(100%/2);
+    //             max-width: calc(100%/2);
+    //         }
+    //     }
+    // }
+}
+
+// 多包一層產季開始、結束
+.shortcut-wrap{
+    &.bee{
+        .season-switch{ padding-top: 92px; }
+    }
+    @extend %flex_set;
+
+    .shortcut,
+    .season-switch{ flex: 1 1 auto; }
+
+    .season-switch{
+        background: #018276;
+        max-width: 180px;
+        padding: 1.25em;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .shortcut{
+        flex-basis: calc(100% - 180px);
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        // 連結
         .links{
-            justify-content: flex-start;
             a{
-                flex-basis: calc(100%/2);
-                max-width: calc(100%/2);
+                max-width: calc(100% / 6);
+            }
+        }
+    }
+    @include screen('tablet'){
+        &.bee{
+            .season-switch{ padding-top: 1.25em; }
+        }
+        .shortcut,
+        .season-switch{ flex: 1 1 100%; }
+
+        .season-switch{
+            max-width: 100%;
+            border-radius: 0 0 5px 5px;
+        }
+        .shortcut{ border-radius: 5px 5px 0 0; }
+    }
+    @include screen('mobile') {
+        .shortcut{
+            .links{
+                justify-content: flex-start;
+                a{
+                    flex-basis: calc(100%/2);
+                    max-width: calc(100%/2);
+                }
             }
         }
     }
@@ -2010,12 +2216,23 @@ $foto-size: 180px;
                     background: url(../images/icon/icon_mail.svg) 16px 50% no-repeat ,#efeeee;
                     background-size: 16px 16px;
                 }
+
+                // 識別名稱
+                +input.Identify-title{
+                    padding: .5em .75em;
+                    margin: .5em 1.25em;
+                    width: calc(100% - 2.5em);
+                }
             }
 
             ul{
                 margin: 0;
                 li{
                     padding: .125em 0;
+                    .btn{
+                        padding: 0.15em .5em;
+                        margin: 0 4px;
+                    }
                 }
             }
         }
@@ -2067,6 +2284,20 @@ $foto-size: 180px;
                     transform: rotate(45deg);
                     left: -3px;
                     top: 14px;
+                }
+
+                +span{
+                    margin-top: 1em;
+                    &:before{ display: none; }  //尖端拿掉
+                    &:after{
+                        content: '';
+                        position: absolute;
+                        width: 2px;
+                        height: 14px;
+                        top: -17px;
+                        left: 50%;
+                        border-left: dotted 2px #258664;
+                    }
                 }
             }
 

@@ -345,6 +345,7 @@ select::-ms-expand {
                     content: "~";
                     font-size: 1.5em;
                     color: #777;
+                    vertical-align: middle;
                 }
 
                 @include screen('xs_mobile') {
@@ -404,6 +405,11 @@ select::-ms-expand {
         padding-bottom: .65em;
         font-weight: bold;
         //white-space: nowrap;
+
+        &.free{ 
+            max-width: 100%;
+            flex: 1 1 100%;
+        }
 
         @include screen('mobile') {
             max-width: calc(100% - .6em);
@@ -482,6 +488,60 @@ select::-ms-expand {
             background: url(../images/map.svg) 50% 50% no-repeat;
         }
 
+        // // 水平表單又要塞垂直表單，找碴？
+        // &.nested-x{
+        //     padding: 0;
+        //     .form_title{ padding-top: 0; }
+        //     .form_grp{
+        //         align-self: start;
+        //         &.nested-cols{
+        //             display: block !important;
+        //             padding: .5em 0;
+        //             .form_title{
+        //                 max-width: 100%;
+        //                 flex: 0 0 100%;
+        //             }
+        //             .form_content{
+        //                 padding: 0;
+        //                 max-width: 100%;
+        //                 flex-basis: 100%;
+
+        //                 .datepick{
+        //                     >input[type="date"]{
+        //                         width: calc(100% - 10px);
+        //                     }
+        //                     +.datepick{
+        //                         position: relative;
+        //                         &:before{
+        //                             position: absolute;
+        //                             top: 50%;
+        //                             margin-top: -12px;
+        //                             left: -1px;
+        //                         }
+        //                         >input[type="date"]{
+        //                             width: calc(100% - 30px);
+        //                             margin-left: 20px;
+        //                         }
+        //                     }
+        //                 }
+
+        //                 &.form_col-6-6{
+        //                     flex-basis: 100%;
+        //                     max-width: 100%;
+        //                 }
+        //             }
+        //         }
+        //     }
+            
+        // }
+        // .flex-date{
+        //     // display: flex;   //.form_content 上已有設定
+        //     flex-wrap: nowrap !important;
+        //     .datepick{
+        //         flex: 1 1 auto;
+        //     }
+        // }
+
         //選單格線系統
         &.form_col-12,
         &.form_col-6-6,
@@ -496,7 +556,8 @@ select::-ms-expand {
         &.form_col-4-8,
         &.form_col-8-4,
         &.form_col-2-2-8,
-        &.form_col-8-2-2 {
+        &.form_col-8-2-2,
+        &.nested-x{
             flex-basis: 100%;
             max-width: 100%;
             // @include gutter(0);
@@ -819,6 +880,21 @@ select::-ms-expand {
             }
         }
 
+        // 麻煩的作業期間 .period 
+        &.nested-x{
+            >.form_grp,
+            >input[type="text"],
+            >select {
+                flex-basis: 50%;
+                width: 50%;
+
+                @media screen and (max-width: 1250px) {
+                    flex-basis: 100%;
+                    width: 100%;
+                }
+            }
+        }
+
         //行內選單格線
         &.form_inline {
             &.form_col-6-6 {
@@ -1126,6 +1202,10 @@ select::-ms-expand {
             // 項目
             .item{
                 flex: 1 1 100%;
+                // padding-bottom: 16px;
+                padding-bottom: 8px;
+                padding-top: 4px;
+                border-bottom: dotted 1px #b8b8b8;
 
                 @extend %flex_set;
                 flex-flow: row nowrap;
@@ -1149,9 +1229,12 @@ select::-ms-expand {
                     padding: .25em .75em;
                     .form_grp{
                         &.warn{
-                            [class^="notice"] {
-                                margin-left: 162px;
-                            }
+                            // [class^="notice"] {
+                            //     margin-left: 162px;
+                            // }
+                        }
+                        [class^="notice"] {
+                            margin-left: 162px;
                         }
                         .form_title{
                             padding-right: 0;
@@ -1172,6 +1255,12 @@ select::-ms-expand {
                 @include screen('tablet') {
                     .branch{ width: 100%; }
                     button{ margin: 10px auto; }
+                }
+            }
+            ol li:last-child{
+                .item{
+                    padding-bottom: 0;
+                    border-bottom: none;
                 }
             }
 
@@ -1241,6 +1330,10 @@ select::-ms-expand {
                             }
                         }
                     }
+                }
+
+                +button{
+                    margin-left: 44px;
                 }
             }
         }
@@ -1439,6 +1532,68 @@ select::-ms-expand {
         //         padding-right: 2em;
         //     }
         // }
+    }
+
+    // 麻煩的作業期間 .period 
+    &.period{
+        .form_content {
+            @include gutter(0);
+
+            // 水平表單又要塞垂直表單，找碴？
+            &.nested-x{
+                padding: 0;
+
+                .form_title{ padding-top: 0; }
+                .form_grp{
+                    align-self: start;
+                    &.nested-cols{
+                        display: block !important;
+                        padding: .5em 0;
+                        .form_title{
+                            max-width: 100%;
+                            flex: 0 0 100%;
+                        }
+                        .form_content{
+                            padding: 0;
+                            max-width: 100%;
+                            flex-basis: 100%;
+
+                            .datepick{
+                                >input[type="date"]{
+                                    width: calc(100% - 10px);
+                                }
+                                +.datepick{
+                                    position: relative;
+                                    &:before{
+                                        position: absolute;
+                                        top: 50%;
+                                        margin-top: -12px;
+                                        left: -1px;
+                                    }
+                                    >input[type="date"]{
+                                        width: calc(100% - 30px);
+                                        margin-left: 20px;
+                                    }
+                                }
+                            }
+
+                            &.form_col-6-6{
+                                flex-basis: 100%;
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+                
+            }
+            .flex-date{
+                // display: flex;   //.form_content 上已有設定
+                flex-wrap: nowrap !important;
+                .datepick{
+                    flex: 1 1 auto;
+                }
+            }
+        }
     }
 
     .btn_grp {
@@ -2054,11 +2209,6 @@ select:focus {
             border-radius: 4px;
         }
     }
-
-    .lost{
-        @include box-shadow(0px 0px 0px 2px #b70000);
-        border: transparent;
-    }
     .this{ color: #b70000; }
 
     // .form_content{
@@ -2073,6 +2223,10 @@ select:focus {
     //         outline: none;
     //     }
     // }
+}
+.lost{
+    @include box-shadow(0px 0px 0px 2px #b70000);
+    border: transparent;
 }
 
 // 單一區塊
@@ -2126,7 +2280,7 @@ input[type="radio"] {
     min-width: 1em;
     height: 1em;
     background-color: #f7f6ee;
-    border: 2px solid $color-gray;
+    border: 2px solid #959595;
 }
 
 input[type="radio"] {

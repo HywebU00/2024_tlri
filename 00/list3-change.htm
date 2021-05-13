@@ -75,10 +75,11 @@
                                 <div class="tel">0912-345-678</div>
                                 <div class="mail">mail@mail.com.tw</div>
                             </div>
+                            <input name="text" type="text" value="溫室A區" placeholder="一般狀態" autocomplete="off" class="Identify-title">
                             <ul>
                                 <li>履歷號碼：10085120030007</li>
                                 <li>作物品種：水稻-二期稻作-台農91號</li>
-                                <li>栽種總面積：1.55公頃
+                                <li>栽種總面積：1.55公頃<button type="button" class="btn btn-blue"><i class="i_edit2"></i>編修栽種農地</button>
                                     <ol>
                                         <li>新嘉段0145-0000：0.3899公頃(未驗證)</li>
                                         <li>新嘉段0179-0000：0.3585公頃</li>
@@ -102,14 +103,41 @@
                     <h3 class="sub_title">次標題：生產紀錄</h3>
 
                     <!-- 快速按鈕 -->
-                    <div class="shortcut">
-                        <p class="total">總蜂群數：<span>500</span></p>
-                        <div class="links">
-                            <a href="#" class="dosing">投藥</a>
-                            <a href="#" class="fertilize">植物施肥</a>
-                            <a href="#" class="feed">動物餵食</a>
-                            <a href="#" class="harvest">採收</a>
-                            <a href="#" class="operate">作業</a>
+                    <div class="shortcut-wrap bee">
+                        <div class="shortcut">
+                            <p class="total">總蜂群數：<span>500</span></p>
+                            <div class="links">
+                                <a href="#" class="operate">蜂場作業</a>
+                                <a href="#" class="feed">我要餵飼</a>
+                                <a href="#" class="dosing">我要噴藥</a>
+                                <a href="#" class="harvest">我要採收</a>
+                                <a href="#" class="move">我要異動蜂群</a>
+                                <a href="#" class="print">出貨列印</a>
+                            </div>
+                        </div>
+                        <div class="season-switch">
+                            <div class="links">
+                                <a href="#" class="start">結束本產季</a>
+                                <!-- <a href="#" class="end">開始本產季</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <br>   
+                    <div class="shortcut-wrap">
+                        <div class="shortcut">
+                            <div class="links">
+                                <a href="#" class="operate">田間作業</a>
+                                <a href="#" class="fertilize">我要施肥</a>
+                                <a href="#" class="dosing">我要噴藥</a>
+                                <a href="#" class="harvest">我要採收</a>
+                                <a href="#" class="print">出貨列印</a>
+                            </div>
+                        </div>
+                        <div class="season-switch">
+                            <div class="links">
+                                <!-- <a href="#" class="start">結束本產季</a> -->
+                                <a href="#" class="end">開始本產季</a>
+                            </div>
                         </div>
                     </div>
 
@@ -140,6 +168,15 @@
                             </div>
                         </form>
                     </div>
+
+                    <!-- 提示說明 -->
+                    <div class="explan">
+                        <ul>
+                            <li>文字</li>
+                            <li>說明文字<span class="R">說明文字</span><span class="B">說明文字</span></li>
+                            <li>文字</li>
+                        </ul>
+                    </div>  
 
                     <!-- 生產紀錄 -->
                     <section class="process">
