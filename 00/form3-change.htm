@@ -1297,6 +1297,44 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="form_grp">
+                                            <div class="form_title">標籤樣式</div>
+                                            <div class="form_content">
+                                                <!-- 標籤格式 -->
+                                                <div class="label-format">
+                                                    <div class="col act">
+                                                        <label><input type="radio" name="sampleRadio1" value="" checked="">標籤樣式：窄版樣式1</label>
+                                                        <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                                        <div class="img-container"><img src="images/card-01.jpg" alt="" class="contain"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label><input type="radio" name="sampleRadio1" value="">標籤樣式：窄版樣式2</label>
+                                                        <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                                        <div class="img-container"><img src="images/card-02.jpg" alt="" class="contain"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label><input type="radio" name="sampleRadio1" value="">標籤樣式：窄版樣式3</label>
+                                                        <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                                        <div class="img-container"><img src="images/card-03.jpg" alt="" class="contain"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label><input type="radio" name="sampleRadio1" value="">標籤樣式：寬版樣式1</label>
+                                                        <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                                        <div class="img-container"><img src="images/card-04.jpg" alt="" class="contain"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label><input type="radio" name="sampleRadio1" value="">標籤樣式：寬版樣式2</label>
+                                                        <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                                        <div class="img-container"><img src="images/card-05.jpg" alt="" class="contain"></div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <label><input type="radio" name="sampleRadio1" value="">標籤樣式：寬版樣式3</label>
+                                                        <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                                        <div class="img-container"><img src="images/card-06.jpg" alt="" class="contain"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </section>
@@ -1697,6 +1735,14 @@
     <script>
         $('header').load("header.htm");
         $('aside').load("aside.htm");
+
+        // 標籤 .act 異動
+        $(function(){
+            $('.label-format').find('label').click(function(){
+                $(this).parents('.col').siblings().removeClass('act');
+                $(this).parents('.col').addClass('act');
+            })
+        });
     </script>
     <!-- hyUI -->
     <!-- <script src="js/hyui.js"></script> -->
