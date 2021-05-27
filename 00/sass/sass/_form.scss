@@ -222,7 +222,8 @@ select::-ms-expand {
 
 .flex-form {
     // font-size: .938em;
-    font-size: 112.5%;
+    // font-size: 112.5%;
+    font-size: 100%;
     margin: .5em;
 
     .form_grp {
@@ -1198,7 +1199,13 @@ select::-ms-expand {
         // 表單多元操作
         &.form_mix_operation{
             // 按鈕
-            .btn_grp{ padding: 0 0 .25em; }
+            .btn_grp{
+                padding: 0 0 .25em;
+
+                +.scroltable-wrapper{
+                    width: 100%;
+                }
+            }
             // 項目
             .item{
                 flex: 1 1 100%;
@@ -1992,8 +1999,6 @@ select::-ms-expand {
         }
     }
 }
-
-
 
 // form 全域行內設定
 .form_inline {

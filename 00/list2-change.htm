@@ -70,16 +70,16 @@
                             <div class="links">
                                 <a href="#" class="operate">蜂場作業</a>
                                 <a href="#" class="feed">我要餵飼</a>
-                                <a href="#" class="dosing">我要噴藥</a>
-                                <a href="#" class="harvest">我要採收</a>
+                                <a href="#" class="dosing-bee">我要噴藥</a>
+                                <a href="#" class="honey">我要採收</a>
                                 <a href="#" class="move">我要異動蜂群</a>
                                 <a href="#" class="print">出貨列印</a>
                             </div>
                         </div>
                         <div class="season-switch">
                             <div class="links">
-                                <a href="#" class="start">結束本產季</a>
-                                <!-- <a href="#" class="end">開始本產季</a> -->
+                                <a href="#" class="start">開始本產季</a>
+                                <!-- <a href="#" class="end">結束本產季</a> -->
                             </div>
                         </div>
                     </div>
@@ -96,8 +96,8 @@
                         </div>
                         <div class="season-switch">
                             <div class="links">
-                                <!-- <a href="#" class="start">結束本產季</a> -->
-                                <a href="#" class="end">開始本產季</a>
+                                <!-- <a href="#" class="start">開始本產季</a> -->
+                                <a href="#" class="end">結束本產季</a>
                             </div>
                         </div>
                     </div>
@@ -156,8 +156,40 @@
                         <div class="checkbox">
                             <label><input type="checkbox">只顯示產季中的生產履歷</label>
                         </div>
+                        <!-- 標籤格式 -->
+                        <div class="label-format">
+                            <div class="col act">
+                                <label><input type="radio" name="sampleRadio1" value="" checked="">標籤樣式：窄版樣式1</label>
+                                <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                <div class="img-container"><img src="images/card-01.jpg" alt="" class="contain"></div>
+                            </div>
+                            <div class="col">
+                                <label><input type="radio" name="sampleRadio1" value="">標籤樣式：窄版樣式2</label>
+                                <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                <div class="img-container"><img src="images/card-02.jpg" alt="" class="contain"></div>
+                            </div>
+                            <div class="col">
+                                <label><input type="radio" name="sampleRadio1" value="">標籤樣式：窄版樣式3</label>
+                                <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                <div class="img-container"><img src="images/card-03.jpg" alt="" class="contain"></div>
+                            </div>
+                            <div class="col">
+                                <label><input type="radio" name="sampleRadio1" value="">標籤樣式：寬版樣式1</label>
+                                <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                <div class="img-container"><img src="images/card-04.jpg" alt="" class="contain"></div>
+                            </div>
+                            <div class="col">
+                                <label><input type="radio" name="sampleRadio1" value="">標籤樣式：寬版樣式2</label>
+                                <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                <div class="img-container"><img src="images/card-05.jpg" alt="" class="contain"></div>
+                            </div>
+                            <div class="col">
+                                <label><input type="radio" name="sampleRadio1" value="">標籤樣式：寬版樣式3</label>
+                                <p class="note">標籤說明：經營業者及生產者(不含國際條碼)</p>    
+                                <div class="img-container"><img src="images/card-06.jpg" alt="" class="contain"></div>
+                            </div>
+                        </div>
                     </div>
-
                     <!-- 頁籤 -->
                     <section>
                         <div class="tabSet2 cards card-type2">
@@ -170,6 +202,7 @@
                                     <h4><a href="javascript:;"><b>產季已結束</b></a></h4>
                                 </div>
                                 <!-- 內容 -->
+                                <!--  -->
                                 <div class="tabContent">
                                     <div class="box">
                                         <!-- 頁碼：筆數 -->
@@ -419,6 +452,13 @@
     <script>
         $('header').load("header.htm");
         $('aside').load("aside.htm");
+
+        $(function(){
+            $('.label-format').find('label').click(function(){
+                $(this).parents('.col').siblings().removeClass('act');
+                $(this).parents('.col').addClass('act');
+            })
+        });
     </script>
     <!-- hyUI -->
     <!-- <script src="js/hyui.js"></script> -->

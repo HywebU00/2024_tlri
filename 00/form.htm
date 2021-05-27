@@ -839,7 +839,10 @@
                     <li><a href="#">1-5 系統權限</a></li>
                 </ul>
                 <!-- 選單說明 -->
-                <p class="submenu_info">選單說明</p>
+                <p class="submenu_info">
+                    <span>項目說明 樣式ㄧ</span>
+                    <img src="images/25QR.jpg" class="QR">
+                </p>
                 <div class="inner_head">
                     <!-- h2節點 -->
                     <h2 class="title">組織資料</h2>
@@ -1583,7 +1586,7 @@
                                 <label for="" class="form_title">radio + 各種組合 1</label>
                                 <div class="form_content" id="fake-legend">
                                     <div class="radio_grp">
-                                        <label><input type="radio" name="sampleRadio3" value="" checked="">文字項目</label>
+                                        <label><input type="radio" name="sampleRadio3" value="" checked=""><p>文字項目</p></label>
                                         <label>
                                             <input type="radio" name="sampleRadio3" value="">
                                             <input name="text" type="text" value="" placeholder="欄位1">
@@ -1667,7 +1670,7 @@
                                 <label for="" class="form_title">radio + 各種組合 2</label>
                                 <div class="form_content" id="fake-legend">
                                     <div class="radio_grp">
-                                        <label><input type="radio" name="sampleRadio3" value="" checked="">文字項目</label>
+                                        <label><input type="radio" name="sampleRadio3" value="" checked=""><p>文字項目</p></label>
                                         <label>
                                             <input type="radio" name="sampleRadio3" value="">
                                             <input name="text" type="text" value="" placeholder="欄位1">
@@ -2190,6 +2193,64 @@
                                 </div>
                             </div>
                             <div class="form_grp">
+                                <label for="selectSample" class="form_title">選擇土地 4</label>
+                                <div class="form_content form_mix_operation">
+                                    <div class="btn_grp">
+                                        <button type="button" class="btn btn-add"><i class="i_add2"></i>新增農業設施面積</button>
+                                    </div>
+                                    <table class="table_hover"  alt="沒有剛好的樣式可以用先借一個來用">
+                                        <tr>
+                                            <th>序號</th>
+                                            <th>農地名稱</th>
+                                            <th>地段</th>
+                                            <th>地號</th>
+                                            <th>可栽培作物面積<br>平方公尺</th>
+                                            <th>移除</th>
+                                        </tr>
+                                        <tr>
+                                            <td align="center">1</td>
+                                            <td>安南公園旁農地</td>
+                                            <td>臺南市安南區公塭段</td>
+                                            <td>0166-0000</td>
+                                            <td>3000</td>
+                                            <td align="center"><button type="button" class="btn btn-delete">移除</button></td>
+                                        </tr>
+                                         <tr>
+                                            <td align="center">2</td>
+                                            <td>安南公園旁農地</td>
+                                            <td>臺南市安南區公塭段</td>
+                                            <td>0166-0000</td>
+                                            <td>3000</td>
+                                            <td align="center"><button type="button" class="btn btn-delete" >移除</button></td>
+                                        </tr>
+                                    </table>
+                                    <!-- 頁碼 -->
+                                    <div class="pagination">
+                                        <form action="" class="form_inline">
+                                            <div class="total"> 共<span>50</span>筆資料，第<span>1/5</span>頁，每頁顯示 
+                                                <select name="" id="">
+                                                    <option value="">10</option>
+                                                    <option value="">50</option>
+                                                    <option value="">100</option>
+                                                </select> 筆，
+                                                <!--input type="button" class="btn" value="確定"-->
+                                            </div>
+                                        </form>
+                                        <ul class="page">
+                                            <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                            <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                            <li class="active"><a href="#">1</a></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#">5</a></li>
+                                            <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                            <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form_grp">
                                 <label for="selectSample" class="form_title">包裝規格 4</label>
                                 <div class="form_content form_mix_operation">
                                     <div class="btn_grp">
@@ -2403,6 +2464,95 @@
                                             </div>
                                         </li>
                                     </ol>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="selectSample" class="form_title">包裝規格 6</label>
+                                <div class="form_content">
+                                    <!-- card 1 -->
+                                    <div class="sticker-info">
+                                        <div class="col">
+                                            <p>標籤樣式：窄版樣式窄版樣式窄版樣式窄版樣式窄版樣式1</p>
+                                            <div class="img-container"><img src="images/card-01.jpg" alt="" class="contain"></div>
+                                        </div>
+                                        <div class="col">
+                                            商品名稱：台灣越光米-品種1<br>
+                                            包裝日期：2021/05/21\5<br>
+                                            包裝規格：2公斤/包-商品國際條碼4710243940013<br>
+                                            包裝標示誤差值：±0.1公斤<br>
+                                            出貨總重量合計 <b>1600</b>公斤
+                                        </div>
+                                    </div>
+                                    <!-- card 2 -->
+                                    <div class="sticker-info">
+                                        <div class="col">
+                                            <p>標籤樣式：窄版樣式1</p>
+                                            <div class="img-container"><img src="images/card-02.jpg" alt="" class="contain"></div>
+                                        </div>
+                                        <div class="col">
+                                            商品名稱：台灣越光米-品種1<br>
+                                            包裝日期：2021/05/21\5<br>
+                                            包裝規格：2公斤/包-商品國際條碼4710243940013<br>
+                                            包裝標示誤差值：±0.1公斤<br>
+                                            出貨總重量合計 <b>1600</b>公斤
+                                        </div>
+                                    </div>
+                                    <!-- card 3 -->
+                                    <div class="sticker-info">
+                                        <div class="col">
+                                            <p>標籤樣式：窄版樣式1</p>
+                                            <div class="img-container"><img src="images/card-03.jpg" alt="" class="contain"></div>
+                                        </div>
+                                        <div class="col">
+                                            商品名稱：台灣越光米-品種1<br>
+                                            包裝日期：2021/05/21\5<br>
+                                            包裝規格：2公斤/包-商品國際條碼4710243940013<br>
+                                            包裝標示誤差值：±0.1公斤<br>
+                                            出貨總重量合計 <b>1600</b>公斤
+                                        </div>
+                                    </div>
+                                    <!-- card 4 -->
+                                    <div class="sticker-info">
+                                        <div class="col">
+                                            <p>標籤樣式：窄版樣式1</p>
+                                            <div class="img-container"><img src="images/card-04.jpg" alt="" class="contain"></div>
+                                        </div>
+                                        <div class="col">
+                                            商品名稱：台灣越光米-品種1<br>
+                                            包裝日期：2021/05/21\5<br>
+                                            包裝規格：2公斤/包-商品國際條碼4710243940013<br>
+                                            包裝標示誤差值：±0.1公斤<br>
+                                            出貨總重量合計 <b>1600</b>公斤
+                                        </div>
+                                    </div>
+                                    <!-- card 5 -->
+                                    <div class="sticker-info">
+                                        <div class="col">
+                                            <p>標籤樣式：窄版樣式1</p>
+                                            <div class="img-container"><img src="images/card-05.jpg" alt="" class="contain"></div>
+                                        </div>
+                                        <div class="col">
+                                            商品名稱：台灣越光米-品種1<br>
+                                            包裝日期：2021/05/21\5<br>
+                                            包裝規格：2公斤/包-商品國際條碼4710243940013<br>
+                                            包裝標示誤差值：±0.1公斤<br>
+                                            出貨總重量合計 <b>1600</b>公斤
+                                        </div>
+                                    </div>
+                                    <!-- card 6 -->
+                                    <div class="sticker-info">
+                                        <div class="col">
+                                            <p>標籤樣式：窄版樣式1</p>
+                                            <div class="img-container"><img src="images/card-06.jpg" alt="" class="contain"></div>
+                                        </div>
+                                        <div class="col">
+                                            商品名稱：台灣越光米-品種1<br>
+                                            包裝日期：2021/05/21\5<br>
+                                            包裝規格：2公斤/包-商品國際條碼4710243940013<br>
+                                            包裝標示誤差值：±0.1公斤<br>
+                                            出貨總重量合計 <b>1600</b>公斤
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <!-- 2、disabled -->

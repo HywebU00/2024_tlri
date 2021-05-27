@@ -19,7 +19,8 @@ table {
     //     }
     // }
     td {
-        padding: .5em;
+        // padding: .5em;
+        padding: 4px 6px;
         // text-align: left;
 
         b{
@@ -57,7 +58,6 @@ table {
                     vertical-align: middle;
                 }
             }
-
         }
     }
     td{
@@ -69,6 +69,12 @@ table {
         a {
             word-break: break-all;
             box-shadow: 0 1px;
+        }
+
+        .btn{
+            padding-top: 2px;
+            padding-bottom: 2px;
+            margin: 0;
         }
     }
     th {

@@ -120,6 +120,17 @@ text.highcharts-credits { display: none; }
                     +.th3_menu{
                         // margin: 0 0 1em;
                     }
+
+                    // 新增QR code
+                    display: flex;
+                    flex-flow: row nowrap;
+                    justify-content: space-between;
+                    span{}
+                    img.QR{
+                        display: block;
+                        text-align: center;
+                        padding-left: 10px;
+                    }
                 }
             }
 
@@ -585,6 +596,56 @@ text.highcharts-credits { display: none; }
   h2 {
     line-height: 1.25em;
   }
+}
+
+// 產銷貼紙
+.sticker-info{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    // align-items: center;
+    width: 100%;
+    padding: 1em 1.5em 1em 3em;
+    border: solid 1px #55cbac;
+    border-radius: 4px;
+    // p{
+    //     b{ color: #b70000; }
+    // }
+    // img.QR{}
+
+    .col{
+        b{ color: #b70000; }
+        &:first-child{
+            flex: 0 0 200px;
+            text-align: center;
+            p{ text-align: left; }
+            .img-container{
+                margin-top: 12px;
+                max-height: 120px;
+                background: none;
+            }
+            // img{
+            //     width: auto;
+            //     max-height: 120px;
+            // }
+        }
+        &:last-child{
+            flex: 1 1 auto;
+            padding-left: .5em;
+
+            padding-left: 1.5em;
+        }
+    }
+
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        width: 28px;
+        height: calc(100% - 2em);
+        background: #55cbac;
+        left: 0;
+    }
 }
 
 // module setting -----------------------------------------
@@ -2040,6 +2101,12 @@ table {
                     background-size: 50px 50px;
                 }
             }
+            &.dosing-bee{
+                &:before{
+                    background: url(../images/icon_quicklink_dosing-bee.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
             // 植物施肥
             &.fertilize{
                 &:before{
@@ -2054,10 +2121,16 @@ table {
                     background-size: 50px 50px;
                 }
             }
-            // 採收
+            // 採收、蜂蜜
             &.harvest{
                 &:before{
                     background: url(../images/icon_quicklink_harvest.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
+            &.honey{
+                &:before{
+                    background: url(../images/icon_quicklink_honey.svg) 50% 50% no-repeat, #fff;
                     background-size: 50px 50px;
                 }
             }
@@ -2068,30 +2141,36 @@ table {
                     background-size: 50px 50px;
                 }
             }
+            &.operate-bee{
+                &:before{
+                    background: url(../images/icon_quicklink_operate-bee.svg) 50% 50% no-repeat, #fff;
+                    background-size: 50px 50px;
+                }
+            }
             // 出貨列印
             &.print{
                 &:before{
-                    background: url(../images/icon_quicklink_operate.svg) 50% 50% no-repeat, #fff;
+                    background: url(../images/icon_quicklink_print.svg) 50% 50% no-repeat, #fff;
                     background-size: 50px 50px;
                 }
             }
             // 我要異動蜂群
             &.move{
                 &:before{
-                    background: url(../images/icon_quicklink_operate.svg) 50% 50% no-repeat, #fff;
+                    background: url(../images/icon_quicklink_move.svg) 50% 50% no-repeat, #fff;
                     background-size: 50px 50px;
                 }
             }
             // 產季 開始、結束
             &.start{
                 &:before{
-                    background: url(../images/icon_quicklink_dosing.svg) 50% 50% no-repeat, #fff;
+                    background: url(../images/icon_quicklink_seasonStart.svg) 50% 50% no-repeat, #fff;
                     background-size: 50px 50px;
                 }
             }
             &.end{
                 &:before{
-                    background: url(../images/icon_quicklink_fertilize.svg) 50% 50% no-repeat, #fff;
+                    background: url(../images/icon_quicklink_seasonEnd.svg) 50% 50% no-repeat, #fff;
                     background-size: 50px 50px;
                 }
             }
@@ -2366,11 +2445,14 @@ $foto-size: 180px;
 
                 .form_grp{
                     .form_title{
-                        padding-top: .25em;
-                        padding-bottom: .25em;
-                        padding-left: 0;
-                        max-width: inherit;
-                        flex: 0 0 auto;
+                        // padding-top: .25em;
+                        // padding-bottom: .25em;
+                        // padding-left: 0;
+                        padding: 0 .25em;
+
+                        // max-width: inherit;
+                        // flex: 0 0 auto;
+                        flex: 0 0 120px;
                     }
 
                     &:last-child{
