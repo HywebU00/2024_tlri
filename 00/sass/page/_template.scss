@@ -799,18 +799,31 @@ text.highcharts-credits { display: none; }
     position: fixed;
     bottom: 0;
     z-index: 9998;
-    width: 100%;
+    // width: 100%;
+    width: calc(100% - 14em);
     background: rgba(74,74,74,.75);
 
+    @media screen and (max-width: 1440px) {
+        width: calc(100% - 13em);
+    }
+    @include screen('tablet') {
+        width: 100%;
+    }
+
     // margin-left: 14em;
-    padding-left: 14em;
+    // padding-left: 14em;
     &.full{
         // margin-left: 3.5em;
-        padding-left: 3.5em;
+        // padding-left: 3.5em;
     }
 
     @include screen('tablet') {}
     @include screen('mobile') {}
+}
+.full{
+    .btn_panel {
+        width: 100%;
+    }
 }
 
 // 無數據
