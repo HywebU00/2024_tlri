@@ -1255,13 +1255,23 @@ select::-ms-expand {
                 @include screen('notebook') {
                     .branch{
                         .form_grp{
-                            .form_content{ flex-wrap: wrap; }
+                            .form_content{
+                                flex-wrap: wrap;
+                                @include gutter(0);
+                            }
                         }
                     }
                 }
                 @include screen('tablet') {
                     .branch{ width: 100%; }
                     button{ margin: 10px auto; }
+                }
+                @include screen('mobile') {
+                    .branch{
+                        .form_grp{
+                            [class^="notice"] { margin-left: 0; }
+                        }
+                    }
                 }
             }
             ol li:last-child{

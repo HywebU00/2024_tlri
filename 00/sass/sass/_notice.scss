@@ -16,7 +16,8 @@
     text-align: left;
     &:before {
         position: absolute;
-        top: calc(50% - 7.5px);
+        // top: calc(50% - 7.5px);
+        top: 7px;
         left: .25em;
         display: block;
         vertical-align: middle;
