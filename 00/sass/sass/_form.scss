@@ -478,7 +478,10 @@ select::-ms-expand {
             }
         }
 
-        p{ margin: 0 .3em; }
+        p{
+            margin: 0 .3em;
+            +input, +select{ width: auto !important; }
+        }
 
         // 地圖按鈕
         .map{
@@ -2360,9 +2363,9 @@ input[type="radio"] {
 }
 
 input[type="checkbox"]:checked,
-input[type="checkbox"]:focus,
-input[type="radio"]:checked,
-input[type="radio"]:focus {
+// input[type="checkbox"]:focus,
+input[type="radio"]:checked{
+// input[type="radio"]:focus {
     border-color: $form-focus;
     background-color: $form-focus;
     outline: none;
@@ -2387,11 +2390,11 @@ input[type="radio"]:focus {
     box-shadow: #fff 0 0 0 3px inset, $form-focus 0 0 0 1px;
 }
 
-input[type="checkbox"]:focus {
-    border-color: $form-focus;
-    background-color: $form-focus;
-    box-shadow: $form-focus 0 0 0 1px;
-}
+// input[type="checkbox"]:focus {
+//     border-color: $form-focus;
+//     background-color: $form-focus;
+//     box-shadow: $form-focus 0 0 0 1px;
+// }
 
 //---------------------------------------------readonly disable -------//
 // input[readonly],

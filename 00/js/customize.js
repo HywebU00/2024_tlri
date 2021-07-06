@@ -228,9 +228,9 @@ var _window = $(window),
     wwMedium = 992,
     wwSmall = 768,
     wwxs = 576;
-/*------------------------------------*/
-// ///////table 加上響應式table wrapper/////
-// /*------------------------------------*/
+/*-------------------------------------*/
+/////////table 加上響應式table wrapper/////
+///*------------------------------------*/
 $('table').each(function(index, el) {
     //判斷沒有table_list
     if ($(this).parents('.table_list').length == 0 && $(this).parents('.fix_th_table').length == 0 && $(this).parent('form').length == 0) {
@@ -240,6 +240,7 @@ $('table').each(function(index, el) {
 // tablearrow arrow，為了設定箭頭
 $('.scroltable-nav-left').append('<div class="tablearrow_left" style="display:none;"></div>');
 $('.scroltable-nav-right').append('<div class="tablearrow_right"  style="display:none;"></div>');
+
 // 固定版頭
 function table_Arrow() {
     if ($('table').parents('.table_list').length == 0 && $('table').parents('.fix_th_table').length == 0 && $(this).parent('form').length == 0) {
@@ -276,9 +277,9 @@ _window.scroll(function() {
         table_Arrow();
     }, 50);
 });
-// /*------------------------------------*/
-// //////////table 加上 data-title//////////
-// /*------------------------------------*/
+///*------------------------------------*/
+////////////table 加上 data-title//////////
+///*------------------------------------*/
 function rwdTable() {
     $('.table_list').find('table').each(function() {
         var $row = $(this).find('tr');
@@ -802,6 +803,28 @@ $(function() {
             }
         });
     });
+});
+
+/*-----------------------------------*/
+///////////////置頂go to top////////////
+/*-----------------------------------*/
+$(window).bind('scroll', function() {
+    if ($(this).scrollTop() > 200) {
+        $('.scrollToTop').fadeIn();
+    } else {
+        $('.scrollToTop').fadeOut();
+    }
+});
+/*-----------------------------------*/
+/////click event to scroll to top//////
+/*-----------------------------------*/
+$('.scrollToTop').click(function(e) {
+    $('html, body').animate({ scrollTop: 0 }, 400, 'easeOutExpo');
+    e.preventDefault();
+});
+$('.scrollToTop').keydown(function(e) {
+    _body.find('a.goCenter').focus();
+    e.preventDefault();
 });
 
 //tab

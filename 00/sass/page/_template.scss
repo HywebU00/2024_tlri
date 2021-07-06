@@ -798,6 +798,7 @@ text.highcharts-credits { display: none; }
 .btn_panel {
     position: fixed;
     bottom: 0;
+    right: 0;
     z-index: 9998;
     // width: 100%;
     width: calc(100% - 14em);
@@ -1302,6 +1303,7 @@ table {
     justify-content: flex-start;
     align-content: flex-start;
     flex-flow: row wrap;
+
     .item {
         flex: 0 1 calc(25% - 1em);
         flex-grow: 0;
@@ -1480,7 +1482,7 @@ table {
                 border-top-left-radius: .25em;
                 border-top-right-radius: .25em;
             }
-            ul {
+            >ul {
                 @include li-reset;
                 padding: .5em 0;
                 // font-size: .875rem;
@@ -1585,6 +1587,38 @@ table {
             &.pass{
                 background: #fff;
                 color: #31a788;
+            }
+        }
+    }
+
+    // 單欄
+    &.single{
+        .item {
+            flex: 1 1 100%;
+            max-width: 100%;
+
+            .card_info{
+                h4.card_title{
+                    padding: .65em 10em .65em 1em;
+                    .certificate_number{
+                        display: inline-block;
+                        padding: 0 10px;
+                    }
+
+                    // 標題右邊按鈕
+                    +button{
+                        position: absolute;
+                        right: 1em;
+                        top: 3px;
+                    }
+                }
+
+                .inner_info{
+                    .form_grid{
+                        border-top: none;
+                        .form_grp { border-bottom: none; }
+                    }
+                }
             }
         }
     }

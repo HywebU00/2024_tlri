@@ -1438,7 +1438,7 @@
                                 <div class="form_title">地號 14</div>
                                 <div class="form_content">
                                     <div class="check_grp form_inline">
-                                        <label><input type="checkbox" name="" value="" checked="">此地號為河川地號</label>
+                                        <label><input type="checkbox" name="" value="">此地號為河川地號</label>
                                     </div>
                                     <div class="form_inline">
                                         &nbsp;R&nbsp;<input name="" type="text" value="" placeholder="">&nbsp;-&nbsp;<input name="" type="text" value="" placeholder=""><a href="#" class="map">地圖</a>
@@ -1587,6 +1587,21 @@
                                 <div class="form_content" id="fake-legend">
                                     <div class="radio_grp">
                                         <label><input type="radio" name="sampleRadio3" value="" checked=""><p>文字項目</p></label>
+                                        <label>
+                                            <input type="radio" name="sampleRadio3" value="" checked="">
+                                            <p>文字項目</p>
+                                            <input name="text" type="text" value="" placeholder="input">
+                                        </label>
+                                        <label>
+                                            <input type="radio" name="sampleRadio3" value="" checked="">
+                                            <p>文字項目</p>
+                                            <select id="selectSample" name="">
+                                                <option value="">請選擇</option>
+                                                <option value="">項目一</option>
+                                                <option value="">項目二</option>
+                                                <option value="">項目三</option>
+                                            </select>
+                                        </label>
                                         <label>
                                             <input type="radio" name="sampleRadio3" value="">
                                             <input name="text" type="text" value="" placeholder="欄位1">
@@ -2678,14 +2693,15 @@
                         </div>
                     </form>
                 </section>
+
+                <!-- control panel-->
+                <div class="btn_panel btn_grp">
+                    <button type="button" class="btn btn-normal">取消</button>
+                    <button type="button" class="btn btn-primary">存檔並繼續新增下一筆</button>
+                    <button type="button" class="btn btn-secondary">存檔</button>
+                </div>
+                <!-- control panel End -->
             </section>
-            <!-- control panel-->
-            <div class="btn_panel btn_grp">
-                <button type="button" class="btn btn-normal">取消</button>
-                <button type="button" class="btn btn-primary">存檔並繼續新增下一筆</button>
-                <button type="button" class="btn btn-secondary">存檔</button>
-            </div>
-            <!-- control panel End -->
         </div>
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
