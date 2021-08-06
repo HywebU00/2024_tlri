@@ -1714,7 +1714,7 @@ select::-ms-expand {
         label {
             position: relative;
             //display: block;
-            z-index: 1;
+            // z-index: 1;   // 因為 align-items: center 的關係，label checked 會有色塊固定不動的問題
             flex-basis: 100%;
             display: flex;
             align-items: center;
@@ -2019,54 +2019,54 @@ select::-ms-expand {
     // padding-top: 1em;
     // margin-bottom: 1em;
     // border-top: solid 1px #e7e7e7;
-    // width: 100%;
+    width: 100%;  // 標籤樣式的父層，hide掉會造成標籤樣式跑版
 
     @extend %flex_set;
     flex-flow: row wrap;
     .col{
-      @include flex-col-equal(3, 20px, 2em);
-      margin-top: 6px;
-      margin-bottom: 6px;
-      // box-shadow: 0px 5px 15px -5px rgba(0,0,0,.3);
-      box-shadow: 0 0 1px 0 rgba(0,0,0,.3);
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
-      overflow: hidden;
+        @include flex-col-equal(3, 20px, 2em);
+        margin-top: 6px;
+        margin-bottom: 6px;
+        // box-shadow: 0px 5px 15px -5px rgba(0,0,0,.3);
+        box-shadow: 0 0 1px 0 rgba(0,0,0,.3);
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        overflow: hidden;
 
-      label{
-        display: block;
-        background: #e1e1e1;
-        color: #222;
-        padding: .75em 1em;
-        margin: 0 -1em;
-        text-align: center;
-        input{ 
-          margin-left: 0;
-          margin-top: 0;
-        }
-      }
-      p.note{
-        padding: .75em 0;
-        margin: 0;
-      }
-      .img-container{
-        background: none;
-        max-height: 140px;
-        // padding: 0 1em;
-        margin-bottom: 1em;
-      }
-
-      &.act{
-        box-shadow: 0 0 1px 0 rgba(0,0,0,1);
         label{
-          background: #505050;
-          color: #fff;
+            display: block;
+            background: #e1e1e1;
+            color: #222;
+            padding: .75em 1em;
+            margin: 0 -1em;
+            text-align: center;
+            input{ 
+                margin-left: 0;
+                margin-top: 0;
+            }
         }
-      }
+        p.note{
+            padding: .75em 0;
+            margin: 0;
+        }
+        .img-container{
+            background: none;
+            max-height: 140px;
+            // padding: 0 1em;
+            margin-bottom: 1em;
+        }
 
-      @include screen('mobile'){
-        @include flex-col-equal(1, 0px, 2em);
-      }
+        &.act{
+            box-shadow: 0 0 1px 0 rgba(0,0,0,1);
+            label{
+                background: #505050;
+                color: #fff;
+            }
+        }
+
+        @include screen('mobile'){
+            @include flex-col-equal(1, 0px, 2em);
+        }
     }
 }
 

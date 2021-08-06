@@ -207,7 +207,7 @@ $btn-radius:.2em;
     opacity: .5;
     cursor: not-allowed!important;
     text-shadow:none;
-    +span{ opacity: .5; }
+    // +span{ opacity: .5; }
 }
 .readonly, [readonly] {
     opacity: .5;
