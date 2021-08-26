@@ -9,7 +9,7 @@
 @import "sass/_font";					//文字設定
 
 // 元素
-@import "sass/_grid";					//格線
+// @import "sass/_grid";					//格線
 @import "sass/_breadcrumb";				//麵包屑
 @import "sass/_divider";				//分隔線
 @import "sass/_btn";					//按鈕設定
@@ -54,6 +54,8 @@
 @import "page/_qp";						//QP
 @import "page/_sitemap";				//Sitemap
 @import "page/_left_block";				//左欄left_block
+
+@import "page/_FrontDesk.scss";			//前台
 
 // 外掛
 @import "sass/_slick";					//slick

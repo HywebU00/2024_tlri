@@ -8,11 +8,19 @@
 
 .mp{
     padding-top: 5em;
+    @include screen('tablet') {
+        padding-top: 1em;
+    }
+
     @extend %flex_set;
     font-size: 110%;
 
     .main{
-        @include flex-col(9, 20px, 0px);
+        // @include flex-col(9, 20px, 0px);
+        @include flex-xs(12, 0px);
+        @include flex-sm(12, 0px);
+        @include flex-md(9, 0px);
+        @include flex-lg(9, 0px);
 
         // figure{ margin: 0; }  // 統計圖
 
@@ -52,7 +60,17 @@
         }
     }
     .R_side{
-        @include flex-col(3, 20px, 0px);
+        // @include flex-col(3, 20px, 0px);
+        @include flex-xs(12, 0px);
+        @include flex-sm(12, 0px);
+        @include flex-md(3, 0px);
+        @include flex-lg(3, 0px);
+        @include gutter();
+
+        @include screen('tablet') {
+            padding: 0 1em;
+            margin: auto;
+        }
 
         >section{
 
@@ -238,12 +256,22 @@
     // 統計圖相關欄位：組織管理
     .Statistics_2{
         section{
-            @include flex-col-equal(2, 10px, 2em);
+            // @include flex-col-equal(2, 10px, 2em);
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(1, 0px);
+            @include flex-md-equal(1, 0px);
+            @include flex-lg-equal(2, 10px);
+            @include gutter();
         }
     }
     .Statistics_4{
         section{
-            @include flex-col-equal(4, 10px, 2em);
+            // @include flex-col-equal(4, 10px, 2em);
+            @include flex-xs-equal(1, 0px);
+            @include flex-sm-equal(1, 0px);
+            @include flex-md-equal(2, 10px);
+            @include flex-lg-equal(4, 10px);
+            @include gutter();
         }
     }
 
@@ -285,7 +313,12 @@
             .Mode{
                 @extend %flex_set;
                 button{
-                    @include flex-col-equal(2, 10px, 0px);
+                    // @include flex-col-equal(2, 10px, 0px);
+                    @include flex-xs-equal(2, 4px);
+                    @include flex-sm-equal(2, 4px);
+                    @include flex-md-equal(2, 4px);
+                    @include flex-lg-equal(2, 4px);
+
                     color: #fff;
                     line-height: 2.4;
                     
@@ -348,7 +381,9 @@
     }
 
     // 最新消息
-    .link_list{}
+    .link_list{
+        padding: 1em 0;
+    }
     // 下載專區
     .download_list{}
 

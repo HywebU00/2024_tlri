@@ -44,7 +44,7 @@ text.highcharts-credits { display: none; }
 }
 .content {
     padding-top: 4em;
-    margin-left: 14em;
+    margin-left: 13em;
     // margin-right: 1em;
     position: relative;
     transition: 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -53,7 +53,7 @@ text.highcharts-credits { display: none; }
         margin-left: 3.5em;
     }
     @media screen and (max-width:1440px) {
-        margin-left: 13em;
+        margin-left: 12em;
     }
     @include screen('tablet') {
         margin: 4em 0 1em;
@@ -190,8 +190,6 @@ text.highcharts-credits { display: none; }
                             }
                         }
                     }
-
-
                     &.now{
                         a{
                             color: #fff;
@@ -211,7 +209,6 @@ text.highcharts-credits { display: none; }
                             }
                         }
                     }
-
                 }
             }
         }
@@ -277,15 +274,17 @@ text.highcharts-credits { display: none; }
 
 
                         .info{
-                            @include flex-col(10, 4px, 0px);
+                            // @include flex-col(10, 4px, 0px);
+                            @include flex-xs(9, 0px);
+                            @include flex-sm(9, 4px);
+                            @include flex-md(10, 4px);
+                            @include flex-lg(10, 4px);
 
                             @extend %flex_set;
                             justify-content: flex-start;
                             align-items: center;
 
-                            h4.title{
-                                margin: 5px 0;
-                            }
+                            h4.title{ margin: 5px 0; }
                             button{ margin: 0 4px; }
                             p{
                                 margin: 0;
@@ -297,7 +296,11 @@ text.highcharts-credits { display: none; }
                             }
                         }
                         .form_content{
-                            @include flex-col(2, 4px, 0px);
+                            // @include flex-col(2, 4px, 0px);
+                            @include flex-xs(3, 0px);
+                            @include flex-sm(3, 4px);
+                            @include flex-md(2, 4px);
+                            @include flex-lg(2, 4px);
                             text-align: center;
                         }
                     }
@@ -311,6 +314,7 @@ text.highcharts-credits { display: none; }
                     @extend %flex_set;
                     .num{
                         @include flex-col(1, 4px, 0px);
+                        
                         flex: 0 0 80px;
                         max-width: 80px;
                         // line-height: 3em;
@@ -416,7 +420,7 @@ text.highcharts-credits { display: none; }
             }
             // 
             .sub_title{
-                color: darken($primaryColor, 10);
+                // color: darken($primaryColor, 10);
                 margin: 1.25em 0 .65em;
             }
 
@@ -587,8 +591,11 @@ text.highcharts-credits { display: none; }
 }
 .main {
   position: relative;
-  margin: 0 1em;
-  padding-bottom: 3em;  // 避開下方常駐按鈕
+
+  // margin: 0 1em;
+  // padding-bottom: 3em;  // 避開下方常駐按鈕
+  padding: 0 1em 3em;
+
   // margin-left: 1em;
   // padding:  1em 0 0 0;
   // 可先設定一個中央區塊最大寬，限制accesskey對齊
