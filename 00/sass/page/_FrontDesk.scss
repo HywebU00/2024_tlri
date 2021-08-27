@@ -4,13 +4,141 @@ body{
 
 .text-center{ text-align: center;}
 
+$main-color: #659d3f;
+
 #FrontDesk{
-	>.wrapper{ background: none;}
+	>.wrapper{
+		background: none;
+
+		&.inner-page{
+			.header{
+				padding-bottom: 500px;
+			}
+
+			.inner-wrap{
+				padding: 0 2em 2.5em;
+				margin-top: -36em;
+
+				h2.title{
+					font-size: 2.125em;
+					letter-spacing: 1px;
+					padding-bottom: .5em;
+					color: #fff
+				}
+				h3.sub-title{
+					font-size: 1.45em;
+					color: $main-color;
+				}
+
+				.content-box{
+					background: #fff;
+					min-height: 300px;
+					// box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+					border-radius: 4px;
+					padding: 1em 1.5em;
+
+					&.login{ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; }
+
+					.Flex-set{
+						@extend %flex_set;
+						flex-flow: row nowrap;
+						align-items: center;
+						// border-bottom: 1px solid #EEE;
+
+						.breadcrumb{
+							margin: 0;
+							border-bottom: none;
+						}
+						.function{}
+
+						+hr{ margin: .5em 0px; }
+					}
+
+					.login-box{
+						width: 500px;
+						margin: auto;
+						padding: 1em 0;
+
+						.flex-form{
+							.form_grp{
+								margin: .65em 0;
+								.form_title{
+									text-align: right;
+						    		max-width: 120px;
+						    		flex: 0 0 120px;
+						    	}
+						    	.form_content{
+						    		max-width: calc(100% - 120px - .6em);
+						    		flex-basis: calc(100% - 120px - .6em);
+						    	}
+						    }
+					    }
+					}
+
+					.btn,
+				    input[type="submit"],
+				    input[type="reset"],
+				    input[type="button"],
+				    input[type="search"] { flex: 0 1 auto; }
+
+				    .flex-form{
+				    	.form_title{}
+				    	.form_content{}
+				    }
+
+				    .btn {
+				    	background: #7a7a7a;
+				    	color: #fff;
+				    	&:hover, &:focus {
+				    		background: darken(#7a7a7a, 18);
+				    	}
+				    }
+				    .btn-submit {
+					    @include btn_setting($main-color, #FFF);
+					}
+					.btn-reset {
+					    @include btn_setting(#ddd, #222);
+					}
+					// 操作按鈕
+					.btn-operating {
+					    @extend %btn;
+					    @include btn_setting($main-color, #FFF);
+					}
+
+					.pagination .page li.active a {
+					    color: #fff !important;
+					    background: #666;
+					    border: darken(#666,20) solid 1px;
+					}
+					.pagination span{ color: $main-color; }
+
+					// 條件查詢
+					#Conditional_switch{}
+					#Conditional_query{
+					    form{
+					        margin: 0 0 .25em;
+					        padding: 1.5em 2em;
+					        background: #fff;
+					        border-radius: 6px;
+					        // box-shadow: 0px 0px 12px 0px rgba(210, 210, 210,0.75);
+					        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+					        &.flex-form{
+					            border-top: 0;
+					            display: none;
+					        }
+					    }
+					}
+				}
+			}
+		}
+	}
+
 	header{
 		box-shadow: none;
 		max-width: 1200px;
 		background: url(../images/front-desk/key-visual.jpg) left 50% top 0px no-repeat;
-		background-size: auto 750px;
+		background-size: 100% 750px;
 		height: auto;
 		margin: 0 auto;
 		// padding: 0 5em;
@@ -190,7 +318,7 @@ body{
     			// width: 42px;
     			// height: 82px;
     			padding: 1.75em .75em;
-    			background: #269d3f;
+    			background: $main-color;
     			color: #fff;
     			text-align: center;
     			border-radius: 40px;
@@ -235,14 +363,25 @@ body{
 		}
 	}
 
+	// .cp{
+	// 	a{
+	// 		color: $main-color;
+	// 		&:hover, &:focus{
+	// 			color: darken($main-color, 10);
+	// 		}
+	// 	}
+	// }
+
 	.slick-prev{
 		&:hover{
 			background: url(../images/slick/icon_arrow_left_inverse.png) center center no-repeat, #ddd;
+			background-size: 30px 30px;
 		}
 	}
 	.slick-next{
 		&:hover{
 			background: url(../images/slick/icon_arrow_right_inverse.png) center center no-repeat, #ddd;
+			background-size: 30px 30px;
 		}
 	}
 
@@ -538,7 +677,7 @@ body{
 					}
 				}
 				.slick-dots li.slick-active button {
-				    background: #269d3f;
+				    background: $main-color;
 				}
 				.slick-prev {
 					left: 40px;
@@ -574,7 +713,7 @@ body{
 								height: 16px;
 								display: block;
 								position: absolute;
-								background: #269d3f;
+								background: $main-color;
 								left: 0;
 								top: 4px;
 							}
@@ -589,10 +728,10 @@ body{
 	.btn_grp{
 		button.btn.more2{
 			background: #fff;
-			border: 2px solid #269d3f;
+			border: 2px solid $main-color;
 			border-radius: 40px;
 			font-weight: bold;
-			color: #269d3f;
+			color: $main-color;
 			padding: 14px 52px;
 			transition: all .3s ease-in;
 
@@ -630,7 +769,7 @@ body{
 			padding: 15em 0 6em;
 			@include gutter(5em);
 
-			background: url(../images/front-desk/footer-cover.png) 50% top no-repeat, #269d3f;
+			background: url(../images/front-desk/footer-cover.png) 50% top no-repeat, $main-color;
 			background-size: contain;
 
 			.footer-flex{}
