@@ -70,6 +70,21 @@ $main-color: #659d3f;
 						    	.form_content{
 						    		max-width: calc(100% - 120px - .6em);
 						    		flex-basis: calc(100% - 120px - .6em);
+
+						    		// 忘記密碼
+						    		.forgetPW{
+						    			flex: 1 1 100%;
+						    			text-align: right;
+						    			a{
+							    			font-size: 90%;
+							    			font-weight: bold;
+							    			color: #666;
+
+							    			&:hover, &:focus{
+							    				color: #489613;
+							    			}
+						    			}
+						    		}
 						    	}
 						    }
 					    }
