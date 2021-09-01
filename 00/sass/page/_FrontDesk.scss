@@ -88,6 +88,22 @@ $main-color: #659d3f;
 						    	}
 						    }
 					    }
+
+					    @include screen('mobile') {
+					    	width: 100%;
+					    	.flex-form{
+					    		// width: calc(100% - 5em);
+					    		.form_grp{
+					    			// background: pink;
+					    			.form_title{ text-align: left;}
+					    			.form_title,
+					    			.form_content{
+						    			flex: 1 1 100%;
+						    			max-width: 100%;
+					    			}
+					    		}
+					    	}
+					    }
 					}
 
 					.btn,
@@ -143,6 +159,25 @@ $main-color: #659d3f;
 					            display: none;
 					        }
 					    }
+					}
+				}
+			}
+
+			@include screen('mobile') {
+				.inner-wrap{
+					padding: 0 0 2.5em;
+					h2.title{
+						font-size: 1.8em;
+						text-align: center;
+					}
+
+					.content-box{
+						&.login{ padding: 1em .75em; }
+
+						.Flex-set{
+							flex-flow: row wrap;
+							.breadcrumb, .function{ width: 100%;}
+						}
 					}
 				}
 			}
@@ -219,7 +254,6 @@ $main-color: #659d3f;
 			        			padding: .5em 1.25em;
 			        			background: rgba(0,0,0, .45);
 			        		}
-
 			        	}
 			        }
 	    		}
@@ -232,6 +266,7 @@ $main-color: #659d3f;
     				font-weight: 500;
     				color: #fff;
     				max-width: 100%;
+    				line-height: 1.2;
     			}
     			p{
     				line-height: 1.8;
@@ -291,6 +326,16 @@ $main-color: #659d3f;
 			        		padding-top: 40px;
 			        		text-align: center;
 			        	}
+			        	h1{
+							float: none;
+							display: block;
+							margin: auto;
+				        	a{
+				        		width: 280px;
+				        		background-size: contain;
+				        		margin: auto;
+				        	}
+				        }
 					}
 				}
 				.slogen{ padding-top: 30px; }
@@ -861,6 +906,10 @@ $main-color: #659d3f;
 				.broccoli,
 				.bell-pepper{ display: none; }
 			}
+			@include screen('xs_mobile') {
+				.corn{ left: -18px; top: 0;}
+				.onion{ left: auto; right: -18px; top: 0;}
+			} 
 		}
 		.col{
 			&:first-child{
@@ -938,9 +987,10 @@ $main-color: #659d3f;
 				p.copyright{ margin-left: 0;}
 				.footer_link{
 					flex-direction: row;
+					flex-wrap: wrap;
 					li{
-						flex: 0 1 auto;
-						margin: 1em 5px;
+						flex: 1 1 100%;
+						margin: 0;
 					}
 				}
 			}
