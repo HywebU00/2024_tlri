@@ -1229,19 +1229,31 @@ $m-gutter: 4px;
 
 		       	.slick-prev{
 		       		float: left;
+		       		display: inline-block;
 		       		margin-left: -42px;
-		       		background: url(../images/slick/icon_arrow_left_inverse.png) center center no-repeat RGBA(0, 0, 0, .5);
+		       		background: url(../images/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .45);
 		       		background-size: 30px 30px;
 		       		border-top-left-radius: 30px;
     				border-bottom-left-radius: 30px;
+
+    				&:hover, &:focus{
+    					background: url(../images/slick/icon_arrow_left.png) center center no-repeat RGBA(0, 0, 0, .75);
+		       			background-size: 30px 30px;
+    				}
 		       	}
 		       	.slick-next{
 		       		float: right;
+		       		display: inline-block;
 		       		margin-right: -42px;
-		       		background: url(../images/slick/icon_arrow_right_inverse.png) center center no-repeat RGBA(0, 0, 0, .5);
+		       		background: url(../images/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .45);
 		       		background-size: 30px 30px;
 		       		border-top-right-radius: 30px;
     				border-bottom-right-radius: 30px;
+
+    				&:hover, &:focus{
+    					background: url(../images/slick/icon_arrow_right.png) center center no-repeat RGBA(0, 0, 0, .75);
+		       			background-size: 30px 30px;
+    				}
 		       	}
 
     		}
@@ -1252,7 +1264,10 @@ $m-gutter: 4px;
     		.tabs-2{
     			@extend %clearfix;
 		    	width: 100%;
+
 		        .tabItem-2{
+		        	margin-top: -60px; // 填滿 sticky btn 造成的區塊
+
 		            @extend %flex_set;
 		            flex-flow: row nowrap;
 		            justify-content: flex-start;
