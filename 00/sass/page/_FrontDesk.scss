@@ -8,12 +8,14 @@ $main-color: #42930F;
 $m-gutter: 4px;
 
 #FrontDesk{
-	li, p, .accordion .accordion-content{
-		a{
-			box-shadow: 0 1px;
-			// transition: all .3s ease;
-			&:hover, &:focus{
-				box-shadow: none;
+	.inner-page{
+		li, p, .accordion .accordion-content{
+			a{
+				box-shadow: 0 1px;
+				// transition: all .3s ease;
+				&:hover, &:focus{
+					box-shadow: none;
+				}
 			}
 		}
 	}
@@ -1064,9 +1066,11 @@ $m-gutter: 4px;
 					b{
 						color: #fff;
 						position: absolute;
-						left: 25px;
+						width: 22px;
+						left: 18px;
 						z-index: 1;
 						font-size: 90%;
+						text-align: center;
 					}
 				}
 			}
@@ -1217,12 +1221,36 @@ $m-gutter: 4px;
 		        @include flex-md(10, $m-gutter);
 		        @include flex-lg(10, $m-gutter);
 		       	padding: 1em;
+
+		       	position: relative;
+		       	.slick-prev, .slick-next{
+		       		position: sticky;
+		       	}
+
+		       	.slick-prev{
+		       		float: left;
+		       		margin-left: -42px;
+		       		background: url(../images/slick/icon_arrow_left_inverse.png) center center no-repeat RGBA(0, 0, 0, .5);
+		       		background-size: 30px 30px;
+		       		border-top-left-radius: 30px;
+    				border-bottom-left-radius: 30px;
+		       	}
+		       	.slick-next{
+		       		float: right;
+		       		margin-right: -42px;
+		       		background: url(../images/slick/icon_arrow_right_inverse.png) center center no-repeat RGBA(0, 0, 0, .5);
+		       		background-size: 30px 30px;
+		       		border-top-right-radius: 30px;
+    				border-bottom-right-radius: 30px;
+		       	}
+
     		}
     	}
 
     	// 第二層 tab
     	.inner-tab{
     		.tabs-2{
+    			@extend %clearfix;
 		    	width: 100%;
 		        .tabItem-2{
 		            @extend %flex_set;
