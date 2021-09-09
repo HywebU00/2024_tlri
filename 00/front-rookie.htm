@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>農糧產品產銷履歷資訊系統 - 前台</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="vendor/wow/animate.min.css"><!-- animate -->
+    <link rel="stylesheet" type="text/css" href="vendor/facybox/dist/jquery.fancybox.min.css"><!-- 燈箱facybox -->
+    <link rel="stylesheet" href="css/hyui.css"><!-- hyUI css -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon"><!-- favicon -->
+</head>
+
+<body id="FrontDesk">
+    <!-- wrapper Start -->
+    <div class="wrapper inner-page">
+        <!-- header -->
+        <header>
+            <div class="container wow fadeIn">
+                <section class="header">
+                    <div class="col">
+                        <h1><a href="#">行政院農業委員會農糧署</a></h1>
+                    </div>
+                    <div class="col rookies">
+                        <a href="#">新手導引</a>
+                        <a href="#">申請帳號</a>
+                    </div>
+                </section>
+            </div>
+        </header>
+        <!-- main Start -->
+        <!-- 主要內容區 -->
+        <div class="content">
+            <div class="container">
+                <div class="inner-wrap">
+                    <h2 class="title">農糧產品產銷履歷系統</h2>
+                    <div class="content-box">
+                        <!-- breadcrumb + function -->
+                        <div class="Flex-set">
+                            <!-- breadcrumb路徑 -->
+                            <div class="breadcrumb">
+                                <ul>
+                                    <li><a href="#">首頁</a></li>
+                                    <li><a href="#">節點</a></li>
+                                    <li>節點</li>
+                                </ul>
+                            </div>
+                            <!-- function功能區塊 -->
+                            <div class="function">
+                                <ul>
+                                    <li class="icon_back"><a href="javascript:history.back()">回上一頁</a></li>
+                                    <!-- <li class="icon_print"><a href="#">友善列印</a></li>
+                                    <li class="icon_forward"><a href="#">轉寄友人</a></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+                        <!-- sub-title ＋ 條件查詢 switch -->
+                        <div class="Flex-set">
+                            <h3 class="sub-title">新手導引</h3>
+                            <!-- 條件查詢 switch -->
+                            <!-- <input type="button" class="btn btn-operating" id="Conditional_switch" value="顯示條件查詢"> -->
+                        </div>
+                        <!-- 新手導引 Start -->
+                        <section class="">
+                            <!-- 後台『新手進度導覽』開啟與否的設定 -->
+                            <div class="checkbox rookie-display-switch">
+                                <label><input type="checkbox">在系統首頁顯示「新手進度導覽面板」。</label>
+                            </div>
+                            <!-- 導引順序 -->
+                            <div class="rookie-guide">
+                                <div class="col">
+                                    <a href="#" class="act">
+                                        <span>1</span><p>輔導諮詢</p>
+                                        <b class="note">諮詢專家，確認申請意願</b>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="#">
+                                        <span>2</span><p>事前準備</p>
+                                        <b class="note">申請系統帳號前可預先準備各項資料</b>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="#">
+                                        <span>3</span><p>線上系統資料設定</p>
+                                        <b class="note">準備開始線上登打栽培紀錄</b>
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="#">
+                                        <span>4</span><p>申請驗證</p>
+                                        <!-- <b class="note">沒內容就拉掉</b> -->
+                                    </a>
+                                </div>
+                                <div class="col">
+                                    <a href="#">
+                                        <span>5</span><p>通過驗證</p>
+                                        <b class="note">配合不定期追蹤查驗維持證書效期</b>
+                                    </a>
+                                </div>
+                            </div>
+                            <!-- 內容 -->
+                            <div class="rookie-content">
+                                <h4 class="title">輔導諮詢</h4>
+                                <h5 class="sub-title">1.&nbsp;備查文件<a href="#">（集團驗證與個別驗證差異）</a></h5>
+                                <h5 class="sub-title">2.&nbsp;帳號開通完成，請依序填寫組織相關資料設定</h5>
+                                <p>如果先前未接觸過產銷履歷，可尋求外部輔導單位提供諮詢，申請者可從以下管道取得產銷履歷<a href="#">連結1</a>相關輔導資源，最後確定個人或集團組織申請驗證的意願後，再開始進行加入產銷履歷的事前準備。</p>
+                                <ol>
+                                    <li>
+                                        <b>技術諮詢－中央及地方政府的農政單位</b>
+                                        <p>農產業的主管機關，以及地方政府農業單位，各地區農業改良場、農業試驗所、各地農會。</p>
+                                    </li>
+                                    <li>
+                                        <b>標題</b>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos veritatis, eius veniam natus corporis nulla consequatur quo, fugit, cum qui, fugiat incidunt praesentium itaque provident quaerat <a href="#">連結1</a> laboriosam nam!</p>
+                                    </li>
+                                    <li>
+                                        <b>標題</b>
+                                        <ol>
+                                            <li><a href="#">連結1</a></li>
+                                            <li><a href="#">連結2</a></li>
+                                            <li><a href="#">連結3</a></li>
+                                        </ol>
+                                    </li>
+                                </ol>
+
+                                <!-- fancybox -->
+                                <div class="lightbox_slider_block">
+                                    <div class="infoSlider">
+                                        <div class="img-container">
+                                            <a href="images/demo/06.jpg" data-fancybox="images" data-caption="第1張標題">
+                                                <img src="images/demo/06.jpg" alt="">
+                                                <div class="caption">
+                                                    <h3>第1張標題</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quis dicta, cupiditate enim tempora delectus saepe atque soluta, veniam odio ipsam inventore deleniti eaque quaerat quod neque ipsa vel a.</p>
+                                                    <ol>
+                                                        <li>於網站首頁點選申請帳號</li>
+                                                        <li>同意個資法聲明</li>
+                                                        <li>依照經營性質選擇組織身分：例：產銷班</li>
+                                                        <li>依照選擇的身分輸入相關資料，完成後點選「確定」按鈕</li>
+                                                        <li>申請註冊完成後，系統會寄送開通信件到您所填寫的email，請依照指示開通帳號</li>
+                                                    </ol>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="img-container">
+                                            <a href="images/demo/07.jpg" data-fancybox="images" data-caption="第2張標題">
+                                                <img src="images/demo/07.jpg" alt="">
+                                                <div class="caption">
+                                                    <h3>第2張標題</h3>
+                                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, quis dicta, cupiditate enim tempora delectus saepe atque soluta, veniam odio ipsam inventore deleniti eaque quaerat quod neque ipsa vel a.</p>
+                                                    <ol>
+                                                        <li>於網站首頁點選申請帳號</li>
+                                                        <li>同意個資法聲明</li>
+                                                        <li>依照經營性質選擇組織身分：例：產銷班</li>
+                                                        <li>依照選擇的身分輸入相關資料，完成後點選「確定」按鈕</li>
+                                                        <li>申請註冊完成後，系統會寄送開通信件到您所填寫的email，請依照指示開通帳號</li>
+                                                    </ol>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 頁籤 - 第一層：front-tab -->
+                                <div class="front-tab">
+                                    <section class="tabs"> 
+                                        <div class="tabItem">
+                                            <h4><a href="javascript:;"><b>項目ㄧ：收合選單</b></a></h4>
+                                            <h4><a href="javascript:;"><b>項目二：步驟流程</b></a></h4>
+                                            <h4><a href="javascript:;"><b>項目三：無項目</b></a></h4>
+                                            <!-- <h4><a href="javascript:;"><b>項目四：slider</b></a></h4> -->
+                                        </div>
+                                        <!-- 內容 -->
+                                        <div class="tabContent">
+                                            <div class="box">
+                                                <!-- 收合選單 -->
+                                                <div class="accordion">
+                                                    <ul>
+                                                        <li>
+                                                            <a href="#" title=""><b>1</b>第一項說明</a>
+                                                            <div class="accordion-content">
+                                                                <p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Consectetur praesentium possimus eius, ratione officiis. Laborum non excepturi aspernatur esse temporibus blanditiis corrupti dignissimos, velit at dolor atque, error nam tempora!</p>
+                                                                <ol>
+                                                                    <li>國影自談王不美一文實別合屋？<a href="#">連結</a>都說到就招投高畫。</li>
+                                                                    <li>國影自談王不美一文實別合屋？<a href="#">連結</a>都說到就招投高畫。</li>
+                                                                    <li>國影自談王不美一文實別合屋？<a href="#">連結</a>都說到就招投高畫。</li>
+                                                                </ol>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title=""><b>2</b>第二項說明</a>
+                                                            <div class="accordion-content">國影自談王不美一文實別合屋？府性元這子一知於料的親到。一用技年不得就資公，也星樣團怎英班水灣個種決以因世書發定很功行何，下飯通反代命假到一不離護麼錯絕懷旅元人。弟新過，道給仍覺裡水國、醫灣了可實界一上德字什心成但創大品隨品。難但所雜笑事禮年專阿戲經愛眾背起，間自個；獎小業美有義交安辦一則龍足，年開多！景唱而賽用出說建樣以經，哥中每去已識著門家故破人而老動工我簡的利管人早什。葉禮名交，都說為一失到就招投高畫。月錢產，機力燈自體日關工車之土庭，件年真經書？</div>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#" title=""><b>3</b>第三項說明Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Temporibus et impedit, assumenda, ipsam enim necessitatibus! Magnam, expedita. Reprehenderit nam, odit minima dolore neque assumenda ut voluptate, cupiditate eveniet iusto, illum?</a>
+                                                            <div class="accordion-content">員無的出從身岸前命想總來到爾八片品每單起關開因打實的爭己正新軍者常創的他現都對位家走許曾東們前草信車我……但機這等意故灣態一員見訴活老見以的無又，一定市不公，也列為吃媽像天對是修送教這原人地樹多相為的物立子進，館企！</div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <!-- 申請步驟流程 -->
+                                                <div class="step-flow">
+                                                    <!-- 0 -->
+                                                    <section>
+                                                        <div class="col">
+                                                            <img src="images/front-desk/iot_icon/nav_icon_01.svg" alt="">
+                                                            <span>0.</span>&nbsp;首頁
+                                                            <b>您的組織總覽服務台</b>
+                                                        </div>
+                                                        <div class="col-r">
+                                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus vero optio, quisquam veritatis omnis ab, esse corrupti ratione harum dicta, quis nostrum a rem consequatur architecto tenetur est laboriosam iste.</p>
+                                                            <ol>
+                                                                <li>Lorem ipsum dolor, sit amet consectetur</li>
+                                                                <li>Lorem ipsum dolor, sit amet consectetur</li>
+                                                                <li>Lorem ipsum dolor, sit amet consectetur</li>
+                                                            </ol>
+                                                        </div>
+                                                    </section>
+
+                                                    <section class="front-remark">
+                                                        以下步驟單元1、2、3、5須先建立資料才可至步驟單元4申請驗證!
+                                                    </section>
+
+                                                    <!-- 1 -->
+                                                    <section>
+                                                        <div class="col">
+                                                            <img src="images/front-desk/iot_icon/nav_icon_02.svg" alt="">
+                                                            <span>1.</span>&nbsp;組織管理
+                                                            <b>為您的組織建立資訊</b>
+                                                        </div>
+                                                        <div class="col-r">
+                                                            <!-- 頁籤 - 第二層：inner-tab -->
+                                                            <div class="inner-tab">
+                                                                <section class="tabs-2"> 
+                                                                    <div class="tabItem-2">
+                                                                        <h4><a href="javascript:;"><b>1-1<br><span>項目ㄧ：文字列表</span></b></a></h4>
+                                                                        <h4><a href="javascript:;"><b>1-2<br><span>項目二：QA</span></b></a></h4>
+                                                                        <h4><a href="javascript:;"><b>1-3<br><span>項目三</span></b></a></h4>
+                                                                        <h4><a href="javascript:;"><b>1-4<br><span>項目四原料與製成品比率設定</span></b></a></h4>
+                                                                        <h4><a href="javascript:;"><b>1-5<br><span>項目五</span></b></a></h4>
+                                                                        <h4><a href="javascript:;"><b>1-6<br><span>項目六</span></b></a></h4>
+                                                                    </div>
+                                                                    <!-- 內容 -->
+                                                                    <div class="tabContent-2">
+                                                                        <div class="box-2">
+                                                                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus vero optio, quisquam veritatis omnis ab, esse corrupti ratione harum dicta, quis nostrum a rem consequatur architecto tenetur est laboriosam iste.</p>
+                                                                            <!-- 案例 -->
+                                                                            <div class="case">
+                                                                                <p>案例：<br>假設某組織栽培稻米，品種為台梗2號，驗證機構核定該組織的稻米合理採收量為每公頃1000公斤，在驗證機構未核定該稻米-台梗2號作物類別一期稻作與二期稻作的合理採收量的情況，稻米-台梗2號一期稻作與二期稻作的合理採收量將以驗證機構核定稻米每公頃合理採收量1000公斤為主。</p>
+                                                                            </div>
+                                                                            <!-- 步驟 -->
+                                                                            <section class="vertical-list">
+                                                                                <p>初次驗證請依序選擇欲申請驗證的驗證機構、作物、農民農地與採後處理場所。</p>
+                                                                                <section>
+                                                                                    <div class="num">1</div>
+                                                                                    <div class="info">
+                                                                                        <h4>填寫作業內容</h4>
+                                                                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos veritatis, eius veniam natus corporis nulla consequatur quo, fugit, cum qui, fugiat incidunt praesentium itaque provident quaerat <a href="#">連結1</a> laboriosam nam!</p>
+                                                                                        <ol>
+                                                                                            <li>
+                                                                                                <b>技術諮詢－中央及地方政府的農政單位</b>
+                                                                                                <p>農產業的主管機關，以及地方政府農業單位，各地區農業改良場、農業試驗所、各地農會。</p>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <b>標題</b>
+                                                                                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos veritatis, eius veniam natus corporis nulla consequatur quo, fugit, cum qui, fugiat incidunt praesentium itaque provident quaerat <a href="#">連結1</a> laboriosam nam!</p>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <b>標題</b>
+                                                                                                <ol>
+                                                                                                    <li><a href="#">連結1</a></li>
+                                                                                                    <li><a href="#">連結2</a></li>
+                                                                                                    <li><a href="#">連結3</a></li>
+                                                                                                </ol>
+                                                                                            </li>
+                                                                                        </ol>
+                                                                                    </div>
+                                                                                </section>
+                                                                                <section>
+                                                                                    <div class="num">2</div>
+                                                                                    <div class="info">
+                                                                                        <h4>填寫作業內容</h4>
+                                                                                        <p>文字</p>
+                                                                                    </div>
+                                                                                </section>
+                                                                            </section>
+                                                                            <!-- 狀態 -->
+                                                                            <div class="notice_info">一般提醒訊息</div>
+                                                                            <div class="notice_success">確認、成功、完成</div>
+                                                                            <div class="notice_warning">警告</div>
+                                                                            <div class="notice_error">錯誤</div>
+                                                                            <!-- 有序清單 -->
+                                                                            <ol>
+                                                                                <li>
+                                                                                    <b>技術諮詢－中央及地方政府的農政單位</b>
+                                                                                    <p>農產業的主管機關，以及地方政府農業單位，各地區農業改良場、農業試驗所、各地農會。</p>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <b>標題</b>
+                                                                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque dignissimos veritatis, eius veniam natus corporis nulla consequatur quo, fugit, cum qui, fugiat incidunt praesentium itaque provident quaerat <a href="#">連結1</a> laboriosam nam!</p>
+                                                                                </li>
+                                                                                <li>
+                                                                                    <b>標題</b>
+                                                                                    <ol>
+                                                                                        <li><a href="#">連結1</a></li>
+                                                                                        <li><a href="#">連結2</a></li>
+                                                                                        <li><a href="#">連結3</a></li>
+                                                                                    </ol>
+                                                                                </li>
+                                                                            </ol>
+                                                                        </div>
+                                                                        <div class="box-2">
+                                                                            <!-- 收合選單 -->
+                                                                            <div class="accordion">
+                                                                                <ul>
+                                                                                    <li>
+                                                                                        <a href="#" title="">第一項說明</a>
+                                                                                        <div class="accordion-content">
+                                                                                            <p>Lorem ipsum dolor sit, amet consectetur, adipisicing elit. Consectetur praesentium possimus eius, ratione officiis. Laborum non excepturi aspernatur esse temporibus blanditiis corrupti dignissimos, velit at dolor atque, error nam tempora!</p>
+                                                                                            <ol>
+                                                                                                <li>國影自談王不美一文實別合屋？<a href="#">連結</a>都說到就招投高畫。</li>
+                                                                                                <li>國影自談王不美一文實別合屋？<a href="#">連結</a>都說到就招投高畫。</li>
+                                                                                                <li>國影自談王不美一文實別合屋？<a href="#">連結</a>都說到就招投高畫。</li>
+                                                                                            </ol>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="#" title="">第二項說明</a>
+                                                                                        <div class="accordion-content">國影自談王不美一文實別合屋？府性元這子一知於料的親到。一用技年不得就資公，也星樣團怎英班水灣個種決以因世書發定很功行何，下飯通反代命假到一不離護麼錯絕懷旅元人。弟新過，道給仍覺裡水國、醫灣了可實界一上德字什心成但創大品隨品。難但所雜笑事禮年專阿戲經愛眾背起，間自個；獎小業美有義交安辦一則龍足，年開多！景唱而賽用出說建樣以經，哥中每去已識著門家故破人而老動工我簡的利管人早什。葉禮名交，都說為一失到就招投高畫。月錢產，機力燈自體日關工車之土庭，件年真經書？</div>
+                                                                                    </li>
+                                                                                    <li>
+                                                                                        <a href="#" title="">第三項說明</a>
+                                                                                        <div class="accordion-content">員無的出從身岸前命想總來到爾八片品每單起關開因打實的爭己正新軍者常創的他現都對位家走許曾東們前草信車我……但機這等意故灣態一員見訴活老見以的無又，一定市不公，也列為吃媽像天對是修送教這原人地樹多相為的物立子進，館企！</div>
+                                                                                    </li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="box-2">3</div>
+                                                                        <div class="box-2">4</div>
+                                                                        <div class="box-2">5</div>
+                                                                        <div class="box-2">6</div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                    <!-- 2 -->
+                                                    <section>
+                                                        <div class="col">
+                                                            <img src="images/front-desk/iot_icon/nav_icon_03.svg" alt="">
+                                                            <span>2.</span>&nbsp;資材管理
+                                                            <b>為組織使用的資材建檔</b>
+                                                        </div>
+                                                        <div class="col-r"></div>
+                                                    </section>
+                                                    <!-- 3 -->
+                                                    <section>
+                                                        <div class="col">
+                                                            <img src="images/front-desk/iot_icon/nav_icon_04.svg" alt="">
+                                                            <span>3.</span>&nbsp;生產紀錄
+                                                            <b>建立栽培批次並登打紀錄</b>
+                                                        </div>
+                                                        <div class="col-r"></div>
+                                                    </section>
+                                                    <!-- 4 -->
+                                                    <section>
+                                                        <div class="col">
+                                                            <img src="images/front-desk/iot_icon/nav_icon_05.svg" alt="">
+                                                            <span>4.</span>&nbsp;申請驗證
+                                                            <b>選擇驗證機構並填寫驗證資料</b>
+                                                        </div>
+                                                        <div class="col-r"></div>
+                                                    </section>
+                                                    <!-- 5 -->
+                                                    <section>
+                                                        <div class="col">
+                                                            <img src="images/front-desk/iot_icon/nav_icon_06.svg" alt="">
+                                                            <span>5.</span>&nbsp;商品管理
+                                                            <b>為組織使用的商品規格與出貨通路建檔</b>
+                                                        </div>
+                                                        <div class="col-r"></div>
+                                                    </section>
+                                                    <section class="front-remark">
+                                                        完成以上步驟單元1、2、3、5的資料建立，可至步驟單元4申請驗證!
+                                                    </section>
+                                                </div>
+                                            </div>
+                                            <div class="box">
+                                                <div class="noData"><span>目前無項目</span></div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- 新手導引 End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer>
+            <div class="container">
+                <!-- 點綴性蔬菜 -->
+                <div class="corn wow bounceIn">玉米</div>
+                <div class="tomato wow bounceIn">番茄</div>
+                <div class="onion wow bounceIn">洋蔥</div>
+                <div class="broccoli wow bounceIn">青花菜</div>
+                <div class="bell-pepper wow bounceIn">甜椒</div>
+                <div class="corn type2 wow bounceIn">玉米</div>
+                <!-- footer 內容 -->
+                <div class="footer-flex">
+                    <div class="col">
+                        <a href="#" class="footer-logo">行政院農業委員會農糧署</a>
+                    </div>
+                    <div class="col">
+                        <p class="footer-info">客服電話：0800-201051<br>
+                            手機撥打：02-23510082<br>
+                            中興辦公區：4044南投縣南投市光華路8號&nbsp;(049)233-2380<br>
+                            台北辦公區：10050台北市杭州南路1段15號&nbsp;(02)2393-7231
+                        </p>
+                        <div class="footer-box">
+                            <ul class="footer_link">
+                                <li><a href="javascript:;">【隱私權及安全政策】</a></li>
+                                <li><a href="javascript:;">【網站安全政策】</a></li>
+                            </ul>
+                            <p class="copyright">行政院農業委員會農糧署&nbsp;&nbsp;版權所有</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <!-- slick js-->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <!-- wow-->
+    <script src="vendor/wow/wow.min.js"></script>
+    <!-- 燈箱facybox -->
+    <script src="vendor/facybox/dist/jquery.fancybox.min.js"></script>
+
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
