@@ -842,16 +842,48 @@ $m-gutter: 4px;
 	// 申請帳號-身份類別
 	.ID-category{
 		a{
-			@include flex-xs-equal(1, 0px);
-	        @include flex-sm-equal(2, 0px);
+			@include flex-xs-equal(2, 1em);
+	        @include flex-sm-equal(3, 1em);
 	        @include flex-md-equal(4, 1em);
-	        @include flex-lg-equal(4, 1em);
+	        @include flex-lg-equal(5, 1em);
 
 	        text-align: center;
 	        color: #222;
+	        font-weight: bold;
 	        margin-bottom: 1em;
-	        padding: 1em;
-	        box-shadow: inset 0 0 0 1px rgba(0,0,0,.25);
+	        padding: 1em 0;
+	        border: 1px solid rgba(0,0,0,.25);
+	        border-radius: 6px;
+	        overflow: hidden;
+	        // box-shadow: inset 0 0 0 1px rgba(0,0,0,.25);
+
+	        span{
+	        	margin: -1em 0 1em;
+	        	display: block;
+	        	height: 120px;
+	        	width: 100%;
+	        	padding: 1em .75em;
+	        	background: #e9eae9;
+	        	// background: darken($main-color, 0);
+
+	        	transition: all .3s ease;
+	        	img{
+	        		@include img-responsive;
+	        		max-height: 100%;
+	        		margin: auto;
+	        		filter: invert(.5);
+	        	}
+	        }
+
+	        &:hover, &:focus{
+	        	color: darken($main-color, 0);
+	        	span{
+	        		background: darken($main-color, 0);
+	        		img{
+	        			filter: invert(0);
+	        		}
+	        	}
+	        }
 		}
 	}
 
@@ -1637,6 +1669,8 @@ $m-gutter: 4px;
 		            border-radius:4px;
 		            text-align: center;
 		            transition: all .3s ease-out;
+		            box-shadow: none;
+
 		            &:hover, &:focus {
 		                background: #1e7e32;
 		                padding: .35em 1em;
@@ -1670,6 +1704,12 @@ $m-gutter: 4px;
 						margin: 0;
 					}
 				}
+			}
+		}
+
+		@include screen('mobile') {
+			.footer-logo{
+				padding-bottom: 2em;
 			}
 		}
 	}
