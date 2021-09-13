@@ -742,17 +742,17 @@ $m-gutter: 4px;
 				// 那顆玉米
 				.slick-list{
 					position: relative;
-					&:before{
-						content: '';
-						display: block;
-						position: absolute;
-						width: 140px;
-						height: 120px;
-						background: url(../images/front-desk/icon-corn.svg) 50% 50% no-repeat;
-						right: 70px;
-						bottom: 0;
-						z-index: 2;
-					}
+					// &:before{
+					// 	content: '';
+					// 	display: block;
+					// 	position: absolute;
+					// 	width: 140px;
+					// 	height: 120px;
+					// 	background: url(../images/front-desk/icon-corn.svg) 50% 50% no-repeat;
+					// 	right: 70px;
+					// 	bottom: 0;
+					// 	z-index: 2;
+					// }
 				}
 				.slick-dots li.slick-active button {
 				    background: $main-color;

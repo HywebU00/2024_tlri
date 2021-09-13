@@ -2051,7 +2051,7 @@ select::-ms-expand {
         }
         .img-container{
             background: none;
-            max-height: 140px;
+            // max-height: 140px;
             // padding: 0 1em;
             margin-bottom: 1em;
         }
@@ -2064,6 +2064,9 @@ select::-ms-expand {
             }
         }
 
+        @include screen('notebook') {
+            @include flex-col-equal(2, 10px, 2em);
+        }
         @include screen('mobile'){
             @include flex-col-equal(1, 0px, 2em);
         }

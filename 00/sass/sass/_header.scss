@@ -45,8 +45,13 @@ header {
             color: darken($primaryColor, 5);
         }
         .control_panel{ flex: 0 0 150px; }
-
     }
+    @include screen('mobile') {
+        h2{
+            font-size: 1.125em;
+        }
+    }
+
     // 桌機版：按鈕是雙擊，用 .toggle_menu_btn
     // 平。版：按鈕是單擊，用 .single_menu_btn
     .single_menu_btn,
