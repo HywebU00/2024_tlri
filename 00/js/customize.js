@@ -690,12 +690,14 @@ $(function() {
     //     e.preventDefault();
     // });
     //----------------------------------------------------------選單控制-----//
-    $('aside').prepend('<a href="#" class="close_btn"></a>');
+    // $('aside').prepend('<a href="#" class="close_btn"></a>');
+
     // $('aside').find('.close_btn').off().click(function(e) {
     //     _CLOSEMENU();
     //     $(this).parents('aside').siblings('header').removeClass('full');
     //     e.preventDefault();
     // });
+
     // 選單控制下拉
     $('aside nav ul li').each(function(index, el) {
         if ($(this).children('ul').length > 0) {
@@ -703,6 +705,7 @@ $(function() {
         }
     });
     $('aside nav ul ul').hide();
+
     // 設定有副選單的a
     $('.li_hasChild>a').each(function(index, el) {
         $(this).off().click(function(e) {
@@ -752,6 +755,12 @@ $(function() {
 
             $('.overlay').off().click(function(e) {
                 _CLOSEMENU();
+                e.preventDefault();
+            });
+
+            $('aside').find('.close_btn').click(function(e){
+                _CLOSEMENU();
+                $(this).parents('aside').removeClass('open');
                 e.preventDefault();
             });
         },
