@@ -38,15 +38,15 @@ aside {
     }
     h1 {
         position: absolute;
-        height: 4.6em;
+        height: 4em;
         width: 100%;
         top: 0;
         left: 0;
         z-index: 9;
         margin: 0;
-        padding: 0.65em 0.75em;
+        padding: 0.5em 0.75em;
         transition: padding .2s ease;
-        font-size: .94rem;
+        font-size: 1rem;
         color: #fff;
         @include screen('tablet') {
             display:none;
