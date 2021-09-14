@@ -44,9 +44,9 @@ aside {
         left: 0;
         z-index: 9;
         margin: 0;
-        padding: 0.5em 0.75em;
+        padding: .65em .75em;
         transition: padding .2s ease;
-        font-size: 1rem;
+        font-size: .94rem;
         color: #fff;
         @include screen('tablet') {
             display:none;

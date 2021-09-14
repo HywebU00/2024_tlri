@@ -43,8 +43,20 @@ header {
             flex: 0 0 auto;
             max-width: calc(100% - 214px);
             color: darken($primaryColor, 5);
+            line-height: 1;
         }
         .control_panel{ flex: 0 0 150px; }
+    }
+    @include screen('tablet') {
+        .container {
+            justify-content: flex-start;
+            h2{
+                width: 100%;
+                margin-left: 70px;
+                margin-right: 150px;
+                text-align: center;
+            }
+        }
     }
     @include screen('mobile') {
         h2{
