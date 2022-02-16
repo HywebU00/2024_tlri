@@ -15,7 +15,7 @@ $form_title_width :150px; // 表單title寬度
 
     // @include screen('mobile') {
     //     margin: 0 0 .3em 0;
-    // }
+    // 
 }
 
 // %mix-col {
@@ -402,8 +402,8 @@ select::-ms-expand {
         flex: 0 0 $form_title_width;
         align-self: flex-start;
         @include gutter();
-        padding-top: .65em;
-        padding-bottom: .65em;
+        padding-top: .45em;
+        padding-bottom: .45em;
         font-weight: bold;
         //white-space: nowrap;
 

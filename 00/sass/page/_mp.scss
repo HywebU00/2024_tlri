@@ -17,10 +17,16 @@
 
     .main{
         // @include flex-col(9, 20px, 0px);
+
+        // @include flex-xs(12, 0px);
+        // @include flex-sm(12, 0px);
+        // @include flex-md(9, 0px);
+        // @include flex-lg(9, 0px);
+
         @include flex-xs(12, 0px);
         @include flex-sm(12, 0px);
-        @include flex-md(9, 0px);
-        @include flex-lg(9, 0px);
+        @include flex-md(12, 0px);
+        @include flex-lg(12, 0px);
 
         // figure{ margin: 0; }  // 統計圖
 
@@ -44,7 +50,7 @@
                 font-size: .813em;
                 display: block;
                 text-align: right;
-                padding-top: .75em;
+                // padding-top: .75em;
             }
 
             section{
@@ -61,43 +67,46 @@
     }
     .R_side{
         // @include flex-col(3, 20px, 0px);
-        @include flex-xs(12, 0px);
-        @include flex-sm(12, 0px);
-        @include flex-md(3, 0px);
-        @include flex-lg(3, 0px);
-        @include gutter();
 
-        @include screen('tablet') {
-            padding: 0 1em;
-            margin: auto;
-        }
+        display: none;
 
-        >section{
+        // @include flex-xs(12, 0px);
+        // @include flex-sm(12, 0px);
+        // @include flex-md(3, 0px);
+        // @include flex-lg(3, 0px);
+        // @include gutter();
 
-            position: relative;
-            margin-bottom: 4em;
-            button.more{
-                position: absolute;
-                right: 0;
-                top: -17px;
-                border-radius: 1em;
-                @include btn_setting($primaryColor, #FFF);
-            }
+        // @include screen('tablet') {
+        //     padding: 0 1em;
+        //     margin: auto;
+        // }
 
-            h3.sub_title{
-                position: relative;
-                margin-bottom: .5em;
-                margin-top: 1.5em;
-                &:before{
-                    content: '';
-                    position: absolute;
-                    width: 48px;
-                    height: 4px;
-                    top: -16px;
-                    background: $primaryColor;
-                }
-            }
-        }
+        // >section{
+
+        //     position: relative;
+        //     margin-bottom: 4em;
+        //     button.more{
+        //         position: absolute;
+        //         right: 0;
+        //         top: -17px;
+        //         border-radius: 1em;
+        //         @include btn_setting($primaryColor, #FFF);
+        //     }
+
+        //     h3.sub_title{
+        //         position: relative;
+        //         margin-bottom: .5em;
+        //         margin-top: 1.5em;
+        //         &:before{
+        //             content: '';
+        //             position: absolute;
+        //             width: 48px;
+        //             height: 4px;
+        //             top: -16px;
+        //             background: $primaryColor;
+        //         }
+        //     }
+        // }
     }
 
     // 管理者
@@ -287,7 +296,7 @@
             margin-bottom: 1em;
 
             h4{
-                margin: 0 -1em;
+                margin: 0 -15px;
                 padding: 1.25em 7em 1.25em 1em;
                 background: $primaryColor;
                 color: #fff;
@@ -366,6 +375,7 @@
             display: block;
             padding: .65em 0;
             color: #333;
+            @extend %clearfix;
 
             box-shadow: inset 0px -1px 0px 0px #ddd;
             &:last-child{ box-shadow: none; }
@@ -374,8 +384,16 @@
                 font-size: .813em;
                 margin-bottom: 4px;
                 display: block;
+
+                float: right;
+                width: 100px;
             }
-            p{ margin: 0; }
+            p{
+                margin: 0;
+
+                float: left;
+                width: calc(100% - 100px);
+            }
 
             &:hover, &:focus{
                 // background: $lightColor;

@@ -217,6 +217,10 @@
                             }
                         }
                     }
+
+                    @include screen('tablet') {
+                        @include flex-col-equal(4, 8px, 20px);
+                    }
                 }
             }
         }

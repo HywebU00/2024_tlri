@@ -78,7 +78,7 @@ $btn-radius:.2em;
     // @extend %btn;
     @include btn_setting($color-green, #FFF);
 }
-.btn-blue {
+.btn-blue, .btn-delete2 {
     // @extend %btn;
     @include btn_setting($color-blue, #FFF);
 }
@@ -116,9 +116,17 @@ $btn-radius:.2em;
     @include btn_setting(#666, #FFF);
 }
 
+
 .btn-add {
     // @extend %btn;
     @include btn_setting($color-orange, #FFF);
+}
+
+.btn-add2 {
+    // @extend %btn;
+    @include btn_setting(darken($primaryColor, 5), #FFF);
+    width: 90%;
+    padding: .5em 1em;
 }
 
 .btn_download{

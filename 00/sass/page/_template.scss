@@ -310,13 +310,13 @@ text.highcharts-credits { display: none; }
             // 新增處理作業內的順序
             .order{
                 section{
-                    margin: 1em 0;
+                    margin: .5em 0;
                     @extend %flex_set;
                     .num{
                         @include flex-col(1, 4px, 0px);
                         
-                        flex: 0 0 80px;
-                        max-width: 80px;
+                        flex: 0 0 60px;
+                        max-width: 60px;
                         // line-height: 3em;
                         text-align: center;
                         font-size: 1.5em;
@@ -327,17 +327,17 @@ text.highcharts-credits { display: none; }
                             content: '';
                             background: #34ae8f;
                             display: block;
-                            width: 56px;
-                            height: 56px;
+                            width: 42px;
+                            height: 42px;
                             border-radius: 50%;
                             text-align: center;
-                            margin: -40px auto 0;
+                            margin: -34px auto 0;
                         }
                     }
                     .info{
                         // @include flex-col(11, 4px, 0px);
                         flex: 1 1 auto;
-                        max-width: calc(100% - 80px);
+                        max-width: calc(100% - 60px);
 
                         h4{
                             margin: .5em 0;
@@ -376,6 +376,7 @@ text.highcharts-credits { display: none; }
                 border: 1px solid #ddd;
                 padding: 1em .5em;
                 border-radius: 4px;
+                overflow: hidden;
 
                 // .remarks{
                 //     padding: 0 8px;
@@ -390,6 +391,7 @@ text.highcharts-credits { display: none; }
                 .form_grid{
                     border-top: 0;
                     .form_grp{
+                        padding: 0 !important;
                         &:last-child{
                             border-bottom: 0;
                         }
@@ -405,6 +407,61 @@ text.highcharts-credits { display: none; }
                     border-bottom-left-radius: 4px;
                     border-bottom-right-radius: 4px;
                     border-top: 1px solid #ddd;
+                }
+
+                // 2022-0216 七龍珠超
+                &.DBSuper{
+                    .order>.num{
+                        color: #fff;
+                        background: #505050;
+                        margin: 0 -0.5em;
+                        padding: 0.5em 1.5em;
+                        line-height: 32px;
+
+                        &:before, &:after{
+                            display: inline-block;
+                        }
+
+                        &:before{
+                            content: '第';
+                            padding-right: 6px;
+                        }
+                        &:after{
+                            content: '筆';
+                            padding-left: 6px;
+                        }
+
+                        >button{
+                            float: right;
+                            margin: 0;
+                        }
+                    }
+
+                    .order{
+                        &:first-child{
+                            >.num{
+                                margin-top: -1em;
+                            }
+                        }
+                        section{
+                            .num{
+                                color: #34ae8f;
+                                font-size: 1.25em;
+                                &:after{
+                                    background: none;
+                                    box-shadow: inset 0 0 0 1px #34ae8f;
+                                    width: 36px;
+                                    height: 36px;
+                                    margin: -30px auto 0;
+                                }
+                            }
+                        }
+
+                        +.btn_grp{
+                            background: #f4f4f4;
+                            margin: 0 -.5em -1em;
+                        }
+                    }
                 }
             }
 
