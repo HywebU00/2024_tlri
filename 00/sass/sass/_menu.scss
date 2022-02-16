@@ -48,9 +48,7 @@ aside {
         transition: padding .2s ease;
         font-size: .94rem;
         color: #fff;
-        @include screen('tablet') {
-            display:none;
-        }
+
         a {
             display: flex;
             flex-flow: row nowrap;
@@ -73,6 +71,15 @@ aside {
                 flex: 1 1 1em;
                 left: 0;
                 line-height: 1.2;
+            }
+        }
+
+        @include screen('tablet') {
+            // display:none;
+            a {
+                span {
+                    color: #fff;
+                }
             }
         }
     }
@@ -207,7 +214,8 @@ aside {
                 img{ margin-left: -.35em; }
                 span {
                     width: 190px;
-                    opacity: 0;
+                    // opacity: 0;
+                    margin-left: 3px;
                     width: 14em;
                     left: 3.5em;
                     position: absolute;
