@@ -37,6 +37,7 @@ header {
 
         @extend %flex_set;
         flex-flow: row nowrap;
+        justify-content: flex-start;
 
         a{ flex: 0 0 64px; }
         h2{
@@ -44,6 +45,10 @@ header {
             max-width: calc(100% - 214px);
             color: darken($primaryColor, 5);
             line-height: 1;
+
+            @include text-line(1,24px);
+            overflow: hidden;
+            padding-left: 80px;
         }
         .control_panel{ flex: 0 0 150px; }
     }
@@ -54,14 +59,16 @@ header {
                 width: 100%;
                 // margin-left: 70px;
                 // margin-right: 150px;
-                text-align: center;
+                font-size: 1.125em;
+                margin-left: 64px;
+                padding-left: 10px;
+                text-align: left;
+                @include text-line(2,18px);
             }
         }
     }
     @include screen('mobile') {
-        h2{
-            font-size: 1.125em;
-        }
+        h2{}
     }
 
     // 桌機版：按鈕是雙擊，用 .toggle_menu_btn
