@@ -136,6 +136,7 @@
         .Foto{
             position: relative;
             flex: 0 0 200px;
+            height: 165px;
 
             >div, button{ position: absolute; }
 
@@ -170,6 +171,29 @@
             margin-top: 1em;
             padding: 1em 0;
             border-top: 1px solid #e6e6e6;
+        }
+
+        @include screen('mobile'){
+            .Foto{
+                flex: 1 1 100%;
+
+                >div{
+                    left: 50%;
+                    margin-left: -70px;
+                }
+                button{
+                    right: 50%;
+                    margin-right: -100px;
+                }
+            }
+            .Info{
+                flex: 1 1 100%;
+                flex-basis: 100%;
+
+                ul{
+                    li{ flex: 1 1 100%; }
+                }
+            }
         }
     }
 
@@ -258,6 +282,21 @@
                 //     box-shadow: 0 1px;
                 //     padding-bottom: 1px;
                 // }
+            }
+        }
+        @include screen('tablet'){
+            .step{
+                >section{
+                    @include flex-col-equal(2, 10px, 0px);
+                }
+            }
+        }
+
+        @include screen('mobile'){
+            .step{
+                >section{
+                    @include flex-col-equal(1, 0px, 0px);
+                }
             }
         }
     }

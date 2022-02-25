@@ -209,6 +209,20 @@ text.highcharts-credits { display: none; }
                             }
                         }
                     }
+
+
+                    @include screen('xs_mobile'){
+                        &:first-child{
+                            a{
+                                &:before{ background: transparent; }
+                            }
+                        }
+                        &:last-child{
+                            a{
+                                &:after{ background: transparent; }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -529,6 +543,10 @@ text.highcharts-credits { display: none; }
                         }
                     }
                 }
+            }
+
+            @include screen('mobile'){
+                padding: 1.25em 1em;
             }
         }
     }
@@ -1664,7 +1682,8 @@ table {
 
             .card_info{
                 h4.card_title{
-                    padding: .65em 10em .65em 1em;
+                    // padding: .65em 10em .65em 1em;  // 右側有按鈕的情況下
+
                     .certificate_number{
                         display: inline-block;
                         padding: 0 10px;
@@ -1710,15 +1729,6 @@ table {
             box-shadow: 0px 10px 20px -5px rgba(0, 0, 0, .5);
         }
 
-        @include screen('notebook'){
-            @include flex-col-equal(2, 10px, 0px); 
-            padding: 1em 1.75em;
-        }
-        @include screen('tablet'){
-            @include flex-col-equal(1, 10px, 0px); 
-            padding: 1em 1.75em;
-        }
-
         // 生產者
         .producer{
             display: flex;
@@ -1752,6 +1762,7 @@ table {
                     font-size: 68%;
                     font-weight: normal;
                     display: block;
+                    margin: 0 0;
                 }
             }
 
@@ -1878,6 +1889,29 @@ table {
                 }
             }
         }
+
+        @include screen('notebook'){
+            @include flex-col-equal(2, 10px, 0px); 
+            padding: 1em 1.5em;
+        }
+        @include screen('tablet'){
+            @include flex-col-equal(1, 0px, 0px); 
+            padding: 1em 1em;
+        }
+
+        @include screen('xs_mobile'){
+            // 生產者
+            .producer{
+                .img-container{
+                    width: 60px;
+                    height: 60px;
+                    flex: 0 0 60px;
+                }
+            }
+            .user{
+                flex-basis: calc( 100% - 60px);
+            }
+        }
     }
 }
 
@@ -1920,7 +1954,7 @@ table {
                 margin: -1em -1.75em 1em;
                 a.title{
                     display: block;
-                    padding: 1em 4em 1em 1.75em;
+                    padding: 1em 3em 1em 1.75em;
                     color: #fff;
                     text-align: center;
                     background: #505050;
@@ -1935,7 +1969,7 @@ table {
                     position: absolute;
                     width: 30px;
                     height: 50px;
-                    right: 8px;
+                    right: 12px;
                     top: 50%;
                     margin-top: -25px;
                     font-size: 0;
@@ -2053,6 +2087,27 @@ table {
                     }
                 }
                 +.btn_grp{ text-align: right; }
+            }
+
+            @include screen('xs_mobile'){
+                // 識別名稱
+                .Identify{
+                    .switch{
+                        right: 18px;
+                    }
+                }
+
+                // 生產者
+                .producer{
+                    .foto{
+                        .risk{
+                            a{ span{ right: -8px;} }
+                        }
+                    }
+                    .user{
+                        >p{ margin-top: 6px; }
+                    }
+                }
             }
         }
     }
@@ -2515,6 +2570,25 @@ $foto-size: 180px;
                 top: 0;
             }
         }
+
+        @include screen('tablet'){
+            >time{
+                span{
+                    +span{
+                        margin-top: 0;
+                        margin-left: 1em;
+                        &:after{
+                            width: 10px;
+                            height: 2px;
+                            top: 50%;
+                            left: -15px;
+                            border-left: none;
+                            border-top: dotted 2px #258664;
+                        }
+                    }
+                }
+            }
+        } 
     }
 
     // time{
@@ -2577,6 +2651,27 @@ $foto-size: 180px;
                     flex: 0 0 180px;
                     max-width: 180px;
                     height: 100%;
+                }
+            }
+
+            // 上多張照片
+            .fotos{
+                border-top: 1px dashed #DDD;
+
+                display: flex;
+                flex-flow: row wrap;
+                img{
+                    @include flex-col-equal(6, 0px, 6px);
+                    margin-top: .5em;
+
+                    &:hover, &:focus{
+                        cursor: pointer;
+                    }
+
+                }
+
+                @include screen('tablet'){
+                    img{ @include flex-col-equal(3, 0px, 6px); }
                 }
             }
         }

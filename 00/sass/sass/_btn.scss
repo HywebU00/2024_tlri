@@ -54,6 +54,10 @@ $btn-radius:.2em;
         margin-right: .1em;
         margin-left: -.3em;
     }
+
+    @include screen('xs_mobile'){
+        white-space: pre-wrap;
+    }
 }
 // 按鈕基本樣式
 .btn {

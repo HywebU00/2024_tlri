@@ -447,19 +447,26 @@ select::-ms-expand {
     .form_content {
         display: flex;
         // padding-top: 3px;
-        max-width: calc(100% - #{$form_title_width}  - .6em);
+
+        // max-width: calc(100% - #{$form_title_width}  - .6em);
+        max-width: calc(100% - 120px);
+
         // flex:1 1 calc(100% - #{$form_title_width});
         flex: auto;
-        flex-basis: calc(100% - #{$form_title_width}  - .6em);
+
+        // flex-basis: calc(100% - #{$form_title_width}  - .6em);
+        flex-basis: calc(100% - 120px);
+
         position: relative;
         min-height: 1px;
-        overflow: hidden;
+        // overflow: hidden;
         flex-wrap: wrap;
         @include gutter();
 
         @include screen('mobile') {
             max-width: 100%;
             flex-basis: 100%;
+            @include gutter(0);
         }
 
         *[class^="notice"] {

@@ -36,7 +36,7 @@ $m-gutter: 4px;
 					font-size: 2.125em;
 					letter-spacing: 1px;
 					padding-bottom: .5em;
-					color: #fff
+					color: #fff;
 				}
 				h3.sub-title{
 					font-size: 1.45em;
@@ -281,6 +281,11 @@ $m-gutter: 4px;
     				color: #fff;
     				max-width: 100%;
     				line-height: 1.2;
+
+    				// 覆蓋_header的設定
+    				overflow: initial;
+					height: auto;
+					padding: 0;
     			}
     			p{
     				line-height: 1.8;
@@ -321,6 +326,13 @@ $m-gutter: 4px;
 				@include gutter(6em);
 				.slogen{
 					text-align: center;
+
+					h2{
+						// 覆蓋_header的設定
+						margin-left: 0;
+						text-align: center;
+					}
+
 					.system-link{
 						a{
 							margin-right: 6px;
