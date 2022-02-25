@@ -43,7 +43,7 @@ $btn-radius:.2em;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
-    white-space: nowrap;
+    // white-space: nowrap;
     line-height: normal;
     width: auto;
     padding: $btn-padding;
@@ -55,9 +55,9 @@ $btn-radius:.2em;
         margin-left: -.3em;
     }
 
-    @include screen('xs_mobile'){
-        white-space: pre-wrap;
-    }
+    // @include screen('xs_mobile'){
+    //     white-space: pre-wrap;
+    // }
 }
 // 按鈕基本樣式
 .btn {

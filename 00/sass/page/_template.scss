@@ -701,7 +701,10 @@ text.highcharts-credits { display: none; }
         &:first-child{
             flex: 0 0 200px;
             text-align: center;
-            p{ text-align: left; }
+            p{
+                text-align: left;
+                margin: 0 .3em;
+            }
             .img-container{
                 margin-top: 12px;
                 max-height: 120px;
@@ -728,6 +731,15 @@ text.highcharts-credits { display: none; }
         height: calc(100% - 2em);
         background: #55cbac;
         left: 0;
+    }
+
+    @include screen('mobile'){
+        flex-flow: row wrap;
+        .col{
+            flex: 1 1 100% !important;
+
+            .img-container{ margin-bottom: 12px;}
+        }
     }
 }
 
@@ -1416,7 +1428,7 @@ table {
         //     flex: 0 1 calc(100%/2 - 1em);
         //     max-width: calc(100%/2 - 1em);
         // }
-        @include screen('xs_mobile') {
+        @include screen('mobile') {
             flex: 0 1 calc(100% - 1em);
             max-width: calc(100% - 1em);
         }
@@ -1677,8 +1689,11 @@ table {
     // 單欄
     &.single{
         .item {
-            flex: 1 1 100%;
-            max-width: 100%;
+            flex: 0 1 calc(100% - 1em);
+            flex-basis: calc(100% - 1em);
+            max-width: calc(100% - 1em);
+            // flex: 1 1 100%;
+            // max-width: 100%;
 
             .card_info{
                 h4.card_title{
@@ -1686,7 +1701,11 @@ table {
 
                     .certificate_number{
                         display: inline-block;
-                        padding: 0 10px;
+                        padding: 4px 8px;
+                        margin-left: 6px;
+                        font-size: 90%;
+                        background: rgba(0,0,0,.25);
+                        border-radius: 3px;
                     }
 
                     // 標題右邊按鈕
