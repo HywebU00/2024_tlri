@@ -76,6 +76,11 @@ table {
             padding-bottom: 2px;
             margin: 0;
         }
+
+        .table_inline{
+            display: flex;
+            flex-wrap: nowrap;
+        }
     }
     th {
         background-color: #F3F3F3;

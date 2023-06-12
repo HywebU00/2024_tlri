@@ -194,7 +194,7 @@
                                                 <th>農藥名稱</th>
                                                 <th>許可證號</th>
                                                 <th>劑型與含量</th>
-                                                <th>本次購買量</th>
+                                                <th>本次購買量<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></th>
                                                 <th>操作</th>
                                             </tr>
                                         </thead>
@@ -205,7 +205,16 @@
                                                 <td>好田丹</td>
                                                 <td>00183</td>
                                                 <td>粒劑3.000 (%)</td>
-                                                <td>3公升</td>
+                                                <td>
+                                                    <div class="table_inline">
+                                                        <input type="text" placeholder="請輸入數字">
+                                                        <select name="" id="">
+                                                            <option value="">公克</option>
+                                                            <option value="">公斤</option>
+                                                            <option value="">...</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
                                                 <td><button type="button" class="btn btn-delete"><i class="i_close2"></i>刪除</button></td>
                                             </tr>
                                             <tr>
@@ -214,7 +223,16 @@
                                                 <td>好田丹</td>
                                                 <td>00183</td>
                                                 <td>種子處理液劑17.500 (%)</td>
-                                                <td>500公克</td>
+                                                <td>
+                                                    <div class="table_inline">
+                                                        <input type="text" placeholder="請輸入數字">
+                                                        <select name="" id="">
+                                                            <option value="">公克</option>
+                                                            <option value="">公斤</option>
+                                                            <option value="">...</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
                                                 <td><button type="button" class="btn btn-delete"><i class="i_close2"></i>刪除</button></td>
                                             </tr>
                                         </tbody>
