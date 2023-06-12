@@ -96,3 +96,29 @@
         }
     }
 }
+.list_col2{
+    .item{
+        display: flex;
+        flex-wrap: nowrap;
+        margin: 12px 0;
+        p{
+            flex: 1 1 auto;
+            margin-bottom: 0;
+            padding: 0 1em;
+            line-height: 1.6;
+            font-weight: bold;
+            font-size: 125%;
+            span{
+                display: block;
+                margin-top: 6px;
+                padding: .45em 1em;
+                background: #eee;
+                font-size: 80%;
+                font-weight: normal;
+            }
+        }
+        button, input{
+            flex: 0 0 auto !important;
+        }
+    }
+}
