@@ -97,6 +97,8 @@
     }
 }
 .list_col2{
+    border-top: 2px solid $primaryColor;
+    margin: 1em 0;
     .item{
         display: flex;
         flex-wrap: nowrap;
