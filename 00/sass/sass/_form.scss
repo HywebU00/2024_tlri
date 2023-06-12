@@ -225,6 +225,7 @@ select::-ms-expand {
     // font-size: 112.5%;
     font-size: 100%;
     margin: .5em;
+    line-height: initial;
 
     .form_grp {
         display: flex;
@@ -475,7 +476,7 @@ select::-ms-expand {
         min-height: 1px;
         // overflow: hidden;
         flex-wrap: wrap;
-        @include gutter();
+        // @include gutter();
 
         @include screen('mobile') {
             max-width: 100%;

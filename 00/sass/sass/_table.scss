@@ -542,7 +542,7 @@ table {
     }
 }
 .table_list {
-    @include screen('xs_mobile') {
+    @include screen('tablet') {
         background-color: transparent !important; //Force table to not be like tables anymore
         thead,
         tbody,
@@ -663,7 +663,7 @@ table {
     -webkit-transform: translate3d(0, 0, 0);
     overflow-y: hidden;
 
-    padding: 0 8px;
+    // padding: 0 8px;
 }
 .scroltable-container { overflow: auto; }
 .scroltable-nav {
@@ -674,13 +674,15 @@ table {
     cursor: pointer;
     z-index: 9;
 }
+
 .scroltable-nav.scroltable-nav-left {
     left: 0;
     @include gradient(rgba(255,255,255,1),rgba(255,255,255,0),horizontal);
     .tablearrow_left {
         position: fixed;
         left: 0em;
-        top: 0em;
+        top: 50%;
+        transform: translateY(-15px);
         display: none;
         z-index: 9;
         @include screen('mobile') {
@@ -704,7 +706,9 @@ table {
     @include gradient(rgba(255,255,255,0),rgba(255,255,255,1),horizontal);
     .tablearrow_right {
         position: fixed;
-        top: 0em;
+        // top: 0em;
+        top: 50%;
+        transform: translateY(-15px);
         right: 0em;
         display: none;
         z-index: 9;

@@ -308,8 +308,8 @@ $('table').each(function(index, el) {
     }
 });
 // tablearrow arrow，為了設定箭頭
-$('.scroltable-nav-left').append('<div class="tablearrow_left" style="display:none;"></div>');
-$('.scroltable-nav-right').append('<div class="tablearrow_right"  style="display:none;"></div>');
+$('.scroltable-nav-left').append('<div class="tablearrow_left" style="display:block;"></div>');
+$('.scroltable-nav-right').append('<div class="tablearrow_right"  style="display:block;"></div>');
 
 // 固定版頭
 function table_Arrow() {
@@ -320,7 +320,6 @@ function table_Arrow() {
             if (thisScroll > stickyArrowTop - 230) {
                 $('.scroltable-wrapper .tablearrow_left').css('display', 'block');
                 $('.scroltable-wrapper .tablearrow_left').css({ "top": thisScroll - stickyArrowTop + 220 }, 100, 'easeOutQuint');
-                // $('.scroltable-wrapper .tablearrow_left').css({ "top": thisScroll - stickyArrowTop + 220 }, 100, 'easeOutQuint');
                 $('.scroltable-wrapper .tablearrow_right').css('display', 'block');
                 $('.scroltable-wrapper .tablearrow_right').css({ "top": thisScroll - stickyArrowTop + 220 }, 100, 'easeOutQuint');
                 // $('.scroltable-wrapper .tablearrow_right').css({ "top": thisScroll - stickyArrowTop + 220 }, 100, 'easeOutQuint');
@@ -347,8 +346,6 @@ _window.scroll(function() {
         table_Arrow();
     }, 50);
 });
-
-
 ///*------------------------------------*/
 ////////////table 加上 data-title//////////
 ///*------------------------------------*/
@@ -715,146 +712,146 @@ $(function() {
     });
 
     // 測試 ------------------------------------------
-    // 手機版
-    enquire.register("screen and (max-width:991px)", {
-        // 則在註冊處理程序時觸發一次。
-        setup : function() {
-            $('.toggle_menu_btn').off().click(function(e) {
-                $('aside').addClass('open');
-                $('.overlay').addClass('show');
-                $('.wrapper').addClass('noscroll');
-                $(this).blur();
-                e.preventDefault();
-            });
+    // // 手機版
+    // enquire.register("screen and (max-width:991px)", {
+    //     // 則在註冊處理程序時觸發一次。
+    //     setup : function() {
+    //         $('.toggle_menu_btn').off().click(function(e) {
+    //             $('aside').addClass('open');
+    //             $('.overlay').addClass('show');
+    //             $('.wrapper').addClass('noscroll');
+    //             $(this).blur();
+    //             e.preventDefault();
+    //         });
 
-            $('.overlay').off().click(function(e) {
-                _CLOSEMENU();
-                e.preventDefault();
-            });
+    //         $('.overlay').off().click(function(e) {
+    //             _CLOSEMENU();
+    //             e.preventDefault();
+    //         });
 
-            //
-            $('aside').find('.close_btn').off().click(function(e) {
-                _CLOSEMENU();
-                $(this).parents('aside').siblings('header').removeClass('full');
-                e.preventDefault();
-            });
-        },
+    //         //
+    //         $('aside').find('.close_btn').off().click(function(e) {
+    //             _CLOSEMENU();
+    //             $(this).parents('aside').siblings('header').removeClass('full');
+    //             e.preventDefault();
+    //         });
+    //     },
         
-        // 在媒體查詢匹配時觸發。
-        match : function() {
-            $('.toggle_menu_btn').off().click(function(e) {
-                $('aside').addClass('open');
-                $('.overlay').addClass('show');
-                $('.wrapper').addClass('noscroll');
-                $(this).blur();
-                e.preventDefault();
-            });
+    //     // 在媒體查詢匹配時觸發。
+    //     match : function() {
+    //         $('.toggle_menu_btn').off().click(function(e) {
+    //             $('aside').addClass('open');
+    //             $('.overlay').addClass('show');
+    //             $('.wrapper').addClass('noscroll');
+    //             $(this).blur();
+    //             e.preventDefault();
+    //         });
 
-            $('.overlay').off().click(function(e) {
-                _CLOSEMENU();
-                e.preventDefault();
-            });
-        },
+    //         $('.overlay').off().click(function(e) {
+    //             _CLOSEMENU();
+    //             e.preventDefault();
+    //         });
+    //     },
 
-        // 在媒體查詢轉換時觸發（從匹配狀態到不匹配狀態）
-        unmatch : function() {
-            var sideStatus = false;
-            $('header').find('.toggle_menu_btn').off().click(function(e) {
-                if (!sideStatus) {
-                    $('aside').addClass('hidden');
-                    $('header').addClass('full');
-                    $('.content').addClass('full');
-                    sideStatus = true;
-                } else {
-                    $('aside').removeClass('hidden');
-                    $('header').removeClass('full');
-                    $('.content').removeClass('full');
-                    sideStatus = false;
-                }
-                if (subStatus = -true) {
-                    $('.sub_nav').removeClass('show_subNav');
-                    subStatus = false;
-                }
-                $('.li_hasChild>a').find('.ink').remove();
-                $(this).blur();
-                e.preventDefault();
-            });
-        }
-    });
-    // 桌機版
-    enquire.register("screen and (min-width:992px)", {
-        // 則在註冊處理程序時觸發一次。
-        setup : function() {
-            var sideStatus = false;
-            $('header').find('.toggle_menu_btn').off().click(function(e) {
-                if (!sideStatus) {
-                    $('aside').addClass('hidden');
-                    $('header').addClass('full');
-                    $('.content').addClass('full');
-                    $(this).parents('header').siblings('.btn_panel').addClass('full');
-                    sideStatus = true;
-                } else {
-                    $('aside').removeClass('hidden');
-                    $('header').removeClass('full');
-                    $('.content').removeClass('full');
-                    $(this).parents('header').siblings('.btn_panel').removeClass('full');
-                    sideStatus = false;
-                }
-                if (subStatus = -true) {
-                    $('.sub_nav').removeClass('show_subNav');
-                    subStatus = false;
-                }
-                $('.li_hasChild>a').find('.ink').remove();
-                $(this).blur();
-                e.preventDefault();
-            });
-        },
+    //     // 在媒體查詢轉換時觸發（從匹配狀態到不匹配狀態）
+    //     unmatch : function() {
+    //         var sideStatus = false;
+    //         $('header').find('.toggle_menu_btn').off().click(function(e) {
+    //             if (!sideStatus) {
+    //                 $('aside').addClass('hidden');
+    //                 $('header').addClass('full');
+    //                 $('.content').addClass('full');
+    //                 sideStatus = true;
+    //             } else {
+    //                 $('aside').removeClass('hidden');
+    //                 $('header').removeClass('full');
+    //                 $('.content').removeClass('full');
+    //                 sideStatus = false;
+    //             }
+    //             if (subStatus = -true) {
+    //                 $('.sub_nav').removeClass('show_subNav');
+    //                 subStatus = false;
+    //             }
+    //             $('.li_hasChild>a').find('.ink').remove();
+    //             $(this).blur();
+    //             e.preventDefault();
+    //         });
+    //     }
+    // });
+    // // 桌機版
+    // enquire.register("screen and (min-width:992px)", {
+    //     // 則在註冊處理程序時觸發一次。
+    //     setup : function() {
+    //         var sideStatus = false;
+    //         $('header').find('.toggle_menu_btn').off().click(function(e) {
+    //             if (!sideStatus) {
+    //                 $('aside').addClass('hidden');
+    //                 $('header').addClass('full');
+    //                 $('.content').addClass('full');
+    //                 $(this).parents('header').siblings('.btn_panel').addClass('full');
+    //                 sideStatus = true;
+    //             } else {
+    //                 $('aside').removeClass('hidden');
+    //                 $('header').removeClass('full');
+    //                 $('.content').removeClass('full');
+    //                 $(this).parents('header').siblings('.btn_panel').removeClass('full');
+    //                 sideStatus = false;
+    //             }
+    //             if (subStatus = -true) {
+    //                 $('.sub_nav').removeClass('show_subNav');
+    //                 subStatus = false;
+    //             }
+    //             $('.li_hasChild>a').find('.ink').remove();
+    //             $(this).blur();
+    //             e.preventDefault();
+    //         });
+    //     },
         
-        // 在媒體查詢匹配時觸發。
-        match : function() {
-            var sideStatus = false;
-            $('header').find('.toggle_menu_btn').off().click(function(e) {
-                if (!sideStatus) {
-                    $('aside').addClass('hidden');
-                    $('header').addClass('full');
-                    $('.content').addClass('full');
-                    $(this).parents('header').siblings('.btn_panel').addClass('full');
-                    sideStatus = true;
-                } else {
-                    $('aside').removeClass('hidden');
-                    $('header').removeClass('full');
-                    $('.content').removeClass('full');
-                    $(this).parents('header').siblings('.btn_panel').removeClass('full');
-                    sideStatus = false;
-                }
-                if (subStatus = -true) {
-                    $('.sub_nav').removeClass('show_subNav');
-                    subStatus = false;
-                }
-                $('.li_hasChild>a').find('.ink').remove();
-                $(this).blur();
-                e.preventDefault();
-            });
-        },
+    //     // 在媒體查詢匹配時觸發。
+    //     match : function() {
+    //         var sideStatus = false;
+    //         $('header').find('.toggle_menu_btn').off().click(function(e) {
+    //             if (!sideStatus) {
+    //                 $('aside').addClass('hidden');
+    //                 $('header').addClass('full');
+    //                 $('.content').addClass('full');
+    //                 $(this).parents('header').siblings('.btn_panel').addClass('full');
+    //                 sideStatus = true;
+    //             } else {
+    //                 $('aside').removeClass('hidden');
+    //                 $('header').removeClass('full');
+    //                 $('.content').removeClass('full');
+    //                 $(this).parents('header').siblings('.btn_panel').removeClass('full');
+    //                 sideStatus = false;
+    //             }
+    //             if (subStatus = -true) {
+    //                 $('.sub_nav').removeClass('show_subNav');
+    //                 subStatus = false;
+    //             }
+    //             $('.li_hasChild>a').find('.ink').remove();
+    //             $(this).blur();
+    //             e.preventDefault();
+    //         });
+    //     },
 
-        // 在媒體查詢轉換時觸發（從匹配狀態到不匹配狀態）
-        unmatch : function() {
-            _CLOSEMENU();
+    //     // 在媒體查詢轉換時觸發（從匹配狀態到不匹配狀態）
+    //     unmatch : function() {
+    //         _CLOSEMENU();
 
-            $('.toggle_menu_btn').off().click(function(e) {
-                $('aside').addClass('open');
-                $('.overlay').addClass('show');
-                $('.wrapper').addClass('noscroll');
-                $(this).blur();
-                e.preventDefault();
-            });
+    //         $('.toggle_menu_btn').off().click(function(e) {
+    //             $('aside').addClass('open');
+    //             $('.overlay').addClass('show');
+    //             $('.wrapper').addClass('noscroll');
+    //             $(this).blur();
+    //             e.preventDefault();
+    //         });
 
-            $('.overlay').off().click(function(e) {
-                _CLOSEMENU();
-                e.preventDefault();
-            });
-        }
-    });
+    //         $('.overlay').off().click(function(e) {
+    //             _CLOSEMENU();
+    //             e.preventDefault();
+    //         });
+    //     }
+    // });
 });
 
 $(function() {

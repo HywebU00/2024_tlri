@@ -18,6 +18,11 @@ $m-gutter: 4px;
 				}
 			}
 		}
+		.web_link, .list{
+			a{
+				box-shadow: none;
+			}
+		}
 	}
 
 	>.wrapper{
