@@ -121,6 +121,17 @@
         }
         button, input{
             flex: 0 0 130px !important;
+            padding: .25em 1em;
+
+        }
+
+        @include screen('mobile'){
+            flex-wrap: wrap;
+            p{ padding: 0; }
+            p,
+            button, input{
+                flex: 1 1 100% !important;
+            }
         }
     }
 }
