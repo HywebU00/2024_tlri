@@ -1,1 +1,21 @@
-*.scssc
+# 忽略所有附檔名是 .sass 的檔案
+*.scss
+*.sass
+sass/
+.sass-cache/
+
+# 忽略所有附檔名是 .map 的檔案
+*.map
+*.yml
+*.gitignore
+
+# 字型資料夾
+fonts/
+
+# 暫存資料夾
+_stand/
+
+# vscode setting
+*.json
+
+.DS_Store
