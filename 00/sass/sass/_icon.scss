@@ -53,6 +53,7 @@
 .i_chat { @include hyui_icon('icon_chat'); }
 .i_check { @include hyui_icon('icon_check'); }
 .i_clock { @include hyui_icon('icon_clock'); }
+.i_clock3 { @include hyui_icon('icon_clock3'); }
 .i_close {
     @include hyui_icon('icon_close');
     &:before { background-size: 14px 14px; }

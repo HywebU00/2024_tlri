@@ -27,6 +27,13 @@
             display: inline-block;
             padding: .5em 1em;
         }
+        .countdown{
+            text-align: right;
+            padding: .75em 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
     </style>
 </head>
 
@@ -831,6 +838,11 @@
         <!-- 主要內容區 -->
         <div class="content">
             <section class="main">
+                <!-- 倒數計時 -->
+                <div class="countdown">
+                    剩餘時間：<b>49分30秒</b>
+                    <button type="button" class="btn btn-primary"><i class="i_clock3"></i>重新計時</button>
+                </div>
                 <!-- 第二層選單 -->
                 <ul class="submenu">
                     <li><a href="#">1-1 組織資料</a></li>

@@ -1,8 +1,8 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 body {
     overflow-x: hidden;
@@ -14,6 +14,15 @@ code, pre {
 
 // Highcharts 隱藏浮水印
 text.highcharts-credits { display: none; }
+
+.countdown{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    b{
+        margin: 0 4px;
+    }
+}
 
 // 最外圍預設為100%
 .wrapper {
@@ -38,9 +47,9 @@ text.highcharts-credits { display: none; }
 }
 // 整體共用container樣式，請注意首頁切版頁面的整齊
 .container {
-  padding: 0;
-  margin: 0 auto;
-  max-width: $container-max; //請看_variable.scss
+    padding: 0;
+    margin: 0 auto;
+    max-width: $container-max; //請看_variable.scss
 }
 .content {
     padding-top: 4em;
