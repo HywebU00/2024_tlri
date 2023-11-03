@@ -6,6 +6,7 @@ table {
     @include screen('xs_mobile') {
         width: 100%;
     }
+
     th,
     // td:not(.gsib_b,.gsc-search-button) {
     //     padding: .5em;
@@ -87,7 +88,7 @@ table {
         color: #333;
         border: #DDD 1px solid;
         text-align: center;
-        white-space: nowrap;
+        white-space: wrap;
 
         // 排序
         &.sort{
@@ -179,6 +180,24 @@ table {
         }
     }
 }
+
+.thead_sticky{
+    table{
+        tbody {
+            display: block;
+            overflow: auto;
+        }
+        thead, tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+        thead {
+            width: 100%;
+        }
+    }
+}
+
 // 原本寫在 .modal 中的設定
 .table_operating{
     // font-size: 112.5%;

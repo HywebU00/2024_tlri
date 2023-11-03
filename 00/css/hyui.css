@@ -1603,7 +1603,7 @@ table th {
   color: #333;
   border: #DDD 1px solid;
   text-align: center;
-  white-space: nowrap;
+  white-space: wrap;
 }
 table th.sort {
   padding-right: 1.5em;
@@ -1685,6 +1685,19 @@ table.type1 tbody td {
 table.type1 tbody td a {
   box-shadow: 0 1px;
   padding-bottom: 1px;
+}
+
+.thead_sticky table tbody {
+  display: block;
+  overflow: auto;
+}
+.thead_sticky table thead, .thead_sticky table tbody tr {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.thead_sticky table thead {
+  width: 100%;
 }
 
 .table_operating a {
