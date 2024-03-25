@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta name="robots" content="noindex" /><!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>林產物產銷履歷資訊系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!--popup start-->
+    <div id="modal" class="modal">
+        <h2>新增原物料進貨</h2>
+        <form action="">
+            <div class="flex-form form_grid">
+                <div class="form_grp">
+                    <label for="address" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>原物料進貨批次碼(12碼)系統產生</label>
+                    <div class="form_content">
+                        <input name="text" type="text" value="3-54168-23-01-01" placeholder="一般狀態" disabled>
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="address" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>進貨日期</label>
+                    <div class="form_content">
+                        <input name="date" type="date" value="" placeholder="">
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="address" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>臺灣林產品生產追溯系統/產品追溯碼</label>
+                    <div class="form_content">
+                        <input name="text" type="text" value="" placeholder="產品追溯碼">
+                        <div>
+                            <a href="https://qrc.forest.gov.tw/product?product_no=0825000675" target="_blank">另開視窗連結到臺灣林產品生產追溯系統/產品追溯碼 </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>樹/竹種(依據 CNS11667)</label>
+                    <div class="form_content">
+                        <select id="selectSample" name="">
+                            <option value="">請選擇</option>
+                            <option value="">項目一</option>
+                            <option value="">項目二</option>
+                            <option value="">項目三</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>材種或竹種</label>
+                    <div class="form_content">
+                        <select id="selectSample" name="">
+                            <option value="">請選擇</option>
+                            <option value="">項目一</option>
+                            <option value="">項目二</option>
+                            <option value="">項目三</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>樹種-總材積(m³)<br>竹種-總重量(kg)</label>
+                    <div class="form_content">
+                        <input name="text" type="text" value="" placeholder="522.000000 小數點6位">
+                    </div>
+                </div>
+                <div class="form_grp">
+                    <label for="selectSample" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>選擇原物料儲存場所</label>
+                    <div class="form_content form_mix_operation">
+                        <div class="btn_grp">
+                            <button type="button" class="btn btn-add"><i class="i_add2"></i>新增</button>
+                        </div>
+                        <table class="table_hover"  alt="沒有剛好的樣式可以用先借一個來用">
+                            <tr>
+                                <th>序號</th>
+                                <th>原物料儲存場所名稱</th>
+                                <th>（樹種）材積(立方公尺)<br>（竹種）重量(公斤)</th>
+                                <th>原物料儲藏追溯碼 (14碼)<br>(系統產生-新增完成才會編)</th>
+                                <th>編輯</th>
+                            </tr>
+                            <tr>
+                                <td align="center">1</td>
+                                <td>
+                                    <select id="selectSample" name="">
+                                        <option value="">請選擇</option>
+                                        <option value="">項目一</option>
+                                        <option value="">項目二</option>
+                                        <option value="">項目三</option>
+                                    </select>
+                                </td>
+                                <td><input name="text" type="text" value="311.000000" placeholder="一般狀態" autocomplete="off"></td>
+                                <td><input name="text" type="text" value="3-54168-23-01-01-01" placeholder="" disabled></td>
+                                <td align="center"><button type="button" class="btn btn-delete">移除</button></td>
+                            </tr>
+                            <tr>
+                                <td align="center">2</td>
+                                <td>
+                                    <select id="selectSample" name="">
+                                        <option value="">請選擇</option>
+                                        <option value="">項目一</option>
+                                        <option value="">項目二</option>
+                                        <option value="">項目三</option>
+                                    </select>
+                                </td>
+                                <td><input name="text" type="text" value="211.000000" placeholder=""></td>
+                                <td><input name="text" type="text" value="3-54168-23-01-01-01" placeholder="" disabled></td>
+                                <td align="center"><button type="button" class="btn btn-delete" >移除</button></td>
+                            </tr>
+                        </table>
+                        <!-- 頁碼 -->
+                        <div class="pagination">
+                            <form action="" class="form_inline">
+                                <div class="total"> 共<span>50</span>筆資料，第<span>1/5</span>頁，每頁顯示 
+                                    <select name="" id="">
+                                        <option value="">10</option>
+                                        <option value="">50</option>
+                                        <option value="">100</option>
+                                    </select> 筆，
+                                    <!--input type="button" class="btn" value="確定"-->
+                                </div>
+                            </form>
+                            <ul class="page">
+                                <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                                <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                                <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn_grp">
+                <button type="button" class="btn btn-normal" onclick="location.href='2-1-list.htm'">取消</button>
+                <button type="button" class="btn btn-primary">存檔</button>
+            </div>
+        </form>
+    </div>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- main Start -->
+        <!-- 主要內容區 -->
+        <div class="content">
+            <section class="main">
+                <!-- 第二層選單 -->
+                <!-- <ul class="submenu">
+                    <li><a href="#">1-1 組織資料</a></li>
+                    <li><a href="#">1-2 列印標籤授權使用</a></li>
+                    <li><a href="#">1-3 L4系統使用權限</a></li>
+                    <li class="now"><a href="#">1-4 使用權限</a></li>
+                    <li><a href="#">1-5 系統權限</a></li>
+                </ul> -->
+                <!-- 選單說明 -->
+                <p class="submenu_info">
+                    <span>功能說明區及操作影片 手機版隱藏本說明區塊（含QRCODE部分）</span>
+                    <img src="images/25QR.jpg" class="QR">
+                </p>
+
+                <!-- 第三層選單 -->
+                <!-- <ul class="th3_menu">
+                    <li class="now"><a href="#">1-4-1 第三層選單</a></li>
+                    <li><a href="#">1-4-2 第三層選單</a></li>
+                </ul> -->
+
+                <div class="inner_head">
+                    <!-- h2節點 -->
+                    <h2 class="title">2-1 原物料驗收管理</h2>
+                    <!-- function功能區塊 -->
+                    <!-- <div class="function">
+                        <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                            <li class="icon_print"><a href="#">友善列印</a></li>
+                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+                <section>
+                    <h3 class="sub_title">編修驗收/收貨單</h3>
+                    <p class="explan">註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p>
+                    <form action="">
+                        <div class="flex-form form_grid">
+                            <div class="form_grp">
+                                <label for="address" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>驗收/收貨單追溯碼</label>
+                                <div class="form_content">
+                                    <b>3-54168-23-01（系統完成新增後才會產生）</b>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="address" class="form_title">驗收/收貨單號或備註</label>
+                                <div class="form_content">
+                                    <input name="username" type="text"  size="35" value="使用者任意輸入單號或是備註" >
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="address" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>供應商名稱</label>
+                                <div class="form_content">
+                                    <input type="radio" name="sourcefrom" checked>林業及自然保育署
+                                    <select>
+                                        <option>農業部林業及自然保育署新竹分署</option>
+                                        <option>農業部林業及自然保育署臺中分署</option>
+                                        <option>農業部林業及自然保育署南投分署</option>
+                                        <option>農業部林業及自然保育署嘉義分署</option>
+                                        <option>農業部林業及自然保育署屏東分署</option>
+                                        <option>農業部林業及自然保育署臺東分署</option>
+                                        <option>農業部林業及自然保育署花蓮分署</option>
+                                        <option>農業部林業及自然保育署宜蘭分署</option>
+                                    </select>
+                                    <input type="radio" name="sourcefrom">其他上游供應商
+                                    <input name="username" type="text"  size="35" value="請輸入供應商名稱" >
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="address" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>驗收人員</label>
+                                <div class="form_content">
+                                    <select>
+                                        <option>廖京典</option>
+                                        <option>作業人員二</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label for="address" class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>驗收日期</label>
+                                <div class="form_content">
+                                    <input name="" type="date" value="2023-09-03" class="calendar" placeholder="購買日期">
+                                </div>
+                            </div>
+                            <div class="form_grp">
+                                <label  class="form_title"><abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>上傳驗收紀錄單 </label>
+                                <div class="form_content file_upload">
+                                    <!-- <div class="btn_grp">
+                                        <input type="file" id="myfile" name="myfile">
+                                        <button type="button" class="btn btn_upload"><i class="i_add2"></i>上傳驗收紀錄單（檔案需小於10MB）</button>
+                                    </div> -->
+                                    <div class="item">
+                                        <div><a href="#" target="_blank">檔案名稱.pdf（另開視窗）</a></div>
+                                        <button type="button" class="btn btn-delete">上傳/更換驗收紀錄單</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <section>
+                    <h3 class="sub_title">原物料進貨紀錄</h3>
+                    <div class="function_mix">
+                        <div class="btn_grp">
+                            <button type="button" class="btn btn-primary" id="openModal"><i class="i_edit2"></i>新增原物料進貨紀錄（跳窗）</button>
+                            <!-- <button type="button" class="btn btn-secondary"><i class="i_setting2"></i>停用成員</button>
+                            <button type="button" class="btn btn-primary"><i class="i_setting2"></i>啟用成員</button> -->
+                        </div>
+                        <!-- 搜尋 -->
+                        <!-- <input name="text" type="text" value="" placeholder="請輸入任意字串查詢"> -->
+                    </div>
+                    <table class="table_hover"  alt="">
+                        <tr>
+                            <th>進貨日期</th>
+                            <th style="min-width: 300px;">臺灣林產品生產追溯系統/產品追溯碼<br>原物料進貨批次碼(12碼)</th>
+                            <th style="min-width: 140px;">樹/竹種<br>(依據 CNS11667)</th>
+                            <th>材種或竹種</th>
+                            <th>驗證狀態</th>
+                            <th style="min-width: 160px;">（樹種）材積(立方公尺)<br>（竹種）重量(公斤)</th>
+                            <th>儲存場所</th>
+                            <th>原物料儲藏追溯碼 (14碼)</th>
+                            <th>編修 </th>
+                        </tr>
+                        <tr>
+                            <td align="center">2023/09/03</td>
+                            <td align="center" nowrap="">2005000195<br>3-54168-23-01-01</td>
+                            <td align="center">柳杉</td>
+                            <td align="center">原木</td>
+                            <td align="center">通過</td>
+                            <td align="right">311.000000</td>
+                            <td align="center">京典奇特有限公司一廠</td>
+                            <td align="center" nowrap="">3-54168-23-01-01-01</td>
+                            <td align="center"><button type="button" class="btn btn-primary">編輯</button><br/></td>
+                        </tr>
+                        <tr>
+                            <td align="center">2023/09/03</td>
+                            <td align="center" nowrap="" >2005000195<br>3-54168-23-01-01</td>
+                            <td align="center">柳杉</td>
+                            <td align="center">原木</td>
+                            <td align="center">通過</td>
+                            <td align="right">211.000000</td>
+                            <td align="center">京典奇特有限公司二廠</td>
+                            <td align="center" nowrap="">3-54168-23-01-01-02</td>
+                            <td align="center"><button type="button" class="btn btn-primary">編輯</button></td>
+                        </tr>
+                        <tr>
+                            <td align="center">2024/01/23</td>
+                            <td align="center" nowrap="">2005000196<br>3-54168-23-01-02</td>
+                            <td align="center">臺灣冷杉</td>
+                            <td align="center">原木</td>
+                            <td align="center">通過</td>
+                            <td align="right">911.000000</td>
+                            <td align="center">京典奇特有限公司二廠</td>
+                            <td align="center" nowrap="">3-54168-23-01-02-01</td>
+                            <td align="center"><button type="button" class="btn btn-primary">編輯</button></td>
+                        </tr>                                   
+                    </table> 
+                </section>
+                <!-- control panel-->
+                <div class="btn_panel btn_grp">
+                    <button type="button" class="btn btn-normal">取消</button>
+                    <button type="button" class="btn btn-secondary" onclick="confirm('確定要刪掉')">刪除(若無任何原物料進貨)</button>
+                    <button type="button" class="btn btn-primary">存檔</button>
+                </div>
+                <!-- control panel End -->
+            </section>
+        </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <script src="vendor/enquire/enquire.js"></script><!-- query js -->
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+    </script>
+    <!-- hyUI -->
+    <!-- <script src="js/hyui.js"></script> -->
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>

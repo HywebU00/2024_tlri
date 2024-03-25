@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta name="robots" content="noindex" /><!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>林產物產銷履歷資訊系統</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+        <script src="js/html5shiv.js"></script>
+        <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+
+<body>
+    <!--popup start-->
+    <div id="modal" class="modal">
+        <h2>燈箱主標題<span>台塑3號有機肥料</span></h2>
+
+        <div class="table_operating">
+            <!-- 2-1 List-我買的肥料 -->
+            <h3>2-1 List-我買的肥料</h3>
+            <table class="table_hover">
+                <tr>
+                    <th>序號</th>
+                    <th>購買日期</th>
+                    <th>廠牌</th>
+                    <th>供應商</th>
+                    <th>購買量</th>
+                    <th>單一包裝重(容)量</th>
+                    <th>備註說明</th>
+                    <th>購買單據</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2020/12/05</td>
+                    <td>台塑3號有機肥料</td>
+                    <td>&nbsp;</td>
+                    <td>1包</td>
+                    <td>1,000公斤</td>
+                    <td>&nbsp;</td>
+                    <td><a href="">image.jpg</a></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2020/12/05</td>
+                    <td>台塑3號有機肥料</td>
+                    <td>&nbsp;</td>
+                    <td>1包</td>
+                    <td>1,000公斤</td>
+                    <td>&nbsp;</td>
+                    <td><a href="">image.jpg</a></td>
+                </tr>
+            </table>
+            <!-- 頁碼 -->
+            <div class="pagination">
+                <form action="" class="form_inline">
+                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 
+                        <select name="" id="">
+                            <option value="">10</option>
+                            <option value="">20</option>
+                            <option value="">30</option>
+                            <option value="">40</option>
+                        </select> 筆，
+                        <input type="button" class="btn" value="確定">
+                    </div>
+                </form>
+                <ul class="page">
+                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                </ul>
+            </div>
+
+
+            <!-- 2-2 Add-我買的農藥 -->
+            <h3>2-2 Add-我買的農藥</h3>
+            <!-- function 三種組合 -->
+            <!-- 1. 搜尋 -->
+            <div class="function_mix">
+                <!-- 搜尋 -->
+                <input name="text" type="text" value="" placeholder="請輸入任意字串查詢">
+            </div>
+            <!-- 提醒 -->
+            <div class="notice">一般提醒訊息</div>
+            <div class="notice_info">一般提醒訊息</div>
+            <div class="notice_success">確認、成功、完成</div>
+            <div class="notice_warning">警告</div>
+            <div class="notice_error">錯誤</div>
+            <table class="table_hover">
+                <tr>
+                    <th>選取</th>
+                    <th>序號</th>
+                    <th>資材名稱</th>
+                    <th>許可證字號</th>
+                    <th>廠牌名稱</th>
+                    <th>廠商名稱（供應者）</th>
+                    <th>劑型與含量</th>
+                    <th>核准使用的作物</th>
+                    <th>農藥分類</th>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-primary">選取</button></td>
+                    <td>1</td>
+                    <td>乙基克繁草</td>
+                    <td>202192</td>
+                    <td>草達達</td>
+                    <td>台灣富美實有限公司</td>
+                    <td>水分散性粒劑(40.000 (%))</td>
+                    <td>小白菜,小芥菜,冬瓜,...<a href="#">更多</a></td>
+                    <td>除草劑</td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-primary">選取</button></td>
+                    <td>2</td>
+                    <td>乙基克繁草</td>
+                    <td>202192</td>
+                    <td>草達達</td>
+                    <td>中華民國農會附設各級農會農化廠</td>
+                    <td>水分散性粒劑(40.000 (%))</td>
+                    <td>小白菜,小芥菜,冬瓜,...<a href="#">更多</a></td>
+                    <td>除草劑</td>
+                </tr>
+            </table>
+            <!-- 頁碼 -->
+            <div class="pagination">
+                <form action="" class="form_inline">
+                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 
+                        <select name="" id="">
+                            <option value="">10</option>
+                            <option value="">20</option>
+                            <option value="">30</option>
+                            <option value="">40</option>
+                        </select> 筆，
+                        <input type="button" class="btn" value="確定">
+                    </div>
+                </form>
+                <ul class="page">
+                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                </ul>
+            </div>
+
+
+            <!-- 3-1 Add-選擇土地以新增生產批次 -->
+            <h3>3-1 Add-選擇土地以新增生產批次</h3>
+
+            <!-- function 三種組合 -->
+            <!-- 1. 搜尋 -->
+            <h4>1. 搜尋</h4>
+            <div class="function_mix">
+                <!-- 搜尋 -->
+                <input name="text" type="text" value="" placeholder="請輸入任意字串查詢">
+            </div>
+            <!-- 2. 搜尋 + 選取狀態 -->
+            <h4>2. 搜尋 + 選取狀態</h4>
+            <div class="function_mix">
+                <!-- 搜尋 -->
+                <input name="text" type="text" value="" placeholder="請輸入任意字串查詢">
+                <!-- 選取狀態 -->
+                <div class="status">
+                    <p class="remarks">已選取<span>2</span>筆資料</p>
+                    <button type="button" class="btn btn-blue">確定新增</button>
+                </div>
+            </div>
+            <!-- 3. (搜尋+表單) + 選取狀態 -->
+            <h4>3. (搜尋+表單) + 選取狀態</h4>
+            <div class="function_mix type2">
+                <!-- 搜尋 + 其他組合 -->
+                <div>
+                    <!-- 搜尋 -->
+                    <input name="text" type="text" value="" placeholder="請輸入任意字串查詢">
+                    <div class="form_grp form_inline">
+                        <!--  -->
+                        <label for="selectSample" class="form_title">類別：</label>
+                        <div class="form_content">
+                            <select id="selectSample" name="">
+                                <option value="">請選擇</option>
+                                <option value="">項目一</option>
+                                <option value="">項目二</option>
+                                <option value="">項目三</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 日期 -->
+                    <div class="form_grp form_inline">
+                        <label for="selectSample" class="form_title">處理完成日期：</label>
+                        <div class="form_content form_inline">
+                            <div class="datepick">
+                                <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                            </div>
+                            <div class="datepick">
+                                <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 選取狀態 -->
+                <div class="status">
+                    <p class="remarks">已選取<span>2</span>筆資料</p>
+                    <button type="button" class="btn btn-blue">確定新增</button>
+                </div>
+            </div>
+
+            <table class="table_hover">
+                <tr>
+                    <th><input type="checkbox" name="" value=""></th>
+                    <th>序號</th>
+                    <th>群組名稱</th>
+                    <th>農地</th>
+                    <th>生產總面積（公頃）</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>1</td>
+                    <td>060區</td>
+                    <td><a href="javascript:void(0);" class="switch">3 (點選可以展開)</a></td>
+                    <td>8.1278</td>
+                </tr>
+                <tr class="sub_info">
+                    <td colspan="5">
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>地段</th>
+                                <th>地號</th>
+                                <th>田區</th>
+                                <th>產季中面積（公頃）</th>
+                                <th>生產面積（公頃）</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>0.0315</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>0574-0001</td>
+                                <td>田區A</td>
+                                <td>0.0100</td>
+                                <td>0.0315</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value="" checked=""></td>
+                    <td>2</td>
+                    <td>077區</td>
+                    <td><a href="javascript:void(0);" class="switch">5</a></td>
+                    <td>5.8454</td>
+                </tr>
+                <tr class="sub_info">
+                    <td colspan="5">
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>地段</th>
+                                <th>地號</th>
+                                <th>田區</th>
+                                <th>產季中面積（公頃）</th>
+                                <th>生產面積（公頃）</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>0.0315</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>0574-0001</td>
+                                <td>田區A</td>
+                                <td>0.0100</td>
+                                <td>0.0315</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value="" checked=""></td>
+                    <td>3</td>
+                    <td>060區</td>
+                    <td><a href="javascript:void(0);" class="switch">3 (點選可以展開)</a></td>
+                    <td>8.1278</td>
+                </tr>
+                <tr class="sub_info">
+                    <td colspan="5">
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>地段</th>
+                                <th>地號</th>
+                                <th>田區</th>
+                                <th>產季中面積（公頃）</th>
+                                <th>生產面積（公頃）</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>0.0315</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>0574-0001</td>
+                                <td>田區A</td>
+                                <td>0.0100</td>
+                                <td>0.0315</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>4</td>
+                    <td>077區</td>
+                    <td><a href="javascript:void(0);" class="switch">5</a></td>
+                    <td>5.8454</td>
+                </tr>
+                <tr class="sub_info">
+                    <td colspan="5">
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>地段</th>
+                                <th>地號</th>
+                                <th>田區</th>
+                                <th>產季中面積（公頃）</th>
+                                <th>生產面積（公頃）</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>0.0315</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>0574-0001</td>
+                                <td>田區A</td>
+                                <td>0.0100</td>
+                                <td>0.0315</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>5</td>
+                    <td>060區</td>
+                    <td><a href="javascript:void(0);" class="switch">3 (點選可以展開)</a></td>
+                    <td>8.1278</td>
+                </tr>
+                <tr class="sub_info">
+                    <td colspan="5">
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>地段</th>
+                                <th>地號</th>
+                                <th>田區</th>
+                                <th>產季中面積（公頃）</th>
+                                <th>生產面積（公頃）</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>0.0315</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>0574-0001</td>
+                                <td>田區A</td>
+                                <td>0.0100</td>
+                                <td>0.0315</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>6</td>
+                    <td>077區</td>
+                    <td><a href="javascript:void(0);" class="switch">5</a></td>
+                    <td>5.8454</td>
+                </tr>
+                <tr class="sub_info">
+                    <td colspan="5">
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>地段</th>
+                                <th>地號</th>
+                                <th>田區</th>
+                                <th>產季中面積（公頃）</th>
+                                <th>生產面積（公頃）</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>0.0315</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>0574-0001</td>
+                                <td>田區A</td>
+                                <td>0.0100</td>
+                                <td>0.0315</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>7</td>
+                    <td>060區</td>
+                    <td><a href="javascript:void(0);" class="switch">3 (點選可以展開)</a></td>
+                    <td>8.1278</td>
+                </tr>
+                <tr class="sub_info">
+                    <td colspan="5">
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>地段</th>
+                                <th>地號</th>
+                                <th>田區</th>
+                                <th>產季中面積（公頃）</th>
+                                <th>生產面積（公頃）</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>0.0315</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>0574-0001</td>
+                                <td>田區A</td>
+                                <td>0.0100</td>
+                                <td>0.0315</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>8</td>
+                    <td>077區</td>
+                    <td><a href="javascript:void(0);" class="switch">5</a></td>
+                    <td>5.8454</td>
+                </tr>
+                <tr class="sub_info">
+                    <td colspan="5">
+                        <table class="table_hover">
+                            <tr>
+                                <th>序號</th>
+                                <th>地段</th>
+                                <th>地號</th>
+                                <th>田區</th>
+                                <th>產季中面積（公頃）</th>
+                                <th>生產面積（公頃）</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>1482-0000</td>
+                                <td>&nbsp;</td>
+                                <td>&nbsp;</td>
+                                <td>0.0315</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>臺南市安南區公塭段</td>
+                                <td>0574-0001</td>
+                                <td>田區A</td>
+                                <td>0.0100</td>
+                                <td>0.0315</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <!-- 頁碼 -->
+            <div class="pagination">
+                <form action="" class="form_inline">
+                    <div class="total"> 共<span>308</span>筆資料，第<span>1/18</span>頁，每頁顯示 
+                        <select name="" id="">
+                            <option value="">10</option>
+                            <option value="">20</option>
+                            <option value="">30</option>
+                            <option value="">40</option>
+                        </select> 筆，
+                        <input type="button" class="btn" value="確定">
+                    </div>
+                </form>
+                <ul class="page">
+                    <li class="first"><a href="#" title="第一頁">第一頁 </a></li>
+                    <li class="prev"><a href="#" title="回上一頁">回上一頁 </a></li>
+                    <li class="active"><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="#">7</a></li>
+                    <li><a href="#">8</a></li>
+                    <li><a href="#">9</a></li>
+                    <li><a href="#">10</a></li>
+                    <li class="next"><a href="#" title="下一頁">下一頁 </a></li>
+                    <li class="last"><a href="#" title="最後一頁">最後一頁 </a></li>
+                </ul>
+            </div>
+
+
+            <!-- 3-1 Add-生產紀錄 -->
+            <h3>3-1 Add-生產紀錄：作物自訂用量參考</h3>
+            <div class="situation">
+                <!-- 狀況1 無設定 -->
+                <h4>狀況1 無設定</h4>
+                此肥料無設定作物自訂用量，可前往2資材管理→<a href="#" target="_blank">2-1我買的肥料設定</a>，便於未來填寫田間紀錄時提供估計總用量
+                <!-- 狀況2 肥料 -->
+                <h4>狀況2 肥料</h4>
+                <ol>
+                    <li><b>作物A</b>自訂用量每分地為<b>100.00</b>毫升，栽種總面積為<b>1.2212</b>公頃，估計總用量為<b class="this">122.12毫升</b><button type="button" class="btn btn-orange">我要使用此用量</button></li>
+                    <li><b>作物B</b>自訂用量每分地為<b>100.00</b>毫升，栽種總面積為<b>1.2212</b>公頃，估計總用量為<b class="this">122.12毫升</b><button type="button" class="btn btn-orange">我要使用此用量</button></li>
+                    <li><b>作物C</b>自訂用量每分地為<b>100.00</b>毫升，栽種總面積為<b>1.2212</b>公頃，估計總用量為<b class="this">122.12毫升</b><button type="button" class="btn btn-orange">我要使用此用量</button></li>
+                </ol>
+                <!-- 狀況3 農藥 -->
+                <h4>狀況3 農藥</h4>
+                <ol>
+                    <li><b>作物A</b>自訂用量為每分地為<b>100</b>公升，稀釋倍數：<b>1000</b>，栽種總面積為<b>1.2212</b>公頃，估計總用量為<b class="this">122.12毫升</b><button type="button" class="btn btn-orange">我要使用此用量</button></li>
+                    <li><b>作物B</b>自訂用量為每分地為<b>100</b>公升，稀釋倍數：<b>1000</b>，栽種總面積為<b>1.2212</b>公頃，估計總用量為<b class="this">122.12毫升</b><button type="button" class="btn btn-orange">我要使用此用量</button></li>
+                    <li><b>作物C</b>自訂用量為每分地為<b>100</b>公升，稀釋倍數：<b>1000</b>，栽種總面積為<b>1.2212</b>公頃，估計總用量為<b class="this">122.12毫升</b><button type="button" class="btn btn-orange">我要使用此用量</button></li>
+                </ol>
+            </div>
+
+
+            <!-- 6-1 Add-零售標籤列印資料 -->
+            <h3>6-1 Add-零售標籤列印資料：選擇出貨批次</h3>
+            <!-- function 三種組合 -->
+            <!-- 3. (搜尋+表單) + 選取狀態 -->
+            <div class="function_mix type2">
+                <!-- 搜尋 + 其他組合 -->
+                <div>
+                    <!-- 搜尋 -->
+                    <input name="text" type="text" value="" placeholder="請輸入任意字串查詢">
+                    <div class="form_grp form_inline">
+                        <!--  -->
+                        <label for="selectSample" class="form_title">類別：</label>
+                        <div class="form_content">
+                            <select id="selectSample" name="">
+                                <option value="">請選擇</option>
+                                <option value="">項目一</option>
+                                <option value="">項目二</option>
+                                <option value="">項目三</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!-- 日期 -->
+                    <div class="form_grp form_inline">
+                        <label for="selectSample" class="form_title">處理完成日期：</label>
+                        <div class="form_content form_inline">
+                            <div class="datepick">
+                                <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                            </div>
+                            <div class="datepick">
+                                <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 選取狀態 -->
+                <div class="status">
+                    <p>已選取<span>2</span>筆資料</p>
+                    <button type="button" class="btn btn-blue">確定新增</button>
+                </div>
+            </div>
+            <!-- 提醒 -->
+            <div class="notice">一般提醒訊息</div>
+            <div class="notice_info">一般提醒訊息</div>
+            <div class="notice_success">確認、成功、完成</div>
+            <div class="notice_warning">警告</div>
+            <div class="notice_error">錯誤</div>
+            <!-- 3種狀況：原料/半成品/製成品 -->
+            <!-- 1. 原料 -->
+            <h4>1. 原料</h4>
+            <table class="table_hover">
+                <tr>
+                    <th><input type="checkbox" name="" value=""></th>
+                    <th>農民</th>
+                    <th>生產履歷追溯碼</th>
+                    <th>作物</th>
+                    <th>品種</th>
+                    <th>採收日期</th>
+                    <th>剩餘重量(公斤)</th>
+                    <th>出貨完畢</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>陳小珊</td>
+                    <td>10037920009009</td>
+                    <td>稻米</td>
+                    <td>桃園1號</td>
+                    <td>2020/03/26</td>
+                    <td>13,000</td>
+                    <td>
+                        <div class="checkSwitch">
+                            <label>
+                                <input name="checkboxSample1" type="checkbox" value="">
+                                <div class="checkSwitch_switch"></div>
+                            </label>
+                        </div>
+                        <!-- 資訊文字 -->
+                        <span>尚有庫存</span>
+                        <!-- <span>出貨完畢</span> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>陳小珊</td>
+                    <td>10037920009009</td>
+                    <td>稻米</td>
+                    <td>桃園1號</td>
+                    <td>2020/03/26</td>
+                    <td>13,000</td>
+                    <td>
+                        <div class="checkSwitch">
+                            <label>
+                                <input name="checkboxSample1" type="checkbox" value="">
+                                <div class="checkSwitch_switch"></div>
+                            </label>
+                        </div>
+                        <!-- 資訊文字 -->
+                        <!-- <span>尚有庫存</span> -->
+                        <span>出貨完畢</span>
+                    </td>
+                </tr>
+            </table>
+            <!-- 2. 半成品 -->
+            <h4>2. 半成品</h4>
+            <table class="table_hover">
+                <tr>
+                    <th><input type="checkbox" name="" value=""></th>
+                    <th>採後處理追溯碼</th>
+                    <th>作物</th>
+                    <th>作業進度</th>
+                    <th>作業日期</th>
+                    <th>採後處理場所</th>
+                    <th>備註說明</th>
+                    <th>剩餘重量(公斤)</th>
+                    <th>出貨完畢</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>10037920900020</td>
+                    <td>稻米</td>
+                    <td>烘乾</td>
+                    <td>2020/05/22</td>
+                    <td>芳榮稻米產銷專業區</td>
+                    <td></td>
+                    <td>300</td>
+                    <td>
+                        <div class="checkSwitch">
+                            <label>
+                                <input name="checkboxSample1" type="checkbox" value="">
+                                <div class="checkSwitch_switch"></div>
+                            </label>
+                        </div>
+                        <!-- 資訊文字 -->
+                        <span>尚有庫存</span>
+                        <!-- <span>出貨完畢</span> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>10037920900020</td>
+                    <td>稻米</td>
+                    <td>碾製</td>
+                    <td>2020/05/22</td>
+                    <td>芳榮稻米產銷專業區</td>
+                    <td></td>
+                    <td>300</td>
+                    <td>
+                        <div class="checkSwitch">
+                            <label>
+                                <input name="checkboxSample1" type="checkbox" value="">
+                                <div class="checkSwitch_switch"></div>
+                            </label>
+                        </div>
+                        <!-- 資訊文字 -->
+                        <!-- <span>尚有庫存</span> -->
+                        <span>出貨完畢</span>
+                    </td>
+                </tr>
+            </table>
+            <!-- 3. 製成品 -->
+            <h4>3. 製成品</h4>
+            <table class="table_hover">
+                <tr>
+                    <th><input type="checkbox" name="" value=""></th>
+                    <th>採後處理追溯碼</th>
+                    <th>作物</th>
+                    <th>採後處理完成日期</th>
+                    <th>處理別</th>
+                    <th>採後處理場所</th>
+                    <th>備註說明</th>
+                    <th>剩餘重量(公斤)</th>
+                    <th>出貨完畢</th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>10037920900020</td>
+                    <td>稻米</td>
+                    <td>2020/12/01</td>
+                    <td>白米</td>
+                    <td>芳榮稻米產銷專業區</td>
+                    <td></td>
+                    <td>300</td>
+                    <td>
+                        <div class="checkSwitch">
+                            <label>
+                                <input name="checkboxSample1" type="checkbox" value="">
+                                <div class="checkSwitch_switch"></div>
+                            </label>
+                        </div>
+                        <!-- 資訊文字 -->
+                        <span>尚有庫存</span>
+                        <!-- <span>出貨完畢</span> -->
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" name="" value=""></td>
+                    <td>10037920900020</td>
+                    <td>稻米</td>
+                    <td>2020/12/01</td>
+                    <td>白米</td>
+                    <td>芳榮稻米產銷專業區</td>
+                    <td></td>
+                    <td>300</td>
+                    <td>
+                        <div class="checkSwitch">
+                            <label>
+                                <input name="checkboxSample1" type="checkbox" value="">
+                                <div class="checkSwitch_switch"></div>
+                            </label>
+                        </div>
+                        <!-- 資訊文字 -->
+                        <!-- <span>尚有庫存</span> -->
+                        <span>出貨完畢</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header load header.htm -->
+        <header></header>
+        <!-- aside load aside.htm -->
+        <aside></aside>
+        <!-- main Start -->
+        <!-- 主要內容區 -->
+        <div class="content">
+            <section class="main">
+                <!-- 第二層選單 -->
+                <!-- <ul class="submenu">
+                    <li><a href="#">1-1 組織資料</a></li>
+                    <li><a href="#">1-2 列印標籤授權使用</a></li>
+                    <li><a href="#">1-3 L4系統使用權限</a></li>
+                    <li class="now"><a href="#">1-4 使用權限</a></li>
+                    <li><a href="#">1-5 系統權限</a></li>
+                </ul> -->
+                <!-- 選單說明 -->
+                <p class="submenu_info">
+                    <span>功能說明區及操作影片 手機版隱藏本說明區塊（含QRCODE部分）</span>
+                    <img src="images/25QR.jpg" class="QR">
+                </p>
+
+                <!-- 第三層選單 -->
+                <!-- <ul class="th3_menu">
+                    <li class="now"><a href="#">1-4-1 第三層選單</a></li>
+                    <li><a href="#">1-4-2 第三層選單</a></li>
+                </ul> -->
+
+                <div class="inner_head">
+                    <!-- h2節點 -->
+                    <h2 class="title">1-5 驗證資料管理</h2>
+                    <!-- function功能區塊 -->
+                    <!-- <div class="function">
+                        <ul>
+                            <li class="icon_back"><a href="#">回上一頁</a></li>
+                            <li class="icon_print"><a href="#">友善列印</a></li>
+                            <li class="icon_forward"><a href="#">轉寄友人</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+
+                <h3 class="sub_title">申請新的證書</h3>
+
+                <!-- step -->
+                <div class="steps">
+                    <ul>
+                        <li class="Pass">
+                            <span>1</span>
+                            <p>選擇驗證機構</p>
+                        </li>
+                        <li class="Pass">
+                            <span>2</span>
+                            <p>選擇驗證品項及項目</p>
+                        </li>
+                        <li class="Now">
+                            <span>3</span>
+                            <p>選擇加工/儲存場所</p>
+                        </li>
+                        <li>
+                            <span>4</span>
+                            <p>確認/送出驗證申請</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <section>
+                    <h3 class="sub_title">3、選擇本次欲申請驗證的加工/儲存場所場所</h3>
+                    <!-- <p>註:<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr>為必填(選)欄位, 不能為空白。</p> -->
+                    <!-- <div class="function_mix">
+                        <div class="btn_grp">
+                            <button type="button" class="btn btn-add" onclick="location.href='1-5-apply1.htm'"><i class="i_add2"></i>我要申請新的證書</button>
+                            <button type="button" class="btn btn-secondary"><i class="i_setting2"></i>停用品項</button>
+                            <button type="button" class="btn btn-primary"><i class="i_setting2"></i>啟用品項</button>
+                        </div>
+                        <input name="text" type="text" value="" placeholder="請輸入任意字串查詢">
+                    </div> -->
+                    <!-- <p class="explan">說明文字<span class="R">說明文字</span><span class="B">說明文字</span></p> -->
+                    <table class="table_hover">
+                        <tr>
+                            <th><input type="checkbox" name="" value="" checked=""></th>
+                            <th>序號</th>
+                            <th>場所名稱</th>
+                            <th>場所類型</th>
+                            <th>自有或委託</th>
+                            <th>地址/地段號/GPS</th>
+                        </tr>
+                        <tr>
+                            <td align="center"><input type="checkbox" name="" value="" checked=""></td>
+                            <td align="center">1</td>
+                            <td>京典奇特有限公司三合一加工儲存場所</td>
+                            <td>初級加工廠, 原物料儲存場所, 產品儲存場所</td>
+                            <td align="center">自有</td>
+                            <td>
+                                地址:臺北市信義區信義路五段7號<br>
+                                地段號:臺北市信義區隘口段1234-0000號<br>
+                                GPS資訊:精度 121.020744,緯度 24.840777
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+                
+                <!-- control panel-->
+                <div class="btn_panel btn_grp">
+                    <button type="button" class="btn btn-normal" onclick="location.href='1-5-list.htm'">取消</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='1-5-apply2.htm'">上一步</button>
+                    <button type="button" class="btn btn-primary" onclick="location.href='1-5-apply4.htm'">下一步</button>
+                    <!-- <button type="button" class="btn btn-secondary">存檔</button> -->
+                </div>
+                <!-- control panel End -->
+            </section>
+        </div>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script><!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script><!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script><!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script><!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script><!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script><!-- scrolltable -->
+    <script src="vendor/enquire/enquire.js"></script><!-- query js -->
+    <script>
+        $('header').load("header.htm");
+        $('aside').load("aside.htm");
+    </script>
+    <!-- hyUI -->
+    <!-- <script src="js/hyui.js"></script> -->
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>
+
+</html>
