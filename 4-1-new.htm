@@ -23,61 +23,21 @@
 <body>
     <!--popup start-->
     <div id="modal" class="modal">
-        <h2>選擇原物料來源</h2>
+        <h2>選擇出貨批次</h2>
         <div class="table_operating">
             <!-- 原物料 -->
-            <h3>輸入查詢條件(原物料)</h3>
             <div class="function_mix type2">
                 <!-- 搜尋 + 其他組合 -->
                 <div>
                     <!-- 搜尋 -->
-                    <!-- <input name="text" type="text" value="" placeholder="請輸入任意字串查詢"> -->
-                    <div class="form_grp form_inline">
-                        <!--  -->
-                        <label for="selectSample" class="form_title">樹/竹種：</label>
-                        <div class="form_content">
-                            <select id="selectSample" name="">
-                                <option value="">請選擇</option>
-                                <option value="">項目一</option>
-                                <option value="">項目二</option>
-                                <option value="">項目三</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form_grp form_inline">
-                        <!--  -->
-                        <label for="selectSample" class="form_title">材種或竹種：</label>
-                        <div class="form_content">
-                            <select id="selectSample" name="">
-                                <option value="">請選擇</option>
-                                <option value="">項目一</option>
-                                <option value="">項目二</option>
-                                <option value="">項目三</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form_grp form_inline">
-                        <!--  -->
-                        <label for="selectSample" class="form_title">儲存場所：</label>
-                        <div class="form_content">
-                            <select id="selectSample" name="">
-                                <option value="">請選擇</option>
-                                <option value="">項目一</option>
-                                <option value="">項目二</option>
-                                <option value="">項目三</option>
-                            </select>
-                        </div>
-                    </div>
+                    <input name="text" type="text" value="" placeholder="請輸入任意字串查詢">
                     <!-- 日期 -->
                     <div class="form_grp form_inline">
-                        <label for="selectSample" class="form_title">儲藏日期：</label>
+                        <label for="selectSample" class="form_title">日期：</label>
                         <div class="form_content form_inline">
                             <div class="datepick">
                                 <input name="" type="date" value="" class="calendar" placeholder="">
                             </div>
-                            <!-- <div class="datepick">
-                                <input name="" type="date" value="" class="calendar" placeholder="結束日期">
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -87,157 +47,34 @@
                     <button type="button" class="btn btn-blue">確定新增</button>
                 </div>
             </div>
+            <div class="notice_info">如欲結清剩餘批次量，請點選「關閉出貨」按鈕</div>
             <div class="checkbox" align="right">
-                <label><input type="checkbox" checked="">不顯示剩餘材積=0之原物料</label>
+                <label><input type="checkbox" checked="">顯示已關閉出貨資料</label>
             </div>
             <table class="table_hover scroltable" >
                 <tr>
                     <th><input type="checkbox" label="selectAll" title="全選" class="checkbox" ></th>
-                    <th>原物料儲藏追溯碼 (14碼)</th>
-                    <th>儲存日期</th>
-                    <th>樹/竹種</th>
-                    <th>材種或竹種</th>
-                    <th>驗證狀態</th>
-                    <th>儲存場所</th>
-                    <th>剩餘材積(立方公尺)<br/> 或 剩餘重量(公斤)</th>
-                </tr>
-                <tr>
-                    <td align="center" ><input type="checkbox"  class="checkbox" ></td>
-                    <td>3-54168-23-01-01-01</td>
-                    <td align="center" ><span >2023/09/03</span></td>
-                    <td align="center" ><span >柳杉</span></td>
-                    <td align="center" ><span >原木</span></td>
-                    <td>通過</td>
-                    <td align="center" ><span >京典奇特有限公司一廠</span></td>
-                    <td align="center" ><span >200.000000</span></td>
-                </tr>
-                <tr >
-                    <td align="center" ><input type="checkbox"  class="checkbox"></td>
-                    <td>3-54168-23-01-01-02</td>
-                    <td align="center" ><span >2023/09/03</span></td>
-                    <td align="center" ><span >柳杉</span></td>
-                    <td align="center" ><span >原木</span></td>
-                    <td>通過</td>
-                    <td align="center" ><span >京典奇特有限公司二廠</span></td>
-                    <td align="center" ><span >100.000000</span></td>
-                </tr>
-                <tr>
-                    <td align="center" ><input type="checkbox"  class="checkbox" checked></td>
-                    <td>3-54168-23-01-01-02</td>
-                    <td align="center" ><span >2023/11/24</span></td>
-                    <td align="center" ><span >柳杉</span></td>
-                    <td align="center" ><span >原木</span></td>
-                    <td>通過</td>
-                    <td align="center" ><span >京典奇特有限公司三廠</span></td>
-                    <td align="center" ><span >222.000000</span></td>
-                </tr>
-            </table>
-
-            <!--  -->
-            <h3>輸入查詢條件(產品)</h3>
-            <div class="function_mix type2">
-                <!-- 搜尋 + 其他組合 -->
-                <div>
-                    <!-- 搜尋 -->
-                    <!-- <input name="text" type="text" value="" placeholder="請輸入任意字串查詢"> -->
-                    <div class="form_grp form_inline">
-                        <!--  -->
-                        <label for="selectSample" class="form_title">樹/竹種：</label>
-                        <div class="form_content">
-                            <select id="selectSample" name="">
-                                <option value="">請選擇</option>
-                                <option value="">項目一</option>
-                                <option value="">項目二</option>
-                                <option value="">項目三</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form_grp form_inline">
-                        <!--  -->
-                        <label for="selectSample" class="form_title">材種或竹種：</label>
-                        <div class="form_content">
-                            <select id="selectSample" name="">
-                                <option value="">請選擇</option>
-                                <option value="">項目一</option>
-                                <option value="">項目二</option>
-                                <option value="">項目三</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form_grp form_inline">
-                        <!--  -->
-                        <label for="selectSample" class="form_title">儲存場所：</label>
-                        <div class="form_content">
-                            <select id="selectSample" name="">
-                                <option value="">請選擇</option>
-                                <option value="">項目一</option>
-                                <option value="">項目二</option>
-                                <option value="">項目三</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- 日期 -->
-                    <div class="form_grp form_inline">
-                        <label for="selectSample" class="form_title">作業日期：</label>
-                        <div class="form_content form_inline">
-                            <div class="datepick">
-                                <input name="" type="date" value="" class="calendar" placeholder="">
-                            </div>
-                            <!-- <div class="datepick">
-                                <input name="" type="date" value="" class="calendar" placeholder="結束日期">
-                            </div> -->
-                        </div>
-                    </div>
-                </div>
-                <!-- 選取狀態 -->
-                <div class="status">
-                    <p class="remarks">已選取<span>2</span>筆資料</p>
-                    <button type="button" class="btn btn-blue">確定新增</button>
-                </div>
-            </div>
-            <div class="checkbox" align="right">
-                <label><input type="checkbox" checked="">不顯示剩餘材積=0之原物料</label>
-            </div>
-            <table class="table_hover scroltable" >
-                <tr>
-                    <th><input type="checkbox" label="selectAll" title="全選" class="checkbox" ></th>
-                    <th>產品儲存追溯碼</th>
+                    <th>原物料儲藏追溯碼</th>
                     <th>作業日期</th>
-                    <th>樹/竹種</th>
+                    <th>樹/竹種	</th>
                     <th>材種或竹種</th>
                     <th>驗證狀態</th>
                     <th>儲存場所</th>
-                    <th>剩餘材積(立方公尺)<br/> 或 剩餘重量(公斤)</th>
+                    <th>剩餘材積(立方公尺)	</th>
+                    <th>剩餘重量</th>
+                    <th>庫存狀態</th>
                 </tr>
                 <tr>
                     <td align="center" ><input type="checkbox"  class="checkbox" ></td>
                     <td>3-54168-23-01-01-01</td>
-                    <td align="center" ><span >2023/09/03</span></td>
-                    <td align="center" ><span >柳杉</span></td>
-                    <td align="center" ><span >原木</span></td>
+                    <td align="center"><span>2023/09/03</span></td>
+                    <td align="center"><span>柳杉</span></td>
+                    <td align="center"><span>木製材品</span></td>
                     <td>通過</td>
-                    <td align="center" ><span >京典奇特有限公司一廠</span></td>
-                    <td align="center" ><span >200.000000</span></td>
-                </tr>
-                <tr >
-                    <td align="center" ><input type="checkbox"  class="checkbox"></td>
-                    <td>3-54168-23-01-01-02</td>
-                    <td align="center" ><span >2023/09/03</span></td>
-                    <td align="center" ><span >柳杉</span></td>
-                    <td align="center" ><span >原木</span></td>
-                    <td>通過</td>
-                    <td align="center" ><span >京典奇特有限公司二廠</span></td>
-                    <td align="center" ><span >100.000000</span></td>
-                </tr>
-                <tr>
-                    <td align="center" ><input type="checkbox"  class="checkbox" checked></td>
-                    <td>3-54168-23-01-01-02</td>
-                    <td align="center" ><span >2023/11/24</span></td>
-                    <td align="center" ><span >柳杉</span></td>
-                    <td align="center" ><span >原木</span></td>
-                    <td>通過</td>
-                    <td align="center" ><span >京典奇特有限公司三廠</span></td>
-                    <td align="center" ><span >222.000000</span></td>
+                    <td align="center"><span>京典奇特有限公司一廠</span></td>
+                    <td align="center"><span>70</span></td>
+                    <td align="center"><span>2450</span></td>
+                    <td><button type="button" class="btn btn-secondary"><i class="i_close2"></i>關閉出貨</button></td>
                 </tr>
             </table>
 
