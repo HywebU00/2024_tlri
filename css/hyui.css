@@ -1615,6 +1615,7 @@ table td .btn {
   padding-bottom: 2px;
   margin: 2px 0;
   min-width: 90px;
+  word-break: keep-all;
 }
 table td .table_inline {
   display: flex;
@@ -7646,7 +7647,6 @@ div.function ul li.icon_forward a:before {
 }
 .function_mix.type2 {
   flex-flow: row wrap;
-  justify-content: end;
   border-bottom: dotted 1px #ddd;
   padding-bottom: 0.35em;
 }
