@@ -13927,6 +13927,8 @@ body#Login {
 #Login footer .container {
   padding-top: 3em;
   padding-left: 3em;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 #Login footer a {
   color: #222;
@@ -13942,8 +13944,6 @@ body#Login {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
 }
 #Login footer .footer-flex .col:nth-child(1) {
   flex: 0 0 auto;
