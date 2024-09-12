@@ -13807,6 +13807,73 @@ body#Login {
     margin: 0 0 3em;
   }
 }
+#Login .content .container .news {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  overflow: hidden;
+  margin-bottom: -1em;
+  position: relative;
+  z-index: 2;
+}
+#Login .content .container .news ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+#Login .content .container .news ul li a {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: #ff6c66;
+  padding: 1em 1.5em;
+  position: relative;
+}
+#Login .content .container .news ul li a time {
+  flex: 0 0 130px;
+  font-weight: bold;
+  padding-right: 12px;
+  color: #333;
+  background: #fff;
+  margin-right: 10px;
+  border-radius: 20px;
+  padding: 4px 16px;
+}
+#Login .content .container .news ul li a p {
+  flex: 1 1 100%;
+  margin: 0;
+  display: block;
+}
+#Login .content .container .news ul li a time, #Login .content .container .news ul li a p {
+  z-index: 1;
+}
+#Login .content .container .news ul li a:after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #1d7130;
+  transition: 0.3s;
+}
+#Login .content .container .news ul li a:hover:after, #Login .content .container .news ul li a:focus-visible:after {
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  #Login .content .container .news ul li a {
+    flex-wrap: wrap;
+  }
+  #Login .content .container .news ul li a p {
+    margin-top: 10px;
+    padding-left: 6px;
+  }
+}
 #Login .content .container .login-box {
   margin: auto;
   background: rgba(255, 255, 255, 0.75);
@@ -13814,13 +13881,10 @@ body#Login {
           backdrop-filter: blur(4px);
   border-radius: 6px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-  transform: perspective(22rem) rotateY(-5deg);
-  transition: 0.3s;
-  padding: 3em 0;
-  position: relative;
-}
-#Login .content .container .login-box:hover, #Login .content .container .login-box:focus-visible {
   transform: perspective(none) rotateY(0);
+  transition: 0.3s;
+  padding: 4em 0 3em;
+  position: relative;
 }
 #Login .content .container .login-box .btn-reset {
   background: #fff;
