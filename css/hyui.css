@@ -13700,13 +13700,13 @@ h1.title span, h2.title span {
   color: #d84a5c;
 }
 
-body#Login {
+body#Login, body#Contact {
   height: 100vh;
   background: url(../images/bg-login.jpg) 50% top no-repeat;
   background-size: contain;
 }
 @media (max-width: 1199px) {
-  body#Login {
+  body#Login, body#Contact {
     background-size: cover;
   }
 }
@@ -14034,6 +14034,191 @@ body#Login {
 #Login .flex-form .form_content .btn {
   background: #333;
   color: #fff;
+}
+
+#Contact .wrapper {
+  background: none;
+}
+#Contact .wrapper .container {
+  max-width: 1400px;
+}
+@media (max-width: 1199px) {
+  #Contact .wrapper .container {
+    max-width: none;
+    padding: 0 2em;
+  }
+}
+@media screen and (max-width: 767px) {
+  #Contact .wrapper .container {
+    padding: 0;
+  }
+}
+#Contact header {
+  position: inherit;
+  background: none;
+  box-shadow: none;
+  height: auto;
+  padding: 2.6em 0;
+}
+#Contact header h1 {
+  height: auto;
+}
+#Contact header h1 a {
+  padding: 50px 0 0;
+  background: url(../images/logo-login.png) left top no-repeat;
+  background-size: 160px 40px;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+@media screen and (max-width: 767px) {
+  #Contact header h1 a {
+    background-position: 50% top;
+  }
+}
+#Contact header .header {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+#Contact header .header .rookies {
+  position: relative;
+}
+#Contact header .header .rookies a {
+  font-size: 1.125em;
+  color: #222;
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+#Contact header .header .rookies a:hover, #Contact header .header .rookies a:focus-visible {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+#Contact header .header .rookies:after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 24px;
+  background: #222;
+  right: calc(50% - 2px);
+  top: -10%;
+}
+@media screen and (max-width: 767px) {
+  #Contact header .header {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #Contact header .header .rookies {
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  #Contact header .header .rookies {
+    width: 100%;
+    text-align: center;
+  }
+}
+#Contact .content {
+  padding-top: 0;
+  margin-left: 0;
+}
+@media screen and (max-width: 991px) {
+  #Contact .content {
+    margin: 0 0 3em;
+  }
+}
+#Contact .content .container .login-box {
+  margin: auto;
+  background: rgba(255, 255, 255, 0.75);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  transform: perspective(none) rotateY(0);
+  transition: 0.3s;
+  padding: 4em 2em 3em;
+  display: flex;
+  position: relative;
+}
+#Contact .content .container .login-box > section {
+  flex: 1 1 50%;
+}
+#Contact .content .container .login-box > section:first-child {
+  border-right: 1px dotted #858585;
+}
+#Contact .content .container .login-box > section h2 {
+  text-align: center;
+  letter-spacing: 1px;
+}
+#Contact .content .container .login-box > section h2 b {
+  color: #1d7130;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  text-underline-offset: 16px;
+}
+#Contact .content .container .login-box > section h2 span {
+  display: inline-block;
+  font-size: 75%;
+  padding: 0.5em 1.5em;
+  margin-top: 24px;
+  color: #fff;
+  background: #ff6c66;
+  border-radius: 30px;
+}
+#Contact .content .container .login-box > section .items {
+  padding: 0 2em;
+  margin-top: 5em;
+}
+#Contact .content .container .login-box > section .items h3 {
+  font-size: 1.75em;
+  letter-spacing: 4px;
+  color: #ff6c66;
+  text-align: center;
+}
+#Contact .content .container .login-box > section .items .spot {
+  padding: 1em 2em;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  line-height: 2;
+}
+#Contact .content .container .login-box::after {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  right: 0;
+  transform: translateX(50%);
+  bottom: 15%;
+  background: url(../images/login-deco.png) 50% 50% no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 767px) {
+  #Contact .content .container .login-box {
+    padding: 3em 1em;
+    flex-wrap: wrap;
+  }
+  #Contact .content .container .login-box > section {
+    flex: 1 1 100%;
+    padding-bottom: 2em;
+    margin-bottom: 2em;
+  }
+  #Contact .content .container .login-box > section:first-child {
+    border-right: none;
+    border-bottom: 1px solid #858585;
+  }
+  #Contact .content .container .login-box > section .items {
+    margin-top: 2em;
+  }
+  #Contact .content .container .login-box:after {
+    bottom: -15%;
+  }
 }
 
 .slick-slider {
