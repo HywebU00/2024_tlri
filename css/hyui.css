@@ -2533,6 +2533,7 @@ select::-ms-expand {
     max-width: calc(100% - 0.6em);
     flex-basis: calc(100% - 0.6em);
     padding: 0.5em 0 0.25em;
+    text-align: left;
   }
 }
 .flex-form .form_title + .form_content {
